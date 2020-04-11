@@ -1,0 +1,16 @@
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\bin\Debug\Trabalho_A1_Supermecado.exe.config
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\bin\Debug\Trabalho_A1_Supermecado.exe
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\bin\Debug\Trabalho_A1_Supermecado.pdb
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.csprojAssemblyReference.cache
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Home.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Properties.Resources.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.csproj.GenerateResource.cache
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.csproj.CoreCompileInputs.cache
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.exe
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.pdb
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Ajuda.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Consultas.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Relatorios.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Forms.Movimentacoes.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Cadastros.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Forms.Login.resources
