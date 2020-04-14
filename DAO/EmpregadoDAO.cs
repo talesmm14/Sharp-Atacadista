@@ -39,14 +39,14 @@ namespace Trabalho_A1_Supermecado.DAO
         public void delete(Empregado empregado)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "DELETE FROM Empregrado WHERE id = @id";
+            cmd.CommandText = "DELETE FROM Empregado WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", empregado.Id);
             Conexao.CRUD(cmd);
         }
         public static Empregado findById(int id)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Empregrado WHERE id = @id";
+            cmd.CommandText = "SELECT * FROM Empregado WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", id);
             SqlDataReader dr = Conexao.selecionar(cmd);
 
@@ -69,7 +69,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public List<Empregado> findAll()
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Empregrado";
+            cmd.CommandText = "SELECT * FROM Empregado";
             SqlDataReader dr = Conexao.selecionar(cmd);
             List<Empregado> objs = new List<Empregado>();
             EmpregadoDAO objDAO = new EmpregadoDAO();
@@ -102,6 +102,33 @@ namespace Trabalho_A1_Supermecado.DAO
             SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, Conexao.conectar());
             da.Fill(dt);
             return dt;
+        }
+        public static Empregado authenticated(String cpf, String senha)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Empregado WHERE cpf = @cpf";
+            cmd.Parameters.AddWithValue("@cpf", cpf);
+            SqlDataReader dr = Conexao.selecionar(cmd);
+
+            Empregado obj = new Empregado();
+            if (dr.HasRows)
+            {
+                dr.Read();
+                obj.Id = (int)dr["id"];
+                obj.NomeCompleto = dr["nome_completo"].ToString();
+                obj.Cpf = dr["cpf"].ToString();
+                obj.Senha = dr["senha"].ToString();
+                obj.Funcao = dr["funcao"].ToString();
+                if (senha != obj.Senha)
+                {
+                    obj = null;
+                }
+            }
+            else
+            {
+                obj = null;
+            }
+            return obj;
         }
     }
 }

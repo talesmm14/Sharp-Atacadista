@@ -1,13 +1,19 @@
 ﻿using System.Windows.Forms;
+using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.Forms;
 
 namespace Trabalho_A1_Supermecado
 {
     public partial class Home : Form
     {
+        Login login = new Login();
         public Home()
         {
-            InitializeComponent();
+            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
+            {
+                InitializeComponent();
+                perfil.Text = Sessao.NomeUsuario;
+            }
         }
 
         private void ajudaMenuItem_Click(object sender, System.EventArgs e)
@@ -47,16 +53,21 @@ namespace Trabalho_A1_Supermecado
 
         private void btn_retirada_Click(object sender, System.EventArgs e)
         {
-
+            Movimentacoes mov = new Movimentacoes();
+            mov.Show();
+            this.Hide();
         }
 
         private void btn_Entrada_Click(object sender, System.EventArgs e)
         {
-
+            Movimentacoes mov = new Movimentacoes();
+            mov.Show();
+            this.Hide();
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
+            Sessao.logout();
             Login login = new Login();
             login.Show();
             this.Hide();

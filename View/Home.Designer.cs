@@ -34,9 +34,9 @@
             this.relatoriosMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfil = new System.Windows.Forms.ToolStripMenuItem();
+            this.sair = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_retirada = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
@@ -107,7 +107,7 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuarioToolStripMenuItem});
+            this.usuario});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -115,28 +115,28 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // usuarioToolStripMenuItem
+            // usuario
             // 
-            this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.perfilToolStripMenuItem,
-            this.sairToolStripMenuItem});
-            this.usuarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(89, 29);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perfil,
+            this.sair});
+            this.usuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuario.Name = "usuario";
+            this.usuario.Size = new System.Drawing.Size(89, 29);
+            this.usuario.Text = "Usuario";
             // 
-            // perfilToolStripMenuItem
+            // perfil
             // 
-            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
-            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfil.Name = "perfil";
+            this.perfil.Size = new System.Drawing.Size(180, 30);
+            this.perfil.Text = "Perfil";
             // 
-            // sairToolStripMenuItem
+            // sair
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            this.sair.Name = "sair";
+            this.sair.Size = new System.Drawing.Size(180, 30);
+            this.sair.Text = "Sair";
+            this.sair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // btn_retirada
             // 
@@ -268,9 +268,9 @@
         private System.Windows.Forms.ToolStripMenuItem relatoriosMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajudaMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuario;
+        private System.Windows.Forms.ToolStripMenuItem perfil;
+        private System.Windows.Forms.ToolStripMenuItem sair;
         private System.Windows.Forms.Button btn_retirada;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button7;

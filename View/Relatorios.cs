@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.DAO;
 
 namespace Trabalho_A1_Supermecado
@@ -15,7 +16,19 @@ namespace Trabalho_A1_Supermecado
     {
         public Relatorios()
         {
-            InitializeComponent();
+            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
+            {
+                InitializeComponent();
+                perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
+            }
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Sessao.logout();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
@@ -40,6 +53,8 @@ namespace Trabalho_A1_Supermecado
 
         private void Relatorios_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Empregado'. Você pode movê-la ou removê-la conforme necessário.
+            this.empregadoTableAdapter.Fill(this.supermecadoDataSet.Empregado);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
             this.fornecedorTableAdapter.Fill(this.supermecadoDataSet.Fornecedor);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Item'. Você pode movê-la ou removê-la conforme necessário.

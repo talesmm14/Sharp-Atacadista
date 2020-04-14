@@ -37,14 +37,19 @@
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.DateTIme = new System.Windows.Forms.DateTimePicker();
             this.cb_empregado = new System.Windows.Forms.ComboBox();
+            this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supermecadoDataSet = new Trabalho_A1_Supermecado.SupermecadoDataSet();
+            this.fornecedorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_voltar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cb_fornecedor = new System.Windows.Forms.ComboBox();
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.cb_produto = new System.Windows.Forms.ComboBox();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,23 +64,21 @@
             this.fkfornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fkempregadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.supermecadoDataSet = new Trabalho_A1_Supermecado.SupermecadoDataSet();
             this.historicoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.HistoricoTableAdapter();
             this.id = new System.Windows.Forms.NumericUpDown();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
-            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fornecedorTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
-            this.fornecedorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_limpar = new System.Windows.Forms.Button();
+            this.empregadoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -103,14 +106,15 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.perfilToolStripMenuItem.Text = "Perfil";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -141,15 +145,30 @@
             // 
             // cb_empregado
             // 
-            this.cb_empregado.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.fornecedorBindingSource1, "id", true));
-            this.cb_empregado.DataSource = this.fornecedorBindingSource1;
-            this.cb_empregado.DisplayMember = "nome";
+            this.cb_empregado.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.empregadoBindingSource, "id", true));
+            this.cb_empregado.DataSource = this.empregadoBindingSource;
+            this.cb_empregado.DisplayMember = "nome_completo";
             this.cb_empregado.FormattingEnabled = true;
             this.cb_empregado.Location = new System.Drawing.Point(98, 114);
             this.cb_empregado.Name = "cb_empregado";
             this.cb_empregado.Size = new System.Drawing.Size(171, 21);
             this.cb_empregado.TabIndex = 9;
             this.cb_empregado.ValueMember = "id";
+            // 
+            // empregadoBindingSource
+            // 
+            this.empregadoBindingSource.DataMember = "Empregado";
+            this.empregadoBindingSource.DataSource = this.supermecadoDataSet;
+            // 
+            // supermecadoDataSet
+            // 
+            this.supermecadoDataSet.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fornecedorBindingSource1
+            // 
+            this.fornecedorBindingSource1.DataMember = "Fornecedor";
+            this.fornecedorBindingSource1.DataSource = this.supermecadoDataSet;
             // 
             // btn_voltar
             // 
@@ -209,6 +228,11 @@
             this.cb_fornecedor.TabIndex = 16;
             this.cb_fornecedor.ValueMember = "id";
             // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -229,6 +253,11 @@
             this.cb_produto.Size = new System.Drawing.Size(212, 21);
             this.cb_produto.TabIndex = 19;
             this.cb_produto.ValueMember = "id";
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataMember = "Item";
+            this.itemBindingSource.DataSource = this.supermecadoDataSet;
             // 
             // dataGrid
             // 
@@ -347,11 +376,6 @@
             this.historicoBindingSource.DataMember = "Historico";
             this.historicoBindingSource.DataSource = this.supermecadoDataSet;
             // 
-            // supermecadoDataSet
-            // 
-            this.supermecadoDataSet.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // historicoTableAdapter
             // 
             this.historicoTableAdapter.ClearBeforeFill = true;
@@ -363,28 +387,13 @@
             this.id.Size = new System.Drawing.Size(50, 20);
             this.id.TabIndex = 21;
             // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataMember = "Item";
-            this.itemBindingSource.DataSource = this.supermecadoDataSet;
-            // 
             // itemTableAdapter
             // 
             this.itemTableAdapter.ClearBeforeFill = true;
             // 
-            // fornecedorBindingSource
-            // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet;
-            // 
             // fornecedorTableAdapter
             // 
             this.fornecedorTableAdapter.ClearBeforeFill = true;
-            // 
-            // fornecedorBindingSource1
-            // 
-            this.fornecedorBindingSource1.DataMember = "Fornecedor";
-            this.fornecedorBindingSource1.DataSource = this.supermecadoDataSet;
             // 
             // btn_limpar
             // 
@@ -395,6 +404,10 @@
             this.btn_limpar.Text = "Limpar";
             this.btn_limpar.UseVisualStyleBackColor = true;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
+            // 
+            // empregadoTableAdapter
+            // 
+            this.empregadoTableAdapter.ClearBeforeFill = true;
             // 
             // Relatorios
             // 
@@ -424,13 +437,14 @@
             this.Load += new System.EventHandler(this.Relatorios_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,5 +491,7 @@
         private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter;
         private System.Windows.Forms.BindingSource fornecedorBindingSource1;
         private System.Windows.Forms.Button btn_limpar;
+        private System.Windows.Forms.BindingSource empregadoBindingSource;
+        private SupermecadoDataSetTableAdapters.EmpregadoTableAdapter empregadoTableAdapter;
     }
 }

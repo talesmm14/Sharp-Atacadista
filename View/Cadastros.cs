@@ -18,7 +18,19 @@ namespace Trabalho_A1_Supermecado
         CadastrosController controller = new CadastrosController();
         public Cadastros()
         {
-            InitializeComponent();
+            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
+            {
+                InitializeComponent();
+                perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
+            }
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Sessao.logout();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void btnImagem_Click(object sender, EventArgs e)

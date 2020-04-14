@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.DAO;
 
 namespace Trabalho_A1_Supermecado
@@ -16,7 +17,19 @@ namespace Trabalho_A1_Supermecado
     {
         public Consultas()
         {
-            InitializeComponent();
+            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
+            {
+                InitializeComponent();
+                perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
+            }
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Sessao.logout();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

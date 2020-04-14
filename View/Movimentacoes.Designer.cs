@@ -28,61 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRetirar = new System.Windows.Forms.Button();
             this.lbNome = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbAddFornecedor = new System.Windows.Forms.ComboBox();
+            this.cbAddProduto = new System.Windows.Forms.ComboBox();
             this.Produto = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbAddTipoEstoque = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.validadeDias = new System.Windows.Forms.NumericUpDown();
+            this.pesoKg = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.valorCompra = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_add_fornecedor = new System.Windows.Forms.Button();
             this.btn_add_Item = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEntrada = new System.Windows.Forms.Button();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRetirarTudo = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbPesquisarFornecedor = new System.Windows.Forms.ComboBox();
+            this.cbPesquisarProduto = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.button5 = new System.Windows.Forms.Button();
+            this.codPesquisarLote = new System.Windows.Forms.NumericUpDown();
+            this.dgLote = new System.Windows.Forms.DataGridView();
+            this.supermecadoDataSet = new Trabalho_A1_Supermecado.SupermecadoDataSet();
+            this.loteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loteTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.LoteTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoestoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasvalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesokgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorcompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdestoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fkitemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fkfornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.validadeDias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesoKg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valorCompra)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.codPesquisarLote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(181, 27);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(430, 37);
             this.label1.TabIndex = 0;
@@ -90,9 +107,9 @@
             // 
             // btnRetirar
             // 
-            this.btnRetirar.Location = new System.Drawing.Point(202, 53);
+            this.btnRetirar.Location = new System.Drawing.Point(136, 53);
             this.btnRetirar.Name = "btnRetirar";
-            this.btnRetirar.Size = new System.Drawing.Size(181, 47);
+            this.btnRetirar.Size = new System.Drawing.Size(120, 47);
             this.btnRetirar.TabIndex = 28;
             this.btnRetirar.Text = "Retirar";
             this.btnRetirar.UseVisualStyleBackColor = true;
@@ -107,21 +124,21 @@
             this.lbNome.TabIndex = 31;
             this.lbNome.Text = "Fornecedor";
             // 
-            // comboBox1
+            // cbAddFornecedor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 21);
-            this.comboBox1.TabIndex = 32;
+            this.cbAddFornecedor.FormattingEnabled = true;
+            this.cbAddFornecedor.Location = new System.Drawing.Point(13, 45);
+            this.cbAddFornecedor.Name = "cbAddFornecedor";
+            this.cbAddFornecedor.Size = new System.Drawing.Size(229, 21);
+            this.cbAddFornecedor.TabIndex = 32;
             // 
-            // comboBox2
+            // cbAddProduto
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(13, 104);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(229, 21);
-            this.comboBox2.TabIndex = 34;
+            this.cbAddProduto.FormattingEnabled = true;
+            this.cbAddProduto.Location = new System.Drawing.Point(13, 104);
+            this.cbAddProduto.Name = "cbAddProduto";
+            this.cbAddProduto.Size = new System.Drawing.Size(229, 21);
+            this.cbAddProduto.TabIndex = 34;
             // 
             // Produto
             // 
@@ -133,13 +150,13 @@
             this.Produto.TabIndex = 33;
             this.Produto.Text = "Produto";
             // 
-            // comboBox3
+            // cbAddTipoEstoque
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(13, 163);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(229, 21);
-            this.comboBox3.TabIndex = 36;
+            this.cbAddTipoEstoque.FormattingEnabled = true;
+            this.cbAddTipoEstoque.Location = new System.Drawing.Point(13, 163);
+            this.cbAddTipoEstoque.Name = "cbAddTipoEstoque";
+            this.cbAddTipoEstoque.Size = new System.Drawing.Size(229, 21);
+            this.cbAddTipoEstoque.TabIndex = 36;
             // 
             // label4
             // 
@@ -161,19 +178,32 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Validade em dias";
             // 
-            // numericUpDown2
+            // validadeDias
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(13, 223);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(229, 20);
-            this.numericUpDown2.TabIndex = 38;
+            this.validadeDias.Location = new System.Drawing.Point(13, 223);
+            this.validadeDias.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.validadeDias.Name = "validadeDias";
+            this.validadeDias.Size = new System.Drawing.Size(229, 20);
+            this.validadeDias.TabIndex = 38;
+            this.validadeDias.ThousandsSeparator = true;
             // 
-            // numericUpDown1
+            // pesoKg
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(13, 282);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(229, 20);
-            this.numericUpDown1.TabIndex = 40;
+            this.pesoKg.DecimalPlaces = 2;
+            this.pesoKg.Location = new System.Drawing.Point(13, 282);
+            this.pesoKg.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.pesoKg.Name = "pesoKg";
+            this.pesoKg.Size = new System.Drawing.Size(229, 20);
+            this.pesoKg.TabIndex = 40;
+            this.pesoKg.ThousandsSeparator = true;
             // 
             // label2
             // 
@@ -185,12 +215,20 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Peso (kg)";
             // 
-            // numericUpDown3
+            // valorCompra
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(13, 341);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(229, 20);
-            this.numericUpDown3.TabIndex = 42;
+            this.valorCompra.DecimalPlaces = 2;
+            this.valorCompra.Location = new System.Drawing.Point(13, 341);
+            this.valorCompra.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.valorCompra.Name = "valorCompra";
+            this.valorCompra.Size = new System.Drawing.Size(229, 20);
+            this.valorCompra.TabIndex = 42;
+            this.valorCompra.Tag = "";
+            this.valorCompra.ThousandsSeparator = true;
             // 
             // label6
             // 
@@ -208,18 +246,18 @@
             this.panel1.Controls.Add(this.btn_add_fornecedor);
             this.panel1.Controls.Add(this.btn_add_Item);
             this.panel1.Controls.Add(this.lbNome);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbAddFornecedor);
             this.panel1.Controls.Add(this.Produto);
-            this.panel1.Controls.Add(this.numericUpDown3);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.valorCompra);
+            this.panel1.Controls.Add(this.cbAddProduto);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.pesoKg);
+            this.panel1.Controls.Add(this.cbAddTipoEstoque);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.numericUpDown2);
-            this.panel1.Location = new System.Drawing.Point(12, 165);
+            this.panel1.Controls.Add(this.validadeDias);
+            this.panel1.Location = new System.Drawing.Point(13, 107);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 377);
             this.panel1.TabIndex = 46;
@@ -235,6 +273,7 @@
             this.btn_add_fornecedor.TabIndex = 44;
             this.btn_add_fornecedor.Text = "+";
             this.btn_add_fornecedor.UseVisualStyleBackColor = false;
+            this.btn_add_fornecedor.Click += new System.EventHandler(this.btn_add_fornecedor_Click);
             // 
             // btn_add_Item
             // 
@@ -247,12 +286,13 @@
             this.btn_add_Item.TabIndex = 43;
             this.btn_add_Item.Text = "+";
             this.btn_add_Item.UseVisualStyleBackColor = false;
+            this.btn_add_Item.Click += new System.EventHandler(this.btn_add_fornecedor_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(77, 115);
+            this.label8.Location = new System.Drawing.Point(78, 57);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 37);
             this.label8.TabIndex = 47;
@@ -261,84 +301,99 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnConfirmar);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(267, 165);
+            this.panel2.Location = new System.Drawing.Point(268, 107);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(419, 331);
+            this.panel2.Size = new System.Drawing.Size(293, 331);
             this.panel2.TabIndex = 49;
             // 
-            // button2
+            // btnConfirmar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(23, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(383, 60);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Confirmar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Location = new System.Drawing.Point(23, 254);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(253, 60);
+            this.btnConfirmar.TabIndex = 50;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.btnEntrada);
             this.panel3.Controls.Add(this.numericUpDown6);
             this.panel3.Controls.Add(this.btnRetirar);
             this.panel3.Controls.Add(this.numericUpDown5);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnRetirarTudo);
             this.panel3.Location = new System.Drawing.Point(20, 17);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(386, 226);
+            this.panel3.Size = new System.Drawing.Size(260, 226);
             this.panel3.TabIndex = 52;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(153, 16);
+            this.label7.Location = new System.Drawing.Point(97, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 25);
             this.label7.TabIndex = 53;
             this.label7.Text = "Ações";
             // 
-            // button3
+            // btnEntrada
             // 
-            this.button3.Location = new System.Drawing.Point(202, 146);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(181, 47);
-            this.button3.TabIndex = 50;
-            this.button3.Text = "Entrada";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEntrada.Location = new System.Drawing.Point(136, 146);
+            this.btnEntrada.Name = "btnEntrada";
+            this.btnEntrada.Size = new System.Drawing.Size(120, 47);
+            this.btnEntrada.TabIndex = 50;
+            this.btnEntrada.Text = "Entrada";
+            this.btnEntrada.UseVisualStyleBackColor = true;
             // 
             // numericUpDown6
             // 
+            this.numericUpDown6.DecimalPlaces = 2;
             this.numericUpDown6.Location = new System.Drawing.Point(3, 161);
+            this.numericUpDown6.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(193, 20);
+            this.numericUpDown6.Size = new System.Drawing.Size(127, 20);
             this.numericUpDown6.TabIndex = 51;
+            this.numericUpDown6.ThousandsSeparator = true;
             // 
             // numericUpDown5
             // 
+            this.numericUpDown5.DecimalPlaces = 2;
             this.numericUpDown5.Location = new System.Drawing.Point(3, 53);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(193, 20);
+            this.numericUpDown5.Size = new System.Drawing.Size(127, 20);
             this.numericUpDown5.TabIndex = 46;
+            this.numericUpDown5.ThousandsSeparator = true;
             // 
-            // button1
+            // btnRetirarTudo
             // 
-            this.button1.Location = new System.Drawing.Point(3, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 21);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Retirar tudo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRetirarTudo.Location = new System.Drawing.Point(3, 79);
+            this.btnRetirarTudo.Name = "btnRetirarTudo";
+            this.btnRetirarTudo.Size = new System.Drawing.Size(127, 29);
+            this.btnRetirarTudo.TabIndex = 49;
+            this.btnRetirarTudo.Text = "Retirar tudo";
+            this.btnRetirarTudo.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(260, 115);
+            this.label10.Location = new System.Drawing.Point(296, 57);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(236, 37);
             this.label10.TabIndex = 50;
@@ -347,35 +402,35 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Controls.Add(this.comboBox5);
-            this.panel4.Controls.Add(this.comboBox4);
+            this.panel4.Controls.Add(this.dgLote);
+            this.panel4.Controls.Add(this.codPesquisarLote);
+            this.panel4.Controls.Add(this.cbPesquisarFornecedor);
+            this.panel4.Controls.Add(this.cbPesquisarProduto);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.listView1);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.btnPesquisar);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Location = new System.Drawing.Point(692, 165);
+            this.panel4.Location = new System.Drawing.Point(567, 107);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(419, 377);
             this.panel4.TabIndex = 55;
             // 
-            // comboBox5
+            // cbPesquisarFornecedor
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(124, 77);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 60;
+            this.cbPesquisarFornecedor.FormattingEnabled = true;
+            this.cbPesquisarFornecedor.Location = new System.Drawing.Point(124, 77);
+            this.cbPesquisarFornecedor.Name = "cbPesquisarFornecedor";
+            this.cbPesquisarFornecedor.Size = new System.Drawing.Size(121, 21);
+            this.cbPesquisarFornecedor.TabIndex = 60;
             // 
-            // comboBox4
+            // cbPesquisarProduto
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(203, 45);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 59;
+            this.cbPesquisarProduto.FormattingEnabled = true;
+            this.cbPesquisarProduto.Location = new System.Drawing.Point(203, 45);
+            this.cbPesquisarProduto.Name = "cbPesquisarProduto";
+            this.cbPesquisarProduto.Size = new System.Drawing.Size(121, 21);
+            this.cbPesquisarProduto.TabIndex = 59;
             // 
             // label11
             // 
@@ -397,15 +452,6 @@
             this.label9.TabIndex = 57;
             this.label9.Text = "Fornecedor";
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(22, 104);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(383, 202);
-            this.listView1.TabIndex = 55;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -416,22 +462,15 @@
             this.label12.TabIndex = 54;
             this.label12.Text = "Cod.";
             // 
-            // textBox2
+            // btnPesquisar
             // 
-            this.textBox2.Location = new System.Drawing.Point(59, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(59, 20);
-            this.textBox2.TabIndex = 53;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(22, 312);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(383, 40);
-            this.button4.TabIndex = 50;
-            this.button4.Text = "Pesquisar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(22, 312);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(383, 40);
+            this.btnPesquisar.TabIndex = 50;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -446,9 +485,9 @@
             // btn_voltar
             // 
             this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.Location = new System.Drawing.Point(287, 502);
+            this.btn_voltar.Location = new System.Drawing.Point(288, 444);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(383, 40);
+            this.btn_voltar.Size = new System.Drawing.Size(256, 40);
             this.btn_voltar.TabIndex = 53;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.UseVisualStyleBackColor = true;
@@ -458,18 +497,134 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(685, 115);
+            this.label3.Location = new System.Drawing.Point(673, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(261, 37);
             this.label3.TabIndex = 56;
             this.label3.Text = "Lotes existentes";
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(604, 9);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(383, 40);
+            this.button5.TabIndex = 57;
+            this.button5.Text = "Voltar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // codPesquisarLote
+            // 
+            this.codPesquisarLote.Location = new System.Drawing.Point(67, 46);
+            this.codPesquisarLote.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.codPesquisarLote.Name = "codPesquisarLote";
+            this.codPesquisarLote.Size = new System.Drawing.Size(51, 20);
+            this.codPesquisarLote.TabIndex = 45;
+            // 
+            // dgLote
+            // 
+            this.dgLote.AllowUserToAddRows = false;
+            this.dgLote.AllowUserToDeleteRows = false;
+            this.dgLote.AutoGenerateColumns = false;
+            this.dgLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.tipoestoqueDataGridViewTextBoxColumn,
+            this.diasvalidadeDataGridViewTextBoxColumn,
+            this.pesokgDataGridViewTextBoxColumn,
+            this.valorcompraDataGridViewTextBoxColumn,
+            this.qtdestoqueDataGridViewTextBoxColumn,
+            this.fkitemDataGridViewTextBoxColumn,
+            this.fkfornecedorDataGridViewTextBoxColumn});
+            this.dgLote.DataSource = this.loteBindingSource;
+            this.dgLote.Location = new System.Drawing.Point(21, 104);
+            this.dgLote.Name = "dgLote";
+            this.dgLote.ReadOnly = true;
+            this.dgLote.Size = new System.Drawing.Size(384, 198);
+            this.dgLote.TabIndex = 61;
+            // 
+            // supermecadoDataSet
+            // 
+            this.supermecadoDataSet.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loteBindingSource
+            // 
+            this.loteBindingSource.DataMember = "Lote";
+            this.loteBindingSource.DataSource = this.supermecadoDataSet;
+            // 
+            // loteTableAdapter
+            // 
+            this.loteTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipoestoqueDataGridViewTextBoxColumn
+            // 
+            this.tipoestoqueDataGridViewTextBoxColumn.DataPropertyName = "tipo_estoque";
+            this.tipoestoqueDataGridViewTextBoxColumn.HeaderText = "Tipo estocado";
+            this.tipoestoqueDataGridViewTextBoxColumn.Name = "tipoestoqueDataGridViewTextBoxColumn";
+            this.tipoestoqueDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diasvalidadeDataGridViewTextBoxColumn
+            // 
+            this.diasvalidadeDataGridViewTextBoxColumn.DataPropertyName = "dias_validade";
+            this.diasvalidadeDataGridViewTextBoxColumn.HeaderText = "Validade (Dias)";
+            this.diasvalidadeDataGridViewTextBoxColumn.Name = "diasvalidadeDataGridViewTextBoxColumn";
+            this.diasvalidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pesokgDataGridViewTextBoxColumn
+            // 
+            this.pesokgDataGridViewTextBoxColumn.DataPropertyName = "peso_kg";
+            this.pesokgDataGridViewTextBoxColumn.HeaderText = "Peso (kg)";
+            this.pesokgDataGridViewTextBoxColumn.Name = "pesokgDataGridViewTextBoxColumn";
+            this.pesokgDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorcompraDataGridViewTextBoxColumn
+            // 
+            this.valorcompraDataGridViewTextBoxColumn.DataPropertyName = "valor_compra";
+            this.valorcompraDataGridViewTextBoxColumn.HeaderText = "Valor da compra";
+            this.valorcompraDataGridViewTextBoxColumn.Name = "valorcompraDataGridViewTextBoxColumn";
+            this.valorcompraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdestoqueDataGridViewTextBoxColumn
+            // 
+            this.qtdestoqueDataGridViewTextBoxColumn.DataPropertyName = "qtd_estoque";
+            this.qtdestoqueDataGridViewTextBoxColumn.HeaderText = "Estoque";
+            this.qtdestoqueDataGridViewTextBoxColumn.Name = "qtdestoqueDataGridViewTextBoxColumn";
+            this.qtdestoqueDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fkitemDataGridViewTextBoxColumn
+            // 
+            this.fkitemDataGridViewTextBoxColumn.DataPropertyName = "fk_item";
+            this.fkitemDataGridViewTextBoxColumn.HeaderText = "Item";
+            this.fkitemDataGridViewTextBoxColumn.Name = "fkitemDataGridViewTextBoxColumn";
+            this.fkitemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fkfornecedorDataGridViewTextBoxColumn
+            // 
+            this.fkfornecedorDataGridViewTextBoxColumn.DataPropertyName = "fk_fornecedor";
+            this.fkfornecedorDataGridViewTextBoxColumn.HeaderText = "Fornecedor";
+            this.fkfornecedorDataGridViewTextBoxColumn.Name = "fkfornecedorDataGridViewTextBoxColumn";
+            this.fkfornecedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Movimentacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 561);
+            this.ClientSize = new System.Drawing.Size(999, 506);
             this.ControlBox = false;
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.panel4);
@@ -481,9 +636,11 @@
             this.Name = "Movimentacoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movimentações do estoque";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.Load += new System.EventHandler(this.Movimentacoes_Load);
+            this.Click += new System.EventHandler(this.btn_voltar_Click);
+            ((System.ComponentModel.ISupportInitialize)(this.validadeDias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesoKg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valorCompra)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -493,6 +650,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.codPesquisarLote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,41 +664,53 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRetirar;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbAddFornecedor;
+        private System.Windows.Forms.ComboBox cbAddProduto;
         private System.Windows.Forms.Label Produto;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbAddTipoEstoque;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown validadeDias;
+        private System.Windows.Forms.NumericUpDown pesoKg;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown valorCompra;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEntrada;
+        private System.Windows.Forms.Button btnRetirarTudo;
         private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbPesquisarFornecedor;
+        private System.Windows.Forms.ComboBox cbPesquisarProduto;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.Button btn_add_fornecedor;
         private System.Windows.Forms.Button btn_add_Item;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.NumericUpDown codPesquisarLote;
+        private System.Windows.Forms.DataGridView dgLote;
+        private SupermecadoDataSet supermecadoDataSet;
+        private System.Windows.Forms.BindingSource loteBindingSource;
+        private SupermecadoDataSetTableAdapters.LoteTableAdapter loteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoestoqueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diasvalidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesokgDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorcompraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtdestoqueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fkitemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fkfornecedorDataGridViewTextBoxColumn;
     }
 }

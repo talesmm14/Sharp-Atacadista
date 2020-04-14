@@ -35,13 +35,14 @@
             this.btnEntrar = new System.Windows.Forms.Button();
             this.senha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.aviso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(66, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(64, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,6 +75,7 @@
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // senha
             // 
@@ -94,11 +96,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Senha";
             // 
+            // aviso
+            // 
+            this.aviso.AutoSize = true;
+            this.aviso.ForeColor = System.Drawing.Color.Red;
+            this.aviso.Location = new System.Drawing.Point(48, 152);
+            this.aviso.Name = "aviso";
+            this.aviso.Size = new System.Drawing.Size(0, 13);
+            this.aviso.TabIndex = 6;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(266, 368);
+            this.Controls.Add(this.aviso);
             this.Controls.Add(this.senha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEntrar);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.TextBox senha;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label aviso;
     }
 }

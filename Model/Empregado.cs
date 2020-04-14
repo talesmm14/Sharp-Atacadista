@@ -19,5 +19,6 @@ namespace Trabalho_A1_Supermecado.Classes
         public string Funcao { get => funcao; set => funcao = value; }
         public string Cpf { get => cpf; set => cpf = value; }
         public string Senha { get => senha; set => senha = value; }
+
     }
 }

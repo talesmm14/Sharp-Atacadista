@@ -75,6 +75,11 @@
             this.Setor_Nome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Setor_dg = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fksubdepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdestoqueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabMarca = new System.Windows.Forms.TabPage();
             this.Marca_Id = new System.Windows.Forms.NumericUpDown();
@@ -156,11 +161,6 @@
             this.btn_voltar = new System.Windows.Forms.Button();
             this.Funcionario = new System.Windows.Forms.DataGridView();
             this.fKItemMarcaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fksubdepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdestoqueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.Marca_.SuspendLayout();
             this.tabDepartamento.SuspendLayout();
@@ -227,14 +227,15 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.perfilToolStripMenuItem.Text = "Perfil";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // Marca_
             // 
@@ -650,6 +651,42 @@
             this.Setor_dg.ReadOnly = true;
             this.Setor_dg.Size = new System.Drawing.Size(565, 187);
             this.Setor_dg.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn9.HeaderText = "id";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 50;
+            // 
+            // fksubdepartamentoDataGridViewTextBoxColumn
+            // 
+            this.fksubdepartamentoDataGridViewTextBoxColumn.DataPropertyName = "fk_sub_departamento";
+            this.fksubdepartamentoDataGridViewTextBoxColumn.HeaderText = "Sub departamento";
+            this.fksubdepartamentoDataGridViewTextBoxColumn.Name = "fksubdepartamentoDataGridViewTextBoxColumn";
+            this.fksubdepartamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdestoqueDataGridViewTextBoxColumn1
+            // 
+            this.qtdestoqueDataGridViewTextBoxColumn1.DataPropertyName = "qtd_estoque";
+            this.qtdestoqueDataGridViewTextBoxColumn1.HeaderText = "Quantidade";
+            this.qtdestoqueDataGridViewTextBoxColumn1.Name = "qtdestoqueDataGridViewTextBoxColumn1";
+            this.qtdestoqueDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // setorBindingSource
             // 
@@ -1364,42 +1401,6 @@
             // 
             this.fKItemMarcaBindingSource1.DataMember = "FK_Item_Marca";
             this.fKItemMarcaBindingSource1.DataSource = this.marcaBindingSource;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn9.HeaderText = "id";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 50;
-            // 
-            // fksubdepartamentoDataGridViewTextBoxColumn
-            // 
-            this.fksubdepartamentoDataGridViewTextBoxColumn.DataPropertyName = "fk_sub_departamento";
-            this.fksubdepartamentoDataGridViewTextBoxColumn.HeaderText = "Sub departamento";
-            this.fksubdepartamentoDataGridViewTextBoxColumn.Name = "fksubdepartamentoDataGridViewTextBoxColumn";
-            this.fksubdepartamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdestoqueDataGridViewTextBoxColumn1
-            // 
-            this.qtdestoqueDataGridViewTextBoxColumn1.DataPropertyName = "qtd_estoque";
-            this.qtdestoqueDataGridViewTextBoxColumn1.HeaderText = "Quantidade";
-            this.qtdestoqueDataGridViewTextBoxColumn1.Name = "qtdestoqueDataGridViewTextBoxColumn1";
-            this.qtdestoqueDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // Consultas
             // 

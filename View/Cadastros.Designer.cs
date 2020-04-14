@@ -104,6 +104,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SubDepartamento_cbDepartamento = new System.Windows.Forms.ComboBox();
             this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.SubDepartamnto_btnCadastrar = new System.Windows.Forms.Button();
             this.SubDepartamento_tbxDescricao = new System.Windows.Forms.TextBox();
@@ -122,7 +123,6 @@
             this.sub_departamentoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
             this.setorTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
             this.marcaTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
-            this.departamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabFuncionario.SuspendLayout();
             this.tabProduto.SuspendLayout();
@@ -135,9 +135,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
             this.tabSubDepartamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource1)).BeginInit();
             this.tabDepartamento.SuspendLayout();
             this.tabControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // usuarioToolStripMenuItem
@@ -153,14 +153,15 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.perfilToolStripMenuItem.Text = "Perfil";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -906,6 +907,11 @@
             this.departamentoBindingSource.DataMember = "Departamento";
             this.departamentoBindingSource.DataSource = this.supermecadoDataSet;
             // 
+            // departamentoBindingSource1
+            // 
+            this.departamentoBindingSource1.DataMember = "Departamento";
+            this.departamentoBindingSource1.DataSource = this.supermecadoDataSet;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.OrangeRed;
@@ -1071,11 +1077,6 @@
             // 
             this.marcaTableAdapter.ClearBeforeFill = true;
             // 
-            // departamentoBindingSource1
-            // 
-            this.departamentoBindingSource1.DataMember = "Departamento";
-            this.departamentoBindingSource1.DataSource = this.supermecadoDataSet;
-            // 
             // Cadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1107,10 +1108,10 @@
             this.tabSubDepartamento.ResumeLayout(false);
             this.tabSubDepartamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource1)).EndInit();
             this.tabDepartamento.ResumeLayout(false);
             this.tabDepartamento.PerformLayout();
             this.tabControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
