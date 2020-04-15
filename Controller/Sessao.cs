@@ -41,5 +41,11 @@ namespace Trabalho_A1_Supermecado.Controller
             Sessao.NomeUsuario = null;
             Sessao.UsuarioId = 0;
         }
+        public static Boolean active()
+        {
+            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
+                return true;
+            return false;
+        }
     }
 }

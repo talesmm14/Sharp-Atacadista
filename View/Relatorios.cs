@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.DAO;
+using Trabalho_A1_Supermecado.Forms;
 
 namespace Trabalho_A1_Supermecado
 {
@@ -16,19 +17,28 @@ namespace Trabalho_A1_Supermecado
     {
         public Relatorios()
         {
-            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
-            {
-                InitializeComponent();
-                perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
-            }
+            InitializeComponent();
+            perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Sessao.logout();
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+            if (Application.OpenForms.Count != 0)
+            {
+                foreach (Form openForm in Application.OpenForms)
+                {
+                    if (openForm is Form)
+                    {
+                        this.Close();
+                        openForm.Show();
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)

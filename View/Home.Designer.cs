@@ -128,13 +128,13 @@
             // perfil
             // 
             this.perfil.Name = "perfil";
-            this.perfil.Size = new System.Drawing.Size(180, 30);
+            this.perfil.Size = new System.Drawing.Size(127, 30);
             this.perfil.Text = "Perfil";
             // 
             // sair
             // 
             this.sair.Name = "sair";
-            this.sair.Size = new System.Drawing.Size(180, 30);
+            this.sair.Size = new System.Drawing.Size(127, 30);
             this.sair.Text = "Sair";
             this.sair.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -250,6 +250,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Supermecado";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
             this.topmenu.ResumeLayout(false);
             this.topmenu.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

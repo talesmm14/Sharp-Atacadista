@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl = new System.Windows.Forms.Label();
-            this.cpf = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.senha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.aviso = new System.Windows.Forms.Label();
+            this.cpf = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,13 +58,6 @@
             this.lbl.Size = new System.Drawing.Size(50, 24);
             this.lbl.TabIndex = 1;
             this.lbl.Text = "CPF";
-            // 
-            // cpf
-            // 
-            this.cpf.Location = new System.Drawing.Point(48, 202);
-            this.cpf.Name = "cpf";
-            this.cpf.Size = new System.Drawing.Size(166, 20);
-            this.cpf.TabIndex = 2;
             // 
             // btnEntrar
             // 
@@ -105,16 +98,24 @@
             this.aviso.Size = new System.Drawing.Size(0, 13);
             this.aviso.TabIndex = 6;
             // 
+            // cpf
+            // 
+            this.cpf.Location = new System.Drawing.Point(48, 202);
+            this.cpf.Mask = "000,000,000-00";
+            this.cpf.Name = "cpf";
+            this.cpf.Size = new System.Drawing.Size(166, 20);
+            this.cpf.TabIndex = 7;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(266, 368);
+            this.Controls.Add(this.cpf);
             this.Controls.Add(this.aviso);
             this.Controls.Add(this.senha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.cpf);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
@@ -130,10 +131,10 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.TextBox cpf;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.TextBox senha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label aviso;
+        private System.Windows.Forms.MaskedTextBox cpf;
     }
 }

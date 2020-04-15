@@ -34,12 +34,12 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabFuncionario = new System.Windows.Forms.TabPage();
+            this.Funcionario_tbcCPF = new System.Windows.Forms.MaskedTextBox();
             this.Funcionario_lbConfirmar = new System.Windows.Forms.Label();
             this.Funcionario_tbxConfirmar = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Funcionario_cbFuncao = new System.Windows.Forms.ComboBox();
             this.Funcionario_tbxSenha = new System.Windows.Forms.TextBox();
-            this.Funcionario_tbcCPF = new System.Windows.Forms.TextBox();
             this.Funcionario_NomeCompleto = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -153,13 +153,13 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
             this.perfilToolStripMenuItem.Text = "Perfil";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -177,12 +177,12 @@
             // 
             // tabFuncionario
             // 
+            this.tabFuncionario.Controls.Add(this.Funcionario_tbcCPF);
             this.tabFuncionario.Controls.Add(this.Funcionario_lbConfirmar);
             this.tabFuncionario.Controls.Add(this.Funcionario_tbxConfirmar);
             this.tabFuncionario.Controls.Add(this.label17);
             this.tabFuncionario.Controls.Add(this.Funcionario_cbFuncao);
             this.tabFuncionario.Controls.Add(this.Funcionario_tbxSenha);
-            this.tabFuncionario.Controls.Add(this.Funcionario_tbcCPF);
             this.tabFuncionario.Controls.Add(this.Funcionario_NomeCompleto);
             this.tabFuncionario.Controls.Add(this.label10);
             this.tabFuncionario.Controls.Add(this.label11);
@@ -197,6 +197,15 @@
             this.tabFuncionario.TabIndex = 5;
             this.tabFuncionario.Text = "Funcionario";
             this.tabFuncionario.UseVisualStyleBackColor = true;
+            // 
+            // Funcionario_tbcCPF
+            // 
+            this.Funcionario_tbcCPF.Location = new System.Drawing.Point(13, 125);
+            this.Funcionario_tbcCPF.Mask = "000,000,000-00";
+            this.Funcionario_tbcCPF.Name = "Funcionario_tbcCPF";
+            this.Funcionario_tbcCPF.Size = new System.Drawing.Size(243, 20);
+            this.Funcionario_tbcCPF.TabIndex = 52;
+            this.Funcionario_tbcCPF.ValidatingType = typeof(int);
             // 
             // Funcionario_lbConfirmar
             // 
@@ -246,13 +255,6 @@
             this.Funcionario_tbxSenha.Size = new System.Drawing.Size(243, 20);
             this.Funcionario_tbxSenha.TabIndex = 45;
             this.Funcionario_tbxSenha.UseSystemPasswordChar = true;
-            // 
-            // Funcionario_tbcCPF
-            // 
-            this.Funcionario_tbcCPF.Location = new System.Drawing.Point(13, 126);
-            this.Funcionario_tbcCPF.Name = "Funcionario_tbcCPF";
-            this.Funcionario_tbcCPF.Size = new System.Drawing.Size(243, 20);
-            this.Funcionario_tbcCPF.TabIndex = 43;
             // 
             // Funcionario_NomeCompleto
             // 
@@ -1125,7 +1127,6 @@
         private System.Windows.Forms.TabPage tabFuncionario;
         private System.Windows.Forms.ComboBox Funcionario_cbFuncao;
         private System.Windows.Forms.TextBox Funcionario_tbxSenha;
-        private System.Windows.Forms.TextBox Funcionario_tbcCPF;
         private System.Windows.Forms.TextBox Funcionario_NomeCompleto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -1212,5 +1213,6 @@
         private System.Windows.Forms.BindingSource marcaBindingSource;
         private SupermecadoDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter;
         private System.Windows.Forms.BindingSource departamentoBindingSource1;
+        private System.Windows.Forms.MaskedTextBox Funcionario_tbcCPF;
     }
 }

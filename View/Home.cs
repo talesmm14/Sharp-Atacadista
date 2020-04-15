@@ -9,11 +9,8 @@ namespace Trabalho_A1_Supermecado
         Login login = new Login();
         public Home()
         {
-            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
-            {
-                InitializeComponent();
-                perfil.Text = Sessao.NomeUsuario;
-            }
+            InitializeComponent();
+            perfil.Text = Sessao.NomeUsuario;
         }
 
         private void ajudaMenuItem_Click(object sender, System.EventArgs e)
@@ -71,6 +68,11 @@ namespace Trabalho_A1_Supermecado
             Login login = new Login();
             login.Show();
             this.Hide();
+        }
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Sessao.logout();
         }
     }
 }

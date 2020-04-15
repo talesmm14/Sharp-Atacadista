@@ -26,12 +26,11 @@ namespace Trabalho_A1_Supermecado.Forms
             User = Sessao.login(cpf.Text, senha.Text);
             if (User != null)
             {
-                Home home = new Home();
-                this.Hide();
-                home.Show();
+                DialogResult = DialogResult.OK;
             }
             aviso.Text = "CPF ou Senha incorretos!!";
             senha.Text = "";
+            lbl.Text = cpf.Text;
         }
     }
 }

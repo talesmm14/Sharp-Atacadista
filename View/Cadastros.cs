@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Trabalho_A1_Supermecado.Classes;
 using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.DAO;
+using Trabalho_A1_Supermecado.Forms;
 
 namespace Trabalho_A1_Supermecado
 {
@@ -18,11 +19,8 @@ namespace Trabalho_A1_Supermecado
         CadastrosController controller = new CadastrosController();
         public Cadastros()
         {
-            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
-            {
-                InitializeComponent();
-                perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
-            }
+            InitializeComponent();
+            perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)

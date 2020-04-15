@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.DAO;
+using Trabalho_A1_Supermecado.Forms;
 
 namespace Trabalho_A1_Supermecado
 {
@@ -17,11 +18,8 @@ namespace Trabalho_A1_Supermecado
     {
         public Consultas()
         {
-            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
-            {
-                InitializeComponent();
-                perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
-            }
+            InitializeComponent();
+            perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -101,7 +99,7 @@ namespace Trabalho_A1_Supermecado
             else
             {
                 Departamento_Nome.Text = "";
-                Departamento_dg.DataSource = Conexao.pesquisar("SELECT * FROM Departamento WHERE (id = "+ Departamento_Id.Text + ")");
+                Departamento_dg.DataSource = Conexao.pesquisar("SELECT * FROM Departamento WHERE (id = " + Departamento_Id.Text + ")");
             }
         }
 
@@ -118,7 +116,7 @@ namespace Trabalho_A1_Supermecado
             {
                 SubDepartamento_dg.DataSource = Conexao.pesquisar("SELECT * FROM Sub_departamento WHERE " +
                     "((nome IS NULL OR nome LIKE '%" + SubDepartamento_Nome.Text + "%') " +
-                    "AND (fk_departamento = " + ((int) SubDepartamento_cbDepartamento.SelectedValue) +"))");
+                    "AND (fk_departamento = " + ((int)SubDepartamento_cbDepartamento.SelectedValue) + "))");
             }
             else
             {
@@ -163,7 +161,7 @@ namespace Trabalho_A1_Supermecado
                 Marca_dg.DataSource = Conexao.pesquisar("SELECT * FROM Marca WHERE " +
                     "((nome LIKE '%" + Marca_Nome.Text + "%')" +
                     "AND " +
-                    "(cnpj LIKE '%" + Marca_Cnpj.Text + "%'))" );
+                    "(cnpj LIKE '%" + Marca_Cnpj.Text + "%'))");
             }
             else
             {

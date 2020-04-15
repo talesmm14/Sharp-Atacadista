@@ -15,19 +15,27 @@ namespace Trabalho_A1_Supermecado.Forms
     {
         public Movimentacoes()
         {
-            if (Sessao.NomeUsuario != null && Sessao.UsuarioId > 0)
-            {
-                InitializeComponent();
-                perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
-            }
+            InitializeComponent();
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Sessao.logout();
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+            if (Application.OpenForms.Count != 0)
+            {
+                foreach (Form openForm in Application.OpenForms)
+                {
+                    if (openForm is Form)
+                    {
+                        this.Close();
+                        openForm.Show();
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
