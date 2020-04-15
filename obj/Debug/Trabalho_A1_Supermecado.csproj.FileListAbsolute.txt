@@ -14,3 +14,4 @@ E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supe
 E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Forms.Movimentacoes.resources
 E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Cadastros.resources
 E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.Forms.Login.resources
+E:\Documentos\VisualStudio\source\repos\Trabalho_A1_Supermecado\Trabalho_A1_Supermecado\obj\Debug\Trabalho_A1_Supermecado.View.Entrada.resources

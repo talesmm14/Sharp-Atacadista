@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.Forms;
+using Trabalho_A1_Supermecado.View;
 
 namespace Trabalho_A1_Supermecado
 {
@@ -57,7 +58,7 @@ namespace Trabalho_A1_Supermecado
 
         private void btn_Entrada_Click(object sender, System.EventArgs e)
         {
-            Movimentacoes mov = new Movimentacoes();
+            Entrada mov = new Entrada();
             mov.Show();
             this.Hide();
         }

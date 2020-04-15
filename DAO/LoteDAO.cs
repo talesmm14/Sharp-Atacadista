@@ -77,6 +77,31 @@ namespace Trabalho_A1_Supermecado.DAO
             }
             return obj;
         }
+        public static Lote findLastId()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT IDENT_CURRENT('Lote')";
+            SqlDataReader dr = Conexao.selecionar(cmd);
+
+            Lote obj = new Lote();
+            if (dr.HasRows)
+            {
+                dr.Read();
+                obj.Id = (int)dr["id"];
+                obj.Tipo_estoque = dr["tipo_estoque"].ToString();
+                obj.Dias_validade = (int)dr["dias_validade"];
+                obj.Peso_kg = (float)dr["peso_kg"];
+                obj.Valor_compra = (float)dr["valor_compra"];
+                obj.Qtd_estoque = (int)dr["qtd_estoque"];
+                obj.Item = ItemDAO.findById((int)dr["fk_item"]);
+                obj.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
+            }
+            else
+            {
+                obj = null;
+            }
+            return obj;
+        }
         public List<Lote> findAll()
         {
             SqlCommand cmd = new SqlCommand();

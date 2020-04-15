@@ -49,8 +49,8 @@
   <ItemGroup>
     <Compile Include="Controller\CadastrosController.cs" />
     <Compile Include="Controller\ConsultasController.cs" />
+    <Compile Include="Controller\EntradaController.cs" />
     <Compile Include="Controller\HomeController.cs" />
-    <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\MovimentacoesController.cs" />
     <Compile Include="Controller\RelatoriosController.cs" />
     <Compile Include="Controller\Sessao.cs" />
@@ -96,6 +96,12 @@
     <Compile Include="View\Consultas.Designer.cs">
       <DependentUpon>Consultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Consultas.resx">
       <DependentUpon>Consultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
