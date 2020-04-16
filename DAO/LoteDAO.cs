@@ -23,6 +23,9 @@ namespace Trabalho_A1_Supermecado.DAO
             cmd.Parameters.AddWithValue("@qtd_estoque", lote.Qtd_estoque);
             cmd.Parameters.AddWithValue("@fk_item", lote.Item.Id);
             cmd.Parameters.AddWithValue("@fk_fornecedor", lote.Fornecedor.Id);
+            cmd.Parameters.AddWithValue("@data_entrada", lote.DataEntrada);
+            cmd.Parameters.AddWithValue("@data_fabricacao", lote.DataFabricacao);
+            cmd.Parameters.AddWithValue("@codigo", lote.Codigo);
             if (Conexao.CRUD(cmd))
                 return lote;
             return null;
@@ -39,7 +42,10 @@ namespace Trabalho_A1_Supermecado.DAO
             cmd.Parameters.AddWithValue("@valor_compra", lote.Valor_compra);
             cmd.Parameters.AddWithValue("@qtd_estoque", lote.Qtd_estoque);
             cmd.Parameters.AddWithValue("@fk_item", lote.Item.Id);
-            cmd.Parameters.AddWithValue("@fk_fornecedor", lote.Fornecedor.Id);
+            cmd.Parameters.AddWithValue("@fk_fornecedor", lote.Fornecedor.Id); 
+            cmd.Parameters.AddWithValue("@data_entrada", lote.DataEntrada);
+            cmd.Parameters.AddWithValue("@data_fabricacao", lote.DataFabricacao);
+            cmd.Parameters.AddWithValue("@codigo", lote.Codigo);
             if (Conexao.CRUD(cmd))
                 return lote;
             return null;
@@ -64,7 +70,7 @@ namespace Trabalho_A1_Supermecado.DAO
                 dr.Read();
                 obj.Id = (int)dr["id"];
                 obj.Tipo_estoque = dr["tipo_estoque"].ToString();
-                obj.Dias_validade = (int)dr["dias_validade"];
+                obj.Dias_validade = (DateTime)dr["dias_validade"];
                 obj.Peso_kg = (float)dr["peso_kg"];
                 obj.Valor_compra = (float)dr["valor_compra"];
                 obj.Qtd_estoque = (int)dr["qtd_estoque"];
@@ -77,10 +83,11 @@ namespace Trabalho_A1_Supermecado.DAO
             }
             return obj;
         }
-        public static Lote findLastId()
+        public static Lote findByCode(String codigo)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT IDENT_CURRENT('Lote')";
+            cmd.CommandText = "SELECT * FROM Lote WHERE codigo = @codigo";
+            cmd.Parameters.AddWithValue("@codigo", codigo);
             SqlDataReader dr = Conexao.selecionar(cmd);
 
             Lote obj = new Lote();
@@ -89,12 +96,15 @@ namespace Trabalho_A1_Supermecado.DAO
                 dr.Read();
                 obj.Id = (int)dr["id"];
                 obj.Tipo_estoque = dr["tipo_estoque"].ToString();
-                obj.Dias_validade = (int)dr["dias_validade"];
+                obj.Dias_validade = (DateTime)dr["dias_validade"];
                 obj.Peso_kg = (float)dr["peso_kg"];
                 obj.Valor_compra = (float)dr["valor_compra"];
                 obj.Qtd_estoque = (int)dr["qtd_estoque"];
                 obj.Item = ItemDAO.findById((int)dr["fk_item"]);
                 obj.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
+                obj.DataEntrada = (DateTime)dr["data_entrada"];
+                obj.DataFabricacao = (DateTime)dr["data_fabricacao"];
+                obj.Codigo = (String)dr["codigo"];
             }
             else
             {
@@ -116,12 +126,15 @@ namespace Trabalho_A1_Supermecado.DAO
                     Lote obj = new Lote();
                     obj.Id = (int)dr["id"];
                     obj.Tipo_estoque = dr["tipo_estoque"].ToString();
-                    obj.Dias_validade = (int)dr["dias_validade"];
+                    obj.Dias_validade = (DateTime)dr["dias_validade"];
                     obj.Peso_kg = (float)dr["peso_kg"];
                     obj.Valor_compra = (float)dr["valor_compra"];
                     obj.Qtd_estoque = (int)dr["qtd_estoque"];
                     obj.Item = ItemDAO.findById((int)dr["fk_item"]);
                     obj.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
+                    obj.DataEntrada = (DateTime)dr["data_entrada"];
+                    obj.DataFabricacao = (DateTime)dr["data_fabricacao"];
+                    obj.Codigo = (String)dr["codigo"];
                     objs.Add(obj);
                 }
             }

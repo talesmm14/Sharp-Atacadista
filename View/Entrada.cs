@@ -25,26 +25,29 @@ namespace Trabalho_A1_Supermecado.View
             EntradaController con = new EntradaController();
             Lote obj = new Lote();
             obj.Tipo_estoque = cbEstoqueTipo.SelectedValue.ToString();
-            obj.Dias_validade = (int)validadeDias.Value;
+            obj.Dias_validade = (DateTime)validadeDias.Value;
             obj.Peso_kg = (float)pesoKg.Value;
             obj.Qtd_estoque = (int)estoque.Value;
             obj.Item = ItemDAO.findById((int)cbItem.SelectedValue);
             obj.Fornecedor = FornecedorDAO.findById((int)cbFornecedor.SelectedValue);
             obj.Valor_compra = (float)valorCompra.Value;
+            obj.DataFabricacao = (DateTime)dtFabricacao.Value;
+            obj.Codigo = (String)tbxCodigo.Text;
 
             if (cbEstoqueTipo.SelectedValue != null || pesoKg.Value != 0 || estoque.Value != 0 ||
-                cbItem.SelectedValue != null || cbFornecedor.SelectedValue != null || valorCompra.Value != 0)
+                cbItem.SelectedValue != null || cbFornecedor.SelectedValue != null || valorCompra.Value != 0 ||
+                tbxCodigo.Text != "")
             {
                 if (con.cadastrarLote(obj) != false)
                 {
                     MessageBox.Show("Cadastro realizado!!");
                     pesoKg.Value = 0;
                     estoque.Value = 0;
-                    validadeDias.Value = 0;
                     cbEstoqueTipo.SelectedIndex = 0;
                     cbItem.SelectedIndex = 0;
                     cbFornecedor.SelectedIndex = 0;
                     valorCompra.Value = 0;
+                    tbxCodigo.Text = "";
                 }
                 else
                 {
@@ -90,6 +93,19 @@ namespace Trabalho_A1_Supermecado.View
         {
             if (codFornecedor.Value != 0)
                 cbItem.DataSource = ItemDAO.returnDataSource();
+        }
+
+        private void Entrada_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Item'. Você pode movê-la ou removê-la conforme necessário.
+            this.itemTableAdapter1.Fill(this.supermecadoDataSet1.Item);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
+            this.fornecedorTableAdapter1.Fill(this.supermecadoDataSet1.Fornecedor);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Item'. Você pode movê-la ou removê-la conforme necessário.
+            this.itemTableAdapter.Fill(this.supermecadoDataSet.Item);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
+            this.fornecedorTableAdapter.Fill(this.supermecadoDataSet.Fornecedor);
+
         }
     }
 }

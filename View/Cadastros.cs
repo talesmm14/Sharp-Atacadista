@@ -267,6 +267,14 @@ namespace Trabalho_A1_Supermecado
 
         private void Cadastros_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Marca'. Você pode movê-la ou removê-la conforme necessário.
+            this.marcaTableAdapter1.Fill(this.supermecadoDataSet1.Marca);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Setor'. Você pode movê-la ou removê-la conforme necessário.
+            this.setorTableAdapter1.Fill(this.supermecadoDataSet1.Setor);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Sub_departamento'. Você pode movê-la ou removê-la conforme necessário.
+            this.sub_departamentoTableAdapter1.Fill(this.supermecadoDataSet1.Sub_departamento);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Departamento'. Você pode movê-la ou removê-la conforme necessário.
+            this.departamentoTableAdapter1.Fill(this.supermecadoDataSet1.Departamento);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Marca'. Você pode movê-la ou removê-la conforme necessário.
             this.marcaTableAdapter.Fill(this.supermecadoDataSet.Marca);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Setor'. Você pode movê-la ou removê-la conforme necessário.

@@ -1604,6 +1604,12 @@ namespace Trabalho_A1_Supermecado {
             
             private global::System.Data.DataColumn columnfk_empregado;
             
+            private global::System.Data.DataColumn columndata_fabricacao;
+            
+            private global::System.Data.DataColumn columndata_entrada;
+            
+            private global::System.Data.DataColumn columncodigo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public HistoricoDataTable() {
@@ -1735,6 +1741,30 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn data_fabricacaoColumn {
+                get {
+                    return this.columndata_fabricacao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn data_entradaColumn {
+                get {
+                    return this.columndata_entrada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn codigoColumn {
+                get {
+                    return this.columncodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1770,7 +1800,7 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public HistoricoRow AddHistoricoRow(System.DateTime datetime, string operacao, LoteRow parentLoteRowByFK_Historico_Lote, string tipo_estoque, int dias_validade, double peso_kg, double valor_compra, int qtd_estoque, ItemRow parentItemRowByFK_Historico_Item, FornecedorRow parentFornecedorRowByFK_Historico_Fornecedor, EmpregadoRow parentEmpregadoRowByFK_Historico_Empregado) {
+            public HistoricoRow AddHistoricoRow(System.DateTime datetime, string operacao, LoteRow parentLoteRowByFK_Historico_Lote, string tipo_estoque, int dias_validade, double peso_kg, double valor_compra, int qtd_estoque, ItemRow parentItemRowByFK_Historico_Item, FornecedorRow parentFornecedorRowByFK_Historico_Fornecedor, EmpregadoRow parentEmpregadoRowByFK_Historico_Empregado, System.DateTime data_fabricacao, System.DateTime data_entrada, string codigo) {
                 HistoricoRow rowHistoricoRow = ((HistoricoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1784,7 +1814,10 @@ namespace Trabalho_A1_Supermecado {
                         qtd_estoque,
                         null,
                         null,
-                        null};
+                        null,
+                        data_fabricacao,
+                        data_entrada,
+                        codigo};
                 if ((parentLoteRowByFK_Historico_Lote != null)) {
                     columnValuesArray[3] = parentLoteRowByFK_Historico_Lote[0];
                 }
@@ -1838,6 +1871,9 @@ namespace Trabalho_A1_Supermecado {
                 this.columnfk_item = base.Columns["fk_item"];
                 this.columnfk_fornecedor = base.Columns["fk_fornecedor"];
                 this.columnfk_empregado = base.Columns["fk_empregado"];
+                this.columndata_fabricacao = base.Columns["data_fabricacao"];
+                this.columndata_entrada = base.Columns["data_entrada"];
+                this.columncodigo = base.Columns["codigo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1867,6 +1903,12 @@ namespace Trabalho_A1_Supermecado {
                 base.Columns.Add(this.columnfk_fornecedor);
                 this.columnfk_empregado = new global::System.Data.DataColumn("fk_empregado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfk_empregado);
+                this.columndata_fabricacao = new global::System.Data.DataColumn("data_fabricacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndata_fabricacao);
+                this.columndata_entrada = new global::System.Data.DataColumn("data_entrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndata_entrada);
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -1877,6 +1919,7 @@ namespace Trabalho_A1_Supermecado {
                 this.columnid.Unique = true;
                 this.columnoperacao.MaxLength = 50;
                 this.columntipo_estoque.MaxLength = 100;
+                this.columncodigo.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2373,7 +2416,7 @@ namespace Trabalho_A1_Supermecado {
             
             private global::System.Data.DataColumn columntipo_estoque;
             
-            private global::System.Data.DataColumn columndias_validade;
+            private global::System.Data.DataColumn columnvalidade;
             
             private global::System.Data.DataColumn columnpeso_kg;
             
@@ -2384,6 +2427,12 @@ namespace Trabalho_A1_Supermecado {
             private global::System.Data.DataColumn columnfk_item;
             
             private global::System.Data.DataColumn columnfk_fornecedor;
+            
+            private global::System.Data.DataColumn columndata_entrada;
+            
+            private global::System.Data.DataColumn columndata_fabricacao;
+            
+            private global::System.Data.DataColumn columncodigo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2436,9 +2485,9 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn dias_validadeColumn {
+            public global::System.Data.DataColumn validadeColumn {
                 get {
-                    return this.columndias_validade;
+                    return this.columnvalidade;
                 }
             }
             
@@ -2484,6 +2533,30 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn data_entradaColumn {
+                get {
+                    return this.columndata_entrada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn data_fabricacaoColumn {
+                get {
+                    return this.columndata_fabricacao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn codigoColumn {
+                get {
+                    return this.columncodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2519,17 +2592,20 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LoteRow AddLoteRow(string tipo_estoque, int dias_validade, double peso_kg, double valor_compra, int qtd_estoque, ItemRow parentItemRowByFK_Lote_Item, FornecedorRow parentFornecedorRowByFK_Lote_Fornecedor) {
+            public LoteRow AddLoteRow(string tipo_estoque, System.DateTime validade, double peso_kg, double valor_compra, int qtd_estoque, ItemRow parentItemRowByFK_Lote_Item, FornecedorRow parentFornecedorRowByFK_Lote_Fornecedor, System.DateTime data_entrada, System.DateTime data_fabricacao, string codigo) {
                 LoteRow rowLoteRow = ((LoteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         tipo_estoque,
-                        dias_validade,
+                        validade,
                         peso_kg,
                         valor_compra,
                         qtd_estoque,
                         null,
-                        null};
+                        null,
+                        data_entrada,
+                        data_fabricacao,
+                        codigo};
                 if ((parentItemRowByFK_Lote_Item != null)) {
                     columnValuesArray[6] = parentItemRowByFK_Lote_Item[0];
                 }
@@ -2567,12 +2643,15 @@ namespace Trabalho_A1_Supermecado {
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
                 this.columntipo_estoque = base.Columns["tipo_estoque"];
-                this.columndias_validade = base.Columns["dias_validade"];
+                this.columnvalidade = base.Columns["validade"];
                 this.columnpeso_kg = base.Columns["peso_kg"];
                 this.columnvalor_compra = base.Columns["valor_compra"];
                 this.columnqtd_estoque = base.Columns["qtd_estoque"];
                 this.columnfk_item = base.Columns["fk_item"];
                 this.columnfk_fornecedor = base.Columns["fk_fornecedor"];
+                this.columndata_entrada = base.Columns["data_entrada"];
+                this.columndata_fabricacao = base.Columns["data_fabricacao"];
+                this.columncodigo = base.Columns["codigo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2582,8 +2661,8 @@ namespace Trabalho_A1_Supermecado {
                 base.Columns.Add(this.columnid);
                 this.columntipo_estoque = new global::System.Data.DataColumn("tipo_estoque", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipo_estoque);
-                this.columndias_validade = new global::System.Data.DataColumn("dias_validade", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndias_validade);
+                this.columnvalidade = new global::System.Data.DataColumn("validade", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvalidade);
                 this.columnpeso_kg = new global::System.Data.DataColumn("peso_kg", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpeso_kg);
                 this.columnvalor_compra = new global::System.Data.DataColumn("valor_compra", typeof(double), null, global::System.Data.MappingType.Element);
@@ -2594,6 +2673,12 @@ namespace Trabalho_A1_Supermecado {
                 base.Columns.Add(this.columnfk_item);
                 this.columnfk_fornecedor = new global::System.Data.DataColumn("fk_fornecedor", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfk_fornecedor);
+                this.columndata_entrada = new global::System.Data.DataColumn("data_entrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndata_entrada);
+                this.columndata_fabricacao = new global::System.Data.DataColumn("data_fabricacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndata_fabricacao);
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -2603,6 +2688,7 @@ namespace Trabalho_A1_Supermecado {
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
                 this.columntipo_estoque.MaxLength = 100;
+                this.columncodigo.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4331,6 +4417,54 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime data_fabricacao {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableHistorico.data_fabricacaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'data_fabricacao\' na tabela \'Historico\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHistorico.data_fabricacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime data_entrada {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableHistorico.data_entradaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'data_entrada\' na tabela \'Historico\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHistorico.data_entradaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string codigo {
+                get {
+                    try {
+                        return ((string)(this[this.tableHistorico.codigoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'codigo\' na tabela \'Historico\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHistorico.codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public EmpregadoRow EmpregadoRow {
                 get {
                     return ((EmpregadoRow)(this.GetParentRow(this.Table.ParentRelations["FK_Historico_Empregado"])));
@@ -4503,6 +4637,42 @@ namespace Trabalho_A1_Supermecado {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfk_empregadoNull() {
                 this[this.tableHistorico.fk_empregadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdata_fabricacaoNull() {
+                return this.IsNull(this.tableHistorico.data_fabricacaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdata_fabricacaoNull() {
+                this[this.tableHistorico.data_fabricacaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdata_entradaNull() {
+                return this.IsNull(this.tableHistorico.data_entradaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdata_entradaNull() {
+                this[this.tableHistorico.data_entradaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscodigoNull() {
+                return this.IsNull(this.tableHistorico.codigoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcodigoNull() {
+                this[this.tableHistorico.codigoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4787,17 +4957,17 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int dias_validade {
+            public System.DateTime validade {
                 get {
                     try {
-                        return ((int)(this[this.tableLote.dias_validadeColumn]));
+                        return ((global::System.DateTime)(this[this.tableLote.validadeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'dias_validade\' na tabela \'Lote\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'validade\' na tabela \'Lote\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLote.dias_validadeColumn] = value;
+                    this[this.tableLote.validadeColumn] = value;
                 }
             }
             
@@ -4883,6 +5053,54 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime data_entrada {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableLote.data_entradaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'data_entrada\' na tabela \'Lote\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLote.data_entradaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime data_fabricacao {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableLote.data_fabricacaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'data_fabricacao\' na tabela \'Lote\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLote.data_fabricacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string codigo {
+                get {
+                    try {
+                        return ((string)(this[this.tableLote.codigoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'codigo\' na tabela \'Lote\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLote.codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FornecedorRow FornecedorRow {
                 get {
                     return ((FornecedorRow)(this.GetParentRow(this.Table.ParentRelations["FK_Lote_Fornecedor"])));
@@ -4917,14 +5135,14 @@ namespace Trabalho_A1_Supermecado {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isdias_validadeNull() {
-                return this.IsNull(this.tableLote.dias_validadeColumn);
+            public bool IsvalidadeNull() {
+                return this.IsNull(this.tableLote.validadeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setdias_validadeNull() {
-                this[this.tableLote.dias_validadeColumn] = global::System.Convert.DBNull;
+            public void SetvalidadeNull() {
+                this[this.tableLote.validadeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4985,6 +5203,42 @@ namespace Trabalho_A1_Supermecado {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfk_fornecedorNull() {
                 this[this.tableLote.fk_fornecedorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdata_entradaNull() {
+                return this.IsNull(this.tableLote.data_entradaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdata_entradaNull() {
+                this[this.tableLote.data_entradaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isdata_fabricacaoNull() {
+                return this.IsNull(this.tableLote.data_fabricacaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setdata_fabricacaoNull() {
+                this[this.tableLote.data_fabricacaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscodigoNull() {
+                return this.IsNull(this.tableLote.codigoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcodigoNull() {
+                this[this.tableLote.codigoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7162,10 +7416,13 @@ SELECT id, nome, complemento, cnpj, endereco, telefone FROM Fornecedor WHERE (id
             tableMapping.ColumnMappings.Add("fk_item", "fk_item");
             tableMapping.ColumnMappings.Add("fk_fornecedor", "fk_fornecedor");
             tableMapping.ColumnMappings.Add("fk_empregado", "fk_empregado");
+            tableMapping.ColumnMappings.Add("data_fabricacao", "data_fabricacao");
+            tableMapping.ColumnMappings.Add("data_entrada", "data_entrada");
+            tableMapping.ColumnMappings.Add("codigo", "codigo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Historico] WHERE (([id] = @Original_id) AND ((@IsNull_datetime = 1 AND [datetime] IS NULL) OR ([datetime] = @Original_datetime)) AND ((@IsNull_operacao = 1 AND [operacao] IS NULL) OR ([operacao] = @Original_operacao)) AND ((@IsNull_fk_id_lote = 1 AND [fk_id_lote] IS NULL) OR ([fk_id_lote] = @Original_fk_id_lote)) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([tipo_estoque] = @Original_tipo_estoque)) AND ((@IsNull_dias_validade = 1 AND [dias_validade] IS NULL) OR ([dias_validade] = @Original_dias_validade)) AND ((@IsNull_peso_kg = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((@IsNull_valor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Original_valor_compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR ([qtd_estoque] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] IS NULL) OR ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND [fk_fornecedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)) AND ((@IsNull_fk_empregado = 1 AND [fk_empregado] IS NULL) OR ([fk_empregado] = @Original_fk_empregado)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Historico] WHERE (([id] = @Original_id) AND ((@IsNull_datetime = 1 AND [datetime] IS NULL) OR ([datetime] = @Original_datetime)) AND ((@IsNull_operacao = 1 AND [operacao] IS NULL) OR ([operacao] = @Original_operacao)) AND ((@IsNull_fk_id_lote = 1 AND [fk_id_lote] IS NULL) OR ([fk_id_lote] = @Original_fk_id_lote)) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([tipo_estoque] = @Original_tipo_estoque)) AND ((@IsNull_dias_validade = 1 AND [dias_validade] IS NULL) OR ([dias_validade] = @Original_dias_validade)) AND ((@IsNull_peso_kg = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((@IsNull_valor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Original_valor_compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR ([qtd_estoque] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] IS NULL) OR ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND [fk_fornecedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)) AND ((@IsNull_fk_empregado = 1 AND [fk_empregado] IS NULL) OR ([fk_empregado] = @Original_fk_empregado)) AND ((@IsNull_data_fabricacao = 1 AND [data_fabricacao] IS NULL) OR ([data_fabricacao] = @Original_data_fabricacao)) AND ((@IsNull_data_entrada = 1 AND [data_entrada] IS NULL) OR ([data_entrada] = @Original_data_entrada)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_datetime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -7190,10 +7447,14 @@ SELECT id, nome, complemento, cnpj, endereco, telefone FROM Fornecedor WHERE (id
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fk_empregado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_empregado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_empregado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_empregado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_fabricacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_entrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Historico] ([datetime], [operacao], [fk_id_lote], [tipo_estoque], [dias_validade], [peso_kg], [valor_compra], [qtd_estoque], [fk_item], [fk_fornecedor], [fk_empregado]) VALUES (@datetime, @operacao, @fk_id_lote, @tipo_estoque, @dias_validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor, @fk_empregado);
-SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado FROM Historico WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Historico] ([datetime], [operacao], [fk_id_lote], [tipo_estoque], [dias_validade], [peso_kg], [valor_compra], [qtd_estoque], [fk_item], [fk_fornecedor], [fk_empregado], [data_fabricacao], [data_entrada], [codigo]) VALUES (@datetime, @operacao, @fk_id_lote, @tipo_estoque, @dias_validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor, @fk_empregado, @data_fabricacao, @data_entrada, @codigo);
+SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado, data_fabricacao, data_entrada, codigo FROM Historico WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@operacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "operacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7206,29 +7467,36 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_empregado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_empregado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Historico] SET [datetime] = @datetime, [operacao] = @operacao, [fk_" +
                 "id_lote] = @fk_id_lote, [tipo_estoque] = @tipo_estoque, [dias_validade] = @dias_" +
                 "validade, [peso_kg] = @peso_kg, [valor_compra] = @valor_compra, [qtd_estoque] = " +
                 "@qtd_estoque, [fk_item] = @fk_item, [fk_fornecedor] = @fk_fornecedor, [fk_empreg" +
-                "ado] = @fk_empregado WHERE (([id] = @Original_id) AND ((@IsNull_datetime = 1 AND" +
-                " [datetime] IS NULL) OR ([datetime] = @Original_datetime)) AND ((@IsNull_operaca" +
-                "o = 1 AND [operacao] IS NULL) OR ([operacao] = @Original_operacao)) AND ((@IsNul" +
-                "l_fk_id_lote = 1 AND [fk_id_lote] IS NULL) OR ([fk_id_lote] = @Original_fk_id_lo" +
-                "te)) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([tipo_estoqu" +
-                "e] = @Original_tipo_estoque)) AND ((@IsNull_dias_validade = 1 AND [dias_validade" +
-                "] IS NULL) OR ([dias_validade] = @Original_dias_validade)) AND ((@IsNull_peso_kg" +
-                " = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((@IsNull_va" +
-                "lor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Original_valor_" +
-                "compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR ([qtd_estoq" +
-                "ue] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] IS NULL) O" +
-                "R ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND [fk_forne" +
-                "cedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)) AND ((@IsNull_fk" +
-                "_empregado = 1 AND [fk_empregado] IS NULL) OR ([fk_empregado] = @Original_fk_emp" +
-                "regado)));\r\nSELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_valida" +
-                "de, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado FRO" +
-                "M Historico WHERE (id = @id)";
+                "ado] = @fk_empregado, [data_fabricacao] = @data_fabricacao, [data_entrada] = @da" +
+                "ta_entrada, [codigo] = @codigo WHERE (([id] = @Original_id) AND ((@IsNull_dateti" +
+                "me = 1 AND [datetime] IS NULL) OR ([datetime] = @Original_datetime)) AND ((@IsNu" +
+                "ll_operacao = 1 AND [operacao] IS NULL) OR ([operacao] = @Original_operacao)) AN" +
+                "D ((@IsNull_fk_id_lote = 1 AND [fk_id_lote] IS NULL) OR ([fk_id_lote] = @Origina" +
+                "l_fk_id_lote)) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([t" +
+                "ipo_estoque] = @Original_tipo_estoque)) AND ((@IsNull_dias_validade = 1 AND [dia" +
+                "s_validade] IS NULL) OR ([dias_validade] = @Original_dias_validade)) AND ((@IsNu" +
+                "ll_peso_kg = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((" +
+                "@IsNull_valor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Origi" +
+                "nal_valor_compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR (" +
+                "[qtd_estoque] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] " +
+                "IS NULL) OR ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND" +
+                " [fk_fornecedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)) AND ((" +
+                "@IsNull_fk_empregado = 1 AND [fk_empregado] IS NULL) OR ([fk_empregado] = @Origi" +
+                "nal_fk_empregado)) AND ((@IsNull_data_fabricacao = 1 AND [data_fabricacao] IS NU" +
+                "LL) OR ([data_fabricacao] = @Original_data_fabricacao)) AND ((@IsNull_data_entra" +
+                "da = 1 AND [data_entrada] IS NULL) OR ([data_entrada] = @Original_data_entrada))" +
+                ");\r\nSELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso" +
+                "_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado, data_fabri" +
+                "cacao, data_entrada, codigo FROM Historico WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@datetime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@operacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "operacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7241,6 +7509,9 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_empregado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_empregado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_datetime", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_datetime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "datetime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7264,6 +7535,10 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fk_empregado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_empregado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_empregado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_empregado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_fabricacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_entrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7281,8 +7556,8 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg, " +
-                "valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado FROM dbo.Histori" +
-                "co";
+                "valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado, data_fabricacao" +
+                ", data_entrada, codigo FROM dbo.Historico";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7343,7 +7618,7 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, global::System.Nullable<global::System.DateTime> Original_datetime, string Original_operacao, global::System.Nullable<int> Original_fk_id_lote, string Original_tipo_estoque, global::System.Nullable<int> Original_dias_validade, global::System.Nullable<double> Original_peso_kg, global::System.Nullable<double> Original_valor_compra, global::System.Nullable<int> Original_qtd_estoque, global::System.Nullable<int> Original_fk_item, global::System.Nullable<int> Original_fk_fornecedor, global::System.Nullable<int> Original_fk_empregado) {
+        public virtual int Delete(int Original_id, global::System.Nullable<global::System.DateTime> Original_datetime, string Original_operacao, global::System.Nullable<int> Original_fk_id_lote, string Original_tipo_estoque, global::System.Nullable<int> Original_dias_validade, global::System.Nullable<double> Original_peso_kg, global::System.Nullable<double> Original_valor_compra, global::System.Nullable<int> Original_qtd_estoque, global::System.Nullable<int> Original_fk_item, global::System.Nullable<int> Original_fk_fornecedor, global::System.Nullable<int> Original_fk_empregado, global::System.Nullable<global::System.DateTime> Original_data_fabricacao, global::System.Nullable<global::System.DateTime> Original_data_entrada) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_datetime.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -7433,6 +7708,22 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
+            if ((Original_data_fabricacao.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((System.DateTime)(Original_data_fabricacao.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_data_entrada.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((System.DateTime)(Original_data_entrada.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7453,7 +7744,7 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> datetime, string operacao, global::System.Nullable<int> fk_id_lote, string tipo_estoque, global::System.Nullable<int> dias_validade, global::System.Nullable<double> peso_kg, global::System.Nullable<double> valor_compra, global::System.Nullable<int> qtd_estoque, global::System.Nullable<int> fk_item, global::System.Nullable<int> fk_fornecedor, global::System.Nullable<int> fk_empregado) {
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> datetime, string operacao, global::System.Nullable<int> fk_id_lote, string tipo_estoque, global::System.Nullable<int> dias_validade, global::System.Nullable<double> peso_kg, global::System.Nullable<double> valor_compra, global::System.Nullable<int> qtd_estoque, global::System.Nullable<int> fk_item, global::System.Nullable<int> fk_fornecedor, global::System.Nullable<int> fk_empregado, global::System.Nullable<global::System.DateTime> data_fabricacao, global::System.Nullable<global::System.DateTime> data_entrada, string codigo) {
             if ((datetime.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(datetime.Value));
             }
@@ -7520,6 +7811,24 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
+            if ((data_fabricacao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(data_fabricacao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((data_entrada.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(data_entrada.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((codigo == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(codigo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7552,6 +7861,9 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
                     global::System.Nullable<int> fk_item, 
                     global::System.Nullable<int> fk_fornecedor, 
                     global::System.Nullable<int> fk_empregado, 
+                    global::System.Nullable<global::System.DateTime> data_fabricacao, 
+                    global::System.Nullable<global::System.DateTime> data_entrada, 
+                    string codigo, 
                     int Original_id, 
                     global::System.Nullable<global::System.DateTime> Original_datetime, 
                     string Original_operacao, 
@@ -7564,6 +7876,8 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
                     global::System.Nullable<int> Original_fk_item, 
                     global::System.Nullable<int> Original_fk_fornecedor, 
                     global::System.Nullable<int> Original_fk_empregado, 
+                    global::System.Nullable<global::System.DateTime> Original_data_fabricacao, 
+                    global::System.Nullable<global::System.DateTime> Original_data_entrada, 
                     int id) {
             if ((datetime.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(datetime.Value));
@@ -7631,96 +7945,130 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id));
-            if ((Original_datetime.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_datetime.Value));
+            if ((data_fabricacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(data_fabricacao.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((data_entrada.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(data_entrada.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((codigo == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_operacao == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(codigo));
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_id));
+            if ((Original_datetime.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_datetime.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_operacao));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_operacao == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_operacao));
             }
             if ((Original_fk_id_lote.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_fk_id_lote.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_fk_id_lote.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_tipo_estoque == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_tipo_estoque));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_tipo_estoque));
             }
             if ((Original_dias_validade.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_dias_validade.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_dias_validade.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             if ((Original_peso_kg.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((double)(Original_peso_kg.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((double)(Original_peso_kg.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             if ((Original_valor_compra.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_valor_compra.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((double)(Original_valor_compra.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             if ((Original_qtd_estoque.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_qtd_estoque.Value));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_qtd_estoque.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             if ((Original_fk_item.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_fk_item.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_fk_item.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             if ((Original_fk_fornecedor.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_fk_fornecedor.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_fk_fornecedor.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             if ((Original_fk_empregado.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_fk_empregado.Value));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_fk_empregado.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(id));
+            if ((Original_data_fabricacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((System.DateTime)(Original_data_fabricacao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((Original_data_entrada.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((System.DateTime)(Original_data_entrada.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7753,6 +8101,9 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
                     global::System.Nullable<int> fk_item, 
                     global::System.Nullable<int> fk_fornecedor, 
                     global::System.Nullable<int> fk_empregado, 
+                    global::System.Nullable<global::System.DateTime> data_fabricacao, 
+                    global::System.Nullable<global::System.DateTime> data_entrada, 
+                    string codigo, 
                     int Original_id, 
                     global::System.Nullable<global::System.DateTime> Original_datetime, 
                     string Original_operacao, 
@@ -7764,8 +8115,10 @@ SELECT id, datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg,
                     global::System.Nullable<int> Original_qtd_estoque, 
                     global::System.Nullable<int> Original_fk_item, 
                     global::System.Nullable<int> Original_fk_fornecedor, 
-                    global::System.Nullable<int> Original_fk_empregado) {
-            return this.Update(datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado, Original_id, Original_datetime, Original_operacao, Original_fk_id_lote, Original_tipo_estoque, Original_dias_validade, Original_peso_kg, Original_valor_compra, Original_qtd_estoque, Original_fk_item, Original_fk_fornecedor, Original_fk_empregado, Original_id);
+                    global::System.Nullable<int> Original_fk_empregado, 
+                    global::System.Nullable<global::System.DateTime> Original_data_fabricacao, 
+                    global::System.Nullable<global::System.DateTime> Original_data_entrada) {
+            return this.Update(datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado, data_fabricacao, data_entrada, codigo, Original_id, Original_datetime, Original_operacao, Original_fk_id_lote, Original_tipo_estoque, Original_dias_validade, Original_peso_kg, Original_valor_compra, Original_qtd_estoque, Original_fk_item, Original_fk_fornecedor, Original_fk_empregado, Original_data_fabricacao, Original_data_entrada, Original_id);
         }
     }
     
@@ -8350,22 +8703,25 @@ SELECT id, nome, complemento, imagem, qtd_estoque, fk_marca, fk_setor FROM Item 
             tableMapping.DataSetTable = "Lote";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("tipo_estoque", "tipo_estoque");
-            tableMapping.ColumnMappings.Add("dias_validade", "dias_validade");
+            tableMapping.ColumnMappings.Add("validade", "validade");
             tableMapping.ColumnMappings.Add("peso_kg", "peso_kg");
             tableMapping.ColumnMappings.Add("valor_compra", "valor_compra");
             tableMapping.ColumnMappings.Add("qtd_estoque", "qtd_estoque");
             tableMapping.ColumnMappings.Add("fk_item", "fk_item");
             tableMapping.ColumnMappings.Add("fk_fornecedor", "fk_fornecedor");
+            tableMapping.ColumnMappings.Add("data_entrada", "data_entrada");
+            tableMapping.ColumnMappings.Add("data_fabricacao", "data_fabricacao");
+            tableMapping.ColumnMappings.Add("codigo", "codigo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Lote] WHERE (([id] = @Original_id) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([tipo_estoque] = @Original_tipo_estoque)) AND ((@IsNull_dias_validade = 1 AND [dias_validade] IS NULL) OR ([dias_validade] = @Original_dias_validade)) AND ((@IsNull_peso_kg = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((@IsNull_valor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Original_valor_compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR ([qtd_estoque] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] IS NULL) OR ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND [fk_fornecedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Lote] WHERE (([id] = @Original_id) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([tipo_estoque] = @Original_tipo_estoque)) AND ((@IsNull_validade = 1 AND [validade] IS NULL) OR ([validade] = @Original_validade)) AND ((@IsNull_peso_kg = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((@IsNull_valor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Original_valor_compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR ([qtd_estoque] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] IS NULL) OR ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND [fk_fornecedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)) AND ((@IsNull_data_entrada = 1 AND [data_entrada] IS NULL) OR ([data_entrada] = @Original_data_entrada)) AND ((@IsNull_data_fabricacao = 1 AND [data_fabricacao] IS NULL) OR ([data_fabricacao] = @Original_data_fabricacao)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tipo_estoque", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_estoque", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipo_estoque", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_estoque", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dias_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias_validade", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dias_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias_validade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "validade", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_validade", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "validade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_peso_kg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_kg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_peso_kg", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_kg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_valor_compra", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valor_compra", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8376,35 +8732,45 @@ SELECT id, nome, complemento, imagem, qtd_estoque, fk_marca, fk_setor FROM Item 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_entrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_fabricacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Lote] ([tipo_estoque], [dias_validade], [peso_kg], [valor_compra], [qtd_estoque], [fk_item], [fk_fornecedor]) VALUES (@tipo_estoque, @dias_validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor);
-SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor FROM Lote WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Lote] ([tipo_estoque], [validade], [peso_kg], [valor_compra], [qtd_estoque], [fk_item], [fk_fornecedor], [data_entrada], [data_fabricacao], [codigo]) VALUES (@tipo_estoque, @validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor, @data_entrada, @data_fabricacao, @codigo);
+SELECT id, tipo_estoque, validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, data_entrada, data_fabricacao, codigo FROM Lote WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_estoque", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_estoque", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dias_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias_validade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@validade", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "validade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@peso_kg", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_kg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valor_compra", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valor_compra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@qtd_estoque", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qtd_estoque", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Lote] SET [tipo_estoque] = @tipo_estoque, [dias_validade] = @dias_validade, [peso_kg] = @peso_kg, [valor_compra] = @valor_compra, [qtd_estoque] = @qtd_estoque, [fk_item] = @fk_item, [fk_fornecedor] = @fk_fornecedor WHERE (([id] = @Original_id) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([tipo_estoque] = @Original_tipo_estoque)) AND ((@IsNull_dias_validade = 1 AND [dias_validade] IS NULL) OR ([dias_validade] = @Original_dias_validade)) AND ((@IsNull_peso_kg = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((@IsNull_valor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Original_valor_compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR ([qtd_estoque] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] IS NULL) OR ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND [fk_fornecedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)));
-SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor FROM Lote WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Lote] SET [tipo_estoque] = @tipo_estoque, [validade] = @validade, [peso_kg] = @peso_kg, [valor_compra] = @valor_compra, [qtd_estoque] = @qtd_estoque, [fk_item] = @fk_item, [fk_fornecedor] = @fk_fornecedor, [data_entrada] = @data_entrada, [data_fabricacao] = @data_fabricacao, [codigo] = @codigo WHERE (([id] = @Original_id) AND ((@IsNull_tipo_estoque = 1 AND [tipo_estoque] IS NULL) OR ([tipo_estoque] = @Original_tipo_estoque)) AND ((@IsNull_validade = 1 AND [validade] IS NULL) OR ([validade] = @Original_validade)) AND ((@IsNull_peso_kg = 1 AND [peso_kg] IS NULL) OR ([peso_kg] = @Original_peso_kg)) AND ((@IsNull_valor_compra = 1 AND [valor_compra] IS NULL) OR ([valor_compra] = @Original_valor_compra)) AND ((@IsNull_qtd_estoque = 1 AND [qtd_estoque] IS NULL) OR ([qtd_estoque] = @Original_qtd_estoque)) AND ((@IsNull_fk_item = 1 AND [fk_item] IS NULL) OR ([fk_item] = @Original_fk_item)) AND ((@IsNull_fk_fornecedor = 1 AND [fk_fornecedor] IS NULL) OR ([fk_fornecedor] = @Original_fk_fornecedor)) AND ((@IsNull_data_entrada = 1 AND [data_entrada] IS NULL) OR ([data_entrada] = @Original_data_entrada)) AND ((@IsNull_data_fabricacao = 1 AND [data_fabricacao] IS NULL) OR ([data_fabricacao] = @Original_data_fabricacao)));
+SELECT id, tipo_estoque, validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, data_entrada, data_fabricacao, codigo FROM Lote WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_estoque", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_estoque", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dias_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias_validade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@validade", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "validade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@peso_kg", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_kg", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valor_compra", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valor_compra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@qtd_estoque", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qtd_estoque", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tipo_estoque", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_estoque", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tipo_estoque", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_estoque", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dias_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias_validade", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dias_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias_validade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_validade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "validade", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_validade", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "validade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_peso_kg", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_kg", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_peso_kg", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "peso_kg", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_valor_compra", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valor_compra", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -8415,6 +8781,10 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fk_fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fk_fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_entrada", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_entrada", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrada", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_fabricacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_fabricacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_fabricacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8431,8 +8801,8 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_it" +
-                "em, fk_fornecedor FROM dbo.Lote";
+            this._commandCollection[0].CommandText = "SELECT id, tipo_estoque, validade, peso_kg, valor_compra, qtd_estoque, fk_item, f" +
+                "k_fornecedor, data_entrada, data_fabricacao, codigo FROM dbo.Lote";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8493,7 +8863,7 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_tipo_estoque, global::System.Nullable<int> Original_dias_validade, global::System.Nullable<double> Original_peso_kg, global::System.Nullable<double> Original_valor_compra, global::System.Nullable<int> Original_qtd_estoque, global::System.Nullable<int> Original_fk_item, global::System.Nullable<int> Original_fk_fornecedor) {
+        public virtual int Delete(int Original_id, string Original_tipo_estoque, global::System.Nullable<global::System.DateTime> Original_validade, global::System.Nullable<double> Original_peso_kg, global::System.Nullable<double> Original_valor_compra, global::System.Nullable<int> Original_qtd_estoque, global::System.Nullable<int> Original_fk_item, global::System.Nullable<int> Original_fk_fornecedor, global::System.Nullable<global::System.DateTime> Original_data_entrada, global::System.Nullable<global::System.DateTime> Original_data_fabricacao) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_tipo_estoque == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -8503,9 +8873,9 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_tipo_estoque));
             }
-            if ((Original_dias_validade.HasValue == true)) {
+            if ((Original_validade.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_dias_validade.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_validade.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -8551,6 +8921,22 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
+            if ((Original_data_entrada.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((System.DateTime)(Original_data_entrada.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_data_fabricacao.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((System.DateTime)(Original_data_fabricacao.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8571,15 +8957,15 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string tipo_estoque, global::System.Nullable<int> dias_validade, global::System.Nullable<double> peso_kg, global::System.Nullable<double> valor_compra, global::System.Nullable<int> qtd_estoque, global::System.Nullable<int> fk_item, global::System.Nullable<int> fk_fornecedor) {
+        public virtual int Insert(string tipo_estoque, global::System.Nullable<global::System.DateTime> validade, global::System.Nullable<double> peso_kg, global::System.Nullable<double> valor_compra, global::System.Nullable<int> qtd_estoque, global::System.Nullable<int> fk_item, global::System.Nullable<int> fk_fornecedor, global::System.Nullable<global::System.DateTime> data_entrada, global::System.Nullable<global::System.DateTime> data_fabricacao, string codigo) {
             if ((tipo_estoque == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(tipo_estoque));
             }
-            if ((dias_validade.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(dias_validade.Value));
+            if ((validade.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(validade.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -8614,6 +9000,24 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
+            if ((data_entrada.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(data_entrada.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((data_fabricacao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(data_fabricacao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((codigo == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(codigo));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8636,20 +9040,25 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     string tipo_estoque, 
-                    global::System.Nullable<int> dias_validade, 
+                    global::System.Nullable<global::System.DateTime> validade, 
                     global::System.Nullable<double> peso_kg, 
                     global::System.Nullable<double> valor_compra, 
                     global::System.Nullable<int> qtd_estoque, 
                     global::System.Nullable<int> fk_item, 
                     global::System.Nullable<int> fk_fornecedor, 
+                    global::System.Nullable<global::System.DateTime> data_entrada, 
+                    global::System.Nullable<global::System.DateTime> data_fabricacao, 
+                    string codigo, 
                     int Original_id, 
                     string Original_tipo_estoque, 
-                    global::System.Nullable<int> Original_dias_validade, 
+                    global::System.Nullable<global::System.DateTime> Original_validade, 
                     global::System.Nullable<double> Original_peso_kg, 
                     global::System.Nullable<double> Original_valor_compra, 
                     global::System.Nullable<int> Original_qtd_estoque, 
                     global::System.Nullable<int> Original_fk_item, 
                     global::System.Nullable<int> Original_fk_fornecedor, 
+                    global::System.Nullable<global::System.DateTime> Original_data_entrada, 
+                    global::System.Nullable<global::System.DateTime> Original_data_fabricacao, 
                     int id) {
             if ((tipo_estoque == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -8657,8 +9066,8 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(tipo_estoque));
             }
-            if ((dias_validade.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(dias_validade.Value));
+            if ((validade.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(validade.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -8693,64 +9102,98 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id));
-            if ((Original_tipo_estoque == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+            if ((data_entrada.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(data_entrada.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((data_fabricacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(data_fabricacao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((codigo == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_tipo_estoque));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(codigo));
             }
-            if ((Original_dias_validade.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_dias_validade.Value));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id));
+            if ((Original_tipo_estoque == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_tipo_estoque));
+            }
+            if ((Original_validade.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_validade.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             if ((Original_peso_kg.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(Original_peso_kg.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((double)(Original_peso_kg.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_valor_compra.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_valor_compra.Value));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((double)(Original_valor_compra.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             if ((Original_qtd_estoque.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_qtd_estoque.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_qtd_estoque.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_fk_item.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_fk_item.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_fk_item.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             if ((Original_fk_fornecedor.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_fk_fornecedor.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_fk_fornecedor.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(id));
+            if ((Original_data_entrada.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_data_entrada.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_data_fabricacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((System.DateTime)(Original_data_fabricacao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8771,8 +9214,28 @@ SELECT id, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string tipo_estoque, global::System.Nullable<int> dias_validade, global::System.Nullable<double> peso_kg, global::System.Nullable<double> valor_compra, global::System.Nullable<int> qtd_estoque, global::System.Nullable<int> fk_item, global::System.Nullable<int> fk_fornecedor, int Original_id, string Original_tipo_estoque, global::System.Nullable<int> Original_dias_validade, global::System.Nullable<double> Original_peso_kg, global::System.Nullable<double> Original_valor_compra, global::System.Nullable<int> Original_qtd_estoque, global::System.Nullable<int> Original_fk_item, global::System.Nullable<int> Original_fk_fornecedor) {
-            return this.Update(tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, Original_id, Original_tipo_estoque, Original_dias_validade, Original_peso_kg, Original_valor_compra, Original_qtd_estoque, Original_fk_item, Original_fk_fornecedor, Original_id);
+        public virtual int Update(
+                    string tipo_estoque, 
+                    global::System.Nullable<global::System.DateTime> validade, 
+                    global::System.Nullable<double> peso_kg, 
+                    global::System.Nullable<double> valor_compra, 
+                    global::System.Nullable<int> qtd_estoque, 
+                    global::System.Nullable<int> fk_item, 
+                    global::System.Nullable<int> fk_fornecedor, 
+                    global::System.Nullable<global::System.DateTime> data_entrada, 
+                    global::System.Nullable<global::System.DateTime> data_fabricacao, 
+                    string codigo, 
+                    int Original_id, 
+                    string Original_tipo_estoque, 
+                    global::System.Nullable<global::System.DateTime> Original_validade, 
+                    global::System.Nullable<double> Original_peso_kg, 
+                    global::System.Nullable<double> Original_valor_compra, 
+                    global::System.Nullable<int> Original_qtd_estoque, 
+                    global::System.Nullable<int> Original_fk_item, 
+                    global::System.Nullable<int> Original_fk_fornecedor, 
+                    global::System.Nullable<global::System.DateTime> Original_data_entrada, 
+                    global::System.Nullable<global::System.DateTime> Original_data_fabricacao) {
+            return this.Update(tipo_estoque, validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, data_entrada, data_fabricacao, codigo, Original_id, Original_tipo_estoque, Original_validade, Original_peso_kg, Original_valor_compra, Original_qtd_estoque, Original_fk_item, Original_fk_fornecedor, Original_data_entrada, Original_data_fabricacao, Original_id);
         }
     }
     

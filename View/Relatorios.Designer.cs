@@ -37,48 +37,31 @@
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.DateTIme = new System.Windows.Forms.DateTimePicker();
             this.cb_empregado = new System.Windows.Forms.ComboBox();
-            this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.supermecadoDataSet = new Trabalho_A1_Supermecado.SupermecadoDataSet();
-            this.fornecedorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btn_voltar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cb_fornecedor = new System.Windows.Forms.ComboBox();
-            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.cb_produto = new System.Windows.Forms.ComboBox();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkidloteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoestoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diasvalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesokgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorcompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdestoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkitemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkfornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkempregadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.historicoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.HistoricoTableAdapter();
             this.id = new System.Windows.Forms.NumericUpDown();
-            this.itemTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
-            this.fornecedorTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
             this.btn_limpar = new System.Windows.Forms.Button();
-            this.empregadoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
+            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
+            this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.empregadoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -106,13 +89,13 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
             this.perfilToolStripMenuItem.Text = "Perfil";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -154,21 +137,6 @@
             this.cb_empregado.Size = new System.Drawing.Size(171, 21);
             this.cb_empregado.TabIndex = 9;
             this.cb_empregado.ValueMember = "id";
-            // 
-            // empregadoBindingSource
-            // 
-            this.empregadoBindingSource.DataMember = "Empregado";
-            this.empregadoBindingSource.DataSource = this.supermecadoDataSet;
-            // 
-            // supermecadoDataSet
-            // 
-            this.supermecadoDataSet.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fornecedorBindingSource1
-            // 
-            this.fornecedorBindingSource1.DataMember = "Fornecedor";
-            this.fornecedorBindingSource1.DataSource = this.supermecadoDataSet;
             // 
             // btn_voltar
             // 
@@ -228,11 +196,6 @@
             this.cb_fornecedor.TabIndex = 16;
             this.cb_fornecedor.ValueMember = "id";
             // 
-            // fornecedorBindingSource
-            // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -254,131 +217,17 @@
             this.cb_produto.TabIndex = 19;
             this.cb_produto.ValueMember = "id";
             // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataMember = "Item";
-            this.itemBindingSource.DataSource = this.supermecadoDataSet;
-            // 
             // dataGrid
             // 
             this.dataGrid.AllowUserToAddRows = false;
             this.dataGrid.AllowUserToDeleteRows = false;
             this.dataGrid.AllowUserToOrderColumns = true;
-            this.dataGrid.AutoGenerateColumns = false;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.datetimeDataGridViewTextBoxColumn,
-            this.operacaoDataGridViewTextBoxColumn,
-            this.fkidloteDataGridViewTextBoxColumn,
-            this.tipoestoqueDataGridViewTextBoxColumn,
-            this.diasvalidadeDataGridViewTextBoxColumn,
-            this.pesokgDataGridViewTextBoxColumn,
-            this.valorcompraDataGridViewTextBoxColumn,
-            this.qtdestoqueDataGridViewTextBoxColumn,
-            this.fkitemDataGridViewTextBoxColumn,
-            this.fkfornecedorDataGridViewTextBoxColumn,
-            this.fkempregadoDataGridViewTextBoxColumn});
-            this.dataGrid.DataSource = this.historicoBindingSource;
             this.dataGrid.Location = new System.Drawing.Point(13, 151);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
             this.dataGrid.Size = new System.Drawing.Size(775, 287);
             this.dataGrid.TabIndex = 20;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // datetimeDataGridViewTextBoxColumn
-            // 
-            this.datetimeDataGridViewTextBoxColumn.DataPropertyName = "datetime";
-            this.datetimeDataGridViewTextBoxColumn.HeaderText = "Data e Hora";
-            this.datetimeDataGridViewTextBoxColumn.Name = "datetimeDataGridViewTextBoxColumn";
-            this.datetimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // operacaoDataGridViewTextBoxColumn
-            // 
-            this.operacaoDataGridViewTextBoxColumn.DataPropertyName = "operacao";
-            this.operacaoDataGridViewTextBoxColumn.HeaderText = "Operacao";
-            this.operacaoDataGridViewTextBoxColumn.Name = "operacaoDataGridViewTextBoxColumn";
-            this.operacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fkidloteDataGridViewTextBoxColumn
-            // 
-            this.fkidloteDataGridViewTextBoxColumn.DataPropertyName = "fk_id_lote";
-            this.fkidloteDataGridViewTextBoxColumn.HeaderText = "Lote";
-            this.fkidloteDataGridViewTextBoxColumn.Name = "fkidloteDataGridViewTextBoxColumn";
-            this.fkidloteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoestoqueDataGridViewTextBoxColumn
-            // 
-            this.tipoestoqueDataGridViewTextBoxColumn.DataPropertyName = "tipo_estoque";
-            this.tipoestoqueDataGridViewTextBoxColumn.HeaderText = "Tipo de estoque";
-            this.tipoestoqueDataGridViewTextBoxColumn.Name = "tipoestoqueDataGridViewTextBoxColumn";
-            this.tipoestoqueDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diasvalidadeDataGridViewTextBoxColumn
-            // 
-            this.diasvalidadeDataGridViewTextBoxColumn.DataPropertyName = "dias_validade";
-            this.diasvalidadeDataGridViewTextBoxColumn.HeaderText = "Dias validade";
-            this.diasvalidadeDataGridViewTextBoxColumn.Name = "diasvalidadeDataGridViewTextBoxColumn";
-            this.diasvalidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pesokgDataGridViewTextBoxColumn
-            // 
-            this.pesokgDataGridViewTextBoxColumn.DataPropertyName = "peso_kg";
-            this.pesokgDataGridViewTextBoxColumn.HeaderText = "peso (kg)";
-            this.pesokgDataGridViewTextBoxColumn.Name = "pesokgDataGridViewTextBoxColumn";
-            this.pesokgDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorcompraDataGridViewTextBoxColumn
-            // 
-            this.valorcompraDataGridViewTextBoxColumn.DataPropertyName = "valor_compra";
-            this.valorcompraDataGridViewTextBoxColumn.HeaderText = "Valor de compra";
-            this.valorcompraDataGridViewTextBoxColumn.Name = "valorcompraDataGridViewTextBoxColumn";
-            this.valorcompraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdestoqueDataGridViewTextBoxColumn
-            // 
-            this.qtdestoqueDataGridViewTextBoxColumn.DataPropertyName = "qtd_estoque";
-            this.qtdestoqueDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.qtdestoqueDataGridViewTextBoxColumn.Name = "qtdestoqueDataGridViewTextBoxColumn";
-            this.qtdestoqueDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fkitemDataGridViewTextBoxColumn
-            // 
-            this.fkitemDataGridViewTextBoxColumn.DataPropertyName = "fk_item";
-            this.fkitemDataGridViewTextBoxColumn.HeaderText = "Item";
-            this.fkitemDataGridViewTextBoxColumn.Name = "fkitemDataGridViewTextBoxColumn";
-            this.fkitemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fkfornecedorDataGridViewTextBoxColumn
-            // 
-            this.fkfornecedorDataGridViewTextBoxColumn.DataPropertyName = "fk_fornecedor";
-            this.fkfornecedorDataGridViewTextBoxColumn.HeaderText = "Fornecedor";
-            this.fkfornecedorDataGridViewTextBoxColumn.Name = "fkfornecedorDataGridViewTextBoxColumn";
-            this.fkfornecedorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fkempregadoDataGridViewTextBoxColumn
-            // 
-            this.fkempregadoDataGridViewTextBoxColumn.DataPropertyName = "fk_empregado";
-            this.fkempregadoDataGridViewTextBoxColumn.HeaderText = "Empregado";
-            this.fkempregadoDataGridViewTextBoxColumn.Name = "fkempregadoDataGridViewTextBoxColumn";
-            this.fkempregadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // historicoBindingSource
-            // 
-            this.historicoBindingSource.DataMember = "Historico";
-            this.historicoBindingSource.DataSource = this.supermecadoDataSet;
-            // 
-            // historicoTableAdapter
-            // 
-            this.historicoTableAdapter.ClearBeforeFill = true;
             // 
             // id
             // 
@@ -386,14 +235,6 @@
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(50, 20);
             this.id.TabIndex = 21;
-            // 
-            // itemTableAdapter
-            // 
-            this.itemTableAdapter.ClearBeforeFill = true;
-            // 
-            // fornecedorTableAdapter
-            // 
-            this.fornecedorTableAdapter.ClearBeforeFill = true;
             // 
             // btn_limpar
             // 
@@ -405,9 +246,37 @@
             this.btn_limpar.UseVisualStyleBackColor = true;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
-            // empregadoTableAdapter
+            // supermecadoDataSet1
             // 
-            this.empregadoTableAdapter.ClearBeforeFill = true;
+            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // empregadoBindingSource
+            // 
+            this.empregadoBindingSource.DataMember = "Empregado";
+            this.empregadoBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // empregadoTableAdapter1
+            // 
+            this.empregadoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataMember = "Item";
+            this.itemBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // itemTableAdapter1
+            // 
+            this.itemTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // fornecedorTableAdapter1
+            // 
+            this.fornecedorTableAdapter1.ClearBeforeFill = true;
             // 
             // Relatorios
             // 
@@ -437,14 +306,12 @@
             this.Load += new System.EventHandler(this.Relatorios_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,7 +337,6 @@
         private System.Windows.Forms.ComboBox cb_produto;
         private System.Windows.Forms.DataGridView dataGrid;
         private SupermecadoDataSet supermecadoDataSet;
-        private System.Windows.Forms.BindingSource historicoBindingSource;
         private SupermecadoDataSetTableAdapters.HistoricoTableAdapter historicoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datetimeDataGridViewTextBoxColumn;
@@ -485,13 +351,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fkfornecedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fkempregadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.NumericUpDown id;
-        private System.Windows.Forms.BindingSource itemBindingSource;
         private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter;
-        private System.Windows.Forms.BindingSource fornecedorBindingSource;
         private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter;
-        private System.Windows.Forms.BindingSource fornecedorBindingSource1;
         private System.Windows.Forms.Button btn_limpar;
-        private System.Windows.Forms.BindingSource empregadoBindingSource;
         private SupermecadoDataSetTableAdapters.EmpregadoTableAdapter empregadoTableAdapter;
+        private SupermecadoDataSet supermecadoDataSet1;
+        private System.Windows.Forms.BindingSource empregadoBindingSource;
+        private SupermecadoDataSetTableAdapters.EmpregadoTableAdapter empregadoTableAdapter1;
+        private System.Windows.Forms.BindingSource itemBindingSource;
+        private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
+        private System.Windows.Forms.BindingSource fornecedorBindingSource;
+        private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter1;
     }
 }

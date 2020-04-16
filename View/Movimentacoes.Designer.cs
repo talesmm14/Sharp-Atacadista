@@ -33,12 +33,10 @@
             this.btnRetirar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nomeLote = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.nuRetirar = new System.Windows.Forms.NumericUpDown();
             this.btnRetirarTudo = new System.Windows.Forms.Button();
-            this.loteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.supermecadoDataSet = new Trabalho_A1_Supermecado.SupermecadoDataSet();
-            this.codPesquisarLote = new System.Windows.Forms.NumericUpDown();
             this.cbPesquisarFornecedor = new System.Windows.Forms.ComboBox();
             this.cbPesquisarProduto = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -46,30 +44,42 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.loteTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.LoteTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoestoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diasvalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesokgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorcompraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdestoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkitemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkfornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nValidade = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbEstoque = new System.Windows.Forms.ComboBox();
-            this.nomeLote = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nValidade = new System.Windows.Forms.DateTimePicker();
+            this.supermecadoDataSet2 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
+            this.codPesquisarLote = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.NumericUpDown();
+            this.loteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loteTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.LoteTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuRetirar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codPesquisarLote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nValidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -116,6 +126,16 @@
             this.panel3.Size = new System.Drawing.Size(156, 272);
             this.panel3.TabIndex = 52;
             // 
+            // nomeLote
+            // 
+            this.nomeLote.AutoSize = true;
+            this.nomeLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeLote.Location = new System.Drawing.Point(38, 72);
+            this.nomeLote.Name = "nomeLote";
+            this.nomeLote.Size = new System.Drawing.Size(21, 20);
+            this.nomeLote.TabIndex = 54;
+            this.nomeLote.Text = "...";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -149,43 +169,29 @@
             this.btnRetirarTudo.Text = "Retirar tudo";
             this.btnRetirarTudo.UseVisualStyleBackColor = true;
             // 
-            // loteBindingSource
-            // 
-            this.loteBindingSource.DataMember = "Lote";
-            this.loteBindingSource.DataSource = this.supermecadoDataSet;
-            // 
-            // supermecadoDataSet
-            // 
-            this.supermecadoDataSet.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // codPesquisarLote
-            // 
-            this.codPesquisarLote.Location = new System.Drawing.Point(116, 6);
-            this.codPesquisarLote.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.codPesquisarLote.Name = "codPesquisarLote";
-            this.codPesquisarLote.Size = new System.Drawing.Size(51, 20);
-            this.codPesquisarLote.TabIndex = 45;
-            // 
             // cbPesquisarFornecedor
             // 
+            this.cbPesquisarFornecedor.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.fornecedorBindingSource, "id", true));
+            this.cbPesquisarFornecedor.DataSource = this.fornecedorBindingSource;
+            this.cbPesquisarFornecedor.DisplayMember = "nome";
             this.cbPesquisarFornecedor.FormattingEnabled = true;
             this.cbPesquisarFornecedor.Location = new System.Drawing.Point(116, 65);
             this.cbPesquisarFornecedor.Name = "cbPesquisarFornecedor";
             this.cbPesquisarFornecedor.Size = new System.Drawing.Size(121, 21);
             this.cbPesquisarFornecedor.TabIndex = 60;
+            this.cbPesquisarFornecedor.ValueMember = "id";
             // 
             // cbPesquisarProduto
             // 
+            this.cbPesquisarProduto.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.itemBindingSource, "id", true));
+            this.cbPesquisarProduto.DataSource = this.itemBindingSource;
+            this.cbPesquisarProduto.DisplayMember = "nome";
             this.cbPesquisarProduto.FormattingEnabled = true;
             this.cbPesquisarProduto.Location = new System.Drawing.Point(116, 35);
             this.cbPesquisarProduto.Name = "cbPesquisarProduto";
             this.cbPesquisarProduto.Size = new System.Drawing.Size(121, 21);
             this.cbPesquisarProduto.TabIndex = 59;
+            this.cbPesquisarProduto.ValueMember = "id";
             // 
             // label11
             // 
@@ -238,10 +244,6 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
-            // loteTableAdapter
-            // 
-            this.loteTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -249,84 +251,23 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.tipoestoqueDataGridViewTextBoxColumn,
-            this.diasvalidadeDataGridViewTextBoxColumn,
-            this.pesokgDataGridViewTextBoxColumn,
-            this.valorcompraDataGridViewTextBoxColumn,
-            this.qtdestoqueDataGridViewTextBoxColumn,
-            this.fkitemDataGridViewTextBoxColumn,
-            this.fkfornecedorDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
             this.dataGridView1.DataSource = this.loteBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(19, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(612, 272);
             this.dataGridView1.TabIndex = 61;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // tipoestoqueDataGridViewTextBoxColumn
-            // 
-            this.tipoestoqueDataGridViewTextBoxColumn.DataPropertyName = "tipo_estoque";
-            this.tipoestoqueDataGridViewTextBoxColumn.HeaderText = "Tipo de estoque";
-            this.tipoestoqueDataGridViewTextBoxColumn.Name = "tipoestoqueDataGridViewTextBoxColumn";
-            this.tipoestoqueDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tipoestoqueDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // diasvalidadeDataGridViewTextBoxColumn
-            // 
-            this.diasvalidadeDataGridViewTextBoxColumn.DataPropertyName = "dias_validade";
-            this.diasvalidadeDataGridViewTextBoxColumn.HeaderText = "Validade (Dias)";
-            this.diasvalidadeDataGridViewTextBoxColumn.Name = "diasvalidadeDataGridViewTextBoxColumn";
-            this.diasvalidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.diasvalidadeDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // pesokgDataGridViewTextBoxColumn
-            // 
-            this.pesokgDataGridViewTextBoxColumn.DataPropertyName = "peso_kg";
-            this.pesokgDataGridViewTextBoxColumn.HeaderText = "Peso (kg)";
-            this.pesokgDataGridViewTextBoxColumn.Name = "pesokgDataGridViewTextBoxColumn";
-            this.pesokgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pesokgDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // valorcompraDataGridViewTextBoxColumn
-            // 
-            this.valorcompraDataGridViewTextBoxColumn.DataPropertyName = "valor_compra";
-            this.valorcompraDataGridViewTextBoxColumn.HeaderText = "Valor (Compra)";
-            this.valorcompraDataGridViewTextBoxColumn.Name = "valorcompraDataGridViewTextBoxColumn";
-            this.valorcompraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valorcompraDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // qtdestoqueDataGridViewTextBoxColumn
-            // 
-            this.qtdestoqueDataGridViewTextBoxColumn.DataPropertyName = "qtd_estoque";
-            this.qtdestoqueDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.qtdestoqueDataGridViewTextBoxColumn.Name = "qtdestoqueDataGridViewTextBoxColumn";
-            this.qtdestoqueDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtdestoqueDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // fkitemDataGridViewTextBoxColumn
-            // 
-            this.fkitemDataGridViewTextBoxColumn.DataPropertyName = "fk_item";
-            this.fkitemDataGridViewTextBoxColumn.HeaderText = "Item";
-            this.fkitemDataGridViewTextBoxColumn.Name = "fkitemDataGridViewTextBoxColumn";
-            this.fkitemDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fkitemDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // fkfornecedorDataGridViewTextBoxColumn
-            // 
-            this.fkfornecedorDataGridViewTextBoxColumn.DataPropertyName = "fk_fornecedor";
-            this.fkfornecedorDataGridViewTextBoxColumn.HeaderText = "Fornecedor";
-            this.fkfornecedorDataGridViewTextBoxColumn.Name = "fkfornecedorDataGridViewTextBoxColumn";
-            this.fkfornecedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fkfornecedorDataGridViewTextBoxColumn.Width = 80;
             // 
             // tableLayoutPanel1
             // 
@@ -336,16 +277,18 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.cbEstoque, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.nValidade, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.codPesquisarLote, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbPesquisarProduto, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbPesquisarFornecedor, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.nValidade, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.codPesquisarLote, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.id, 3, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 336);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -355,6 +298,30 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(516, 101);
             this.tableLayoutPanel1.TabIndex = 62;
+            // 
+            // cbEstoque
+            // 
+            this.cbEstoque.FormattingEnabled = true;
+            this.cbEstoque.Items.AddRange(new object[] {
+            "Estoque de proteção",
+            "Estoque em trânsito",
+            "Estoque de antecipação",
+            "Estoque consignado",
+            "Dropshipping"});
+            this.cbEstoque.Location = new System.Drawing.Point(387, 35);
+            this.cbEstoque.Name = "cbEstoque";
+            this.cbEstoque.Size = new System.Drawing.Size(121, 21);
+            this.cbEstoque.TabIndex = 66;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(246, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 20);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Estoque (Tipo)";
             // 
             // label2
             // 
@@ -369,42 +336,153 @@
             // nValidade
             // 
             this.nValidade.Location = new System.Drawing.Point(387, 6);
-            this.nValidade.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.nValidade.Name = "nValidade";
-            this.nValidade.Size = new System.Drawing.Size(51, 20);
-            this.nValidade.TabIndex = 64;
+            this.nValidade.Size = new System.Drawing.Size(121, 20);
+            this.nValidade.TabIndex = 67;
             // 
-            // label3
+            // supermecadoDataSet2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(246, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 20);
-            this.label3.TabIndex = 65;
-            this.label3.Text = "Estoque (Tipo)";
+            this.supermecadoDataSet2.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cbEstoque
+            // itemBindingSource
             // 
-            this.cbEstoque.FormattingEnabled = true;
-            this.cbEstoque.Location = new System.Drawing.Point(387, 35);
-            this.cbEstoque.Name = "cbEstoque";
-            this.cbEstoque.Size = new System.Drawing.Size(121, 21);
-            this.cbEstoque.TabIndex = 66;
+            this.itemBindingSource.DataMember = "Item";
+            this.itemBindingSource.DataSource = this.supermecadoDataSet2;
             // 
-            // nomeLote
+            // itemTableAdapter1
             // 
-            this.nomeLote.AutoSize = true;
-            this.nomeLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeLote.Location = new System.Drawing.Point(38, 72);
-            this.nomeLote.Name = "nomeLote";
-            this.nomeLote.Size = new System.Drawing.Size(21, 20);
-            this.nomeLote.TabIndex = 54;
-            this.nomeLote.Text = "...";
+            this.itemTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet2;
+            // 
+            // fornecedorTableAdapter1
+            // 
+            this.fornecedorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // codPesquisarLote
+            // 
+            this.codPesquisarLote.Location = new System.Drawing.Point(116, 6);
+            this.codPesquisarLote.Name = "codPesquisarLote";
+            this.codPesquisarLote.Size = new System.Drawing.Size(121, 20);
+            this.codPesquisarLote.TabIndex = 68;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(246, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 20);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "ID";
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(387, 65);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(120, 20);
+            this.id.TabIndex = 70;
+            // 
+            // loteBindingSource
+            // 
+            this.loteBindingSource.DataMember = "Lote";
+            this.loteBindingSource.DataSource = this.supermecadoDataSet2;
+            // 
+            // loteTableAdapter1
+            // 
+            this.loteTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "codigo";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Cod.";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "tipo_estoque";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo de Estoque";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "validade";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Validade";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "peso_kg";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Peso(kg)";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 55;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor_compra";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor(compra)";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "qtd_estoque";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "fk_item";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Item";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "fk_fornecedor";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Fornecedor";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "data_entrada";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Data de entrada";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "data_fabricacao";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Data de fabricação";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 60;
             // 
             // Movimentacoes
             // 
@@ -427,13 +505,14 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuRetirar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codPesquisarLote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nValidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,24 +534,49 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.NumericUpDown codPesquisarLote;
         private SupermecadoDataSet supermecadoDataSet;
-        private System.Windows.Forms.BindingSource loteBindingSource;
         private SupermecadoDataSetTableAdapters.LoteTableAdapter loteTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ComboBox cbEstoque;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nomeLote;
+        private SupermecadoDataSet supermecadoDataSet1;
+        private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter;
+        private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoestoqueDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diasvalidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn validadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pesokgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorcompraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdestoqueDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fkitemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fkfornecedorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox cbEstoque;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown nValidade;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label nomeLote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataentradaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datafabricacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker nValidade;
+        private SupermecadoDataSet supermecadoDataSet2;
+        private System.Windows.Forms.BindingSource itemBindingSource;
+        private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
+        private System.Windows.Forms.BindingSource fornecedorBindingSource;
+        private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter1;
+        private System.Windows.Forms.TextBox codPesquisarLote;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown id;
+        private System.Windows.Forms.BindingSource loteBindingSource;
+        private SupermecadoDataSetTableAdapters.LoteTableAdapter loteTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

@@ -26,11 +26,14 @@ namespace Trabalho_A1_Supermecado.DAO
             cmd.Parameters.AddWithValue("@fk_item", historico.Lote.Item.Id);
             cmd.Parameters.AddWithValue("@fk_fornecedor", historico.Lote.Fornecedor.Id);
             cmd.Parameters.AddWithValue("@fk_empregado", historico.Empregado.Id);
+            cmd.Parameters.AddWithValue("@data_fabricacao", historico.Lote.DataFabricacao);
+            cmd.Parameters.AddWithValue("@data_entrada", historico.Lote.DataEntrada);
+            cmd.Parameters.AddWithValue("@codigo", historico.Lote.Codigo);
             if (Conexao.CRUD(cmd))
                 return historico;
             return null;
         }
-        public Historico update(Historico historico)
+       public Historico update(Historico historico)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UPDATE Historico set datetime = @datetime, operacao = @operacao, fk_id_lote = @fk_id_lote, " +
@@ -48,6 +51,9 @@ namespace Trabalho_A1_Supermecado.DAO
             cmd.Parameters.AddWithValue("@fk_item", historico.Lote.Item.Id);
             cmd.Parameters.AddWithValue("@fk_fornecedor", historico.Lote.Fornecedor.Id);
             cmd.Parameters.AddWithValue("@fk_empregado", historico.Empregado.Id);
+            cmd.Parameters.AddWithValue("@data_fabricacao", historico.Lote.DataFabricacao);
+            cmd.Parameters.AddWithValue("@data_entrada", historico.Lote.DataEntrada);
+            cmd.Parameters.AddWithValue("@codigo", historico.Lote.Codigo);
             if (Conexao.CRUD(cmd))
                 return historico;
             return null;
@@ -75,13 +81,16 @@ namespace Trabalho_A1_Supermecado.DAO
                 obj.Operacao = dr["operacao"].ToString();
                 obj.Lote.Id = (int)dr["fk_id_lote"];
                 obj.Lote.Tipo_estoque = dr["tipo_estoque"].ToString();
-                obj.Lote.Dias_validade = (int)dr["dias_validade"];
+                obj.Lote.Dias_validade = (DateTime)dr["dias_validade"];
                 obj.Lote.Peso_kg = (float)dr["peso_kg"];
                 obj.Lote.Valor_compra = (float)dr["valor_compra"];
                 obj.Lote.Qtd_estoque = (int)dr["qtd_estoque"];
                 obj.Lote.Item = ItemDAO.findById((int)dr["fk_item"]);
                 obj.Lote.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
                 obj.Empregado = EmpregadoDAO.findById((int)dr["fk_empregado"]);
+                obj.Lote.DataEntrada = (DateTime)dr["data_entrada"];
+                obj.Lote.DataFabricacao = (DateTime)dr["data_fabricacao"];
+                obj.Lote.Codigo = (String)dr["codigo"];
             }
             else
             {
@@ -106,13 +115,16 @@ namespace Trabalho_A1_Supermecado.DAO
                     obj.Operacao = dr["operacao"].ToString();
                     obj.Lote.Id = (int)dr["fk_id_lote"];
                     obj.Lote.Tipo_estoque = dr["tipo_estoque"].ToString();
-                    obj.Lote.Dias_validade = (int)dr["dias_validade"];
+                    obj.Lote.Dias_validade = (DateTime)dr["dias_validade"];
                     obj.Lote.Peso_kg = (float)dr["peso_kg"];
                     obj.Lote.Valor_compra = (float)dr["valor_compra"];
                     obj.Lote.Qtd_estoque = (int)dr["qtd_estoque"];
                     obj.Lote.Item = ItemDAO.findById((int)dr["fk_item"]);
                     obj.Lote.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
                     obj.Empregado = EmpregadoDAO.findById((int)dr["fk_empregado"]);
+                    obj.Lote.DataEntrada = (DateTime)dr["data_entrada"];
+                    obj.Lote.DataFabricacao = (DateTime)dr["data_fabricacao"];
+                    obj.Lote.Codigo = (String)dr["codigo"];
                     objs.Add(obj);
                 }
             }

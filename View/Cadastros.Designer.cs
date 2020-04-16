@@ -52,12 +52,9 @@
             this.Item_tbxComplemento = new System.Windows.Forms.TextBox();
             this.Item_tbxNome = new System.Windows.Forms.TextBox();
             this.Item_cbSetor = new System.Windows.Forms.ComboBox();
-            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.supermecadoDataSet = new Trabalho_A1_Supermecado.SupermecadoDataSet();
             this.label8 = new System.Windows.Forms.Label();
             this.btnImagem = new System.Windows.Forms.Button();
             this.Item_cbMarca = new System.Windows.Forms.ComboBox();
-            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -93,7 +90,6 @@
             this.tabSetor = new System.Windows.Forms.TabPage();
             this.lbSubDepartamento = new System.Windows.Forms.Label();
             this.Setor_cbSubDepartamento = new System.Windows.Forms.ComboBox();
-            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.Setor_btnCadastrar = new System.Windows.Forms.Button();
             this.Setor_tbxDescricao = new System.Windows.Forms.TextBox();
@@ -103,8 +99,6 @@
             this.tabSubDepartamento = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.SubDepartamento_cbDepartamento = new System.Windows.Forms.ComboBox();
-            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.SubDepartamnto_btnCadastrar = new System.Windows.Forms.Button();
             this.SubDepartamento_tbxDescricao = new System.Windows.Forms.TextBox();
@@ -119,25 +113,29 @@
             this.lbDescricao = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.departamentoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
-            this.sub_departamentoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
-            this.setorTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
-            this.marcaTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
+            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
+            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
+            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sub_departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
+            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.setorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
+            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marcaTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.tabFuncionario.SuspendLayout();
             this.tabProduto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabMarca.SuspendLayout();
             this.tabSetor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
             this.tabSubDepartamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource1)).BeginInit();
             this.tabDepartamento.SuspendLayout();
             this.tabControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // usuarioToolStripMenuItem
@@ -384,16 +382,6 @@
             this.Item_cbSetor.TabIndex = 52;
             this.Item_cbSetor.ValueMember = "id";
             // 
-            // setorBindingSource
-            // 
-            this.setorBindingSource.DataMember = "Setor";
-            this.setorBindingSource.DataSource = this.supermecadoDataSet;
-            // 
-            // supermecadoDataSet
-            // 
-            this.supermecadoDataSet.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -425,11 +413,6 @@
             this.Item_cbMarca.Size = new System.Drawing.Size(121, 21);
             this.Item_cbMarca.TabIndex = 46;
             this.Item_cbMarca.ValueMember = "id";
-            // 
-            // marcaBindingSource
-            // 
-            this.marcaBindingSource.DataMember = "Marca";
-            this.marcaBindingSource.DataSource = this.supermecadoDataSet;
             // 
             // label18
             // 
@@ -800,11 +783,6 @@
             this.Setor_cbSubDepartamento.TabIndex = 20;
             this.Setor_cbSubDepartamento.ValueMember = "id";
             // 
-            // subdepartamentoBindingSource
-            // 
-            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
-            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.OrangeRed;
@@ -895,7 +873,7 @@
             // SubDepartamento_cbDepartamento
             // 
             this.SubDepartamento_cbDepartamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.departamentoBindingSource, "id", true));
-            this.SubDepartamento_cbDepartamento.DataSource = this.departamentoBindingSource1;
+            this.SubDepartamento_cbDepartamento.DataSource = this.departamentoBindingSource;
             this.SubDepartamento_cbDepartamento.DisplayMember = "nome";
             this.SubDepartamento_cbDepartamento.FormattingEnabled = true;
             this.SubDepartamento_cbDepartamento.Location = new System.Drawing.Point(299, 48);
@@ -903,16 +881,6 @@
             this.SubDepartamento_cbDepartamento.Size = new System.Drawing.Size(180, 21);
             this.SubDepartamento_cbDepartamento.TabIndex = 12;
             this.SubDepartamento_cbDepartamento.ValueMember = "id";
-            // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataMember = "Departamento";
-            this.departamentoBindingSource.DataSource = this.supermecadoDataSet;
-            // 
-            // departamentoBindingSource1
-            // 
-            this.departamentoBindingSource1.DataMember = "Departamento";
-            this.departamentoBindingSource1.DataSource = this.supermecadoDataSet;
             // 
             // button1
             // 
@@ -1063,21 +1031,46 @@
             this.tabControl4.Size = new System.Drawing.Size(775, 401);
             this.tabControl4.TabIndex = 3;
             // 
-            // departamentoTableAdapter
+            // supermecadoDataSet1
             // 
-            this.departamentoTableAdapter.ClearBeforeFill = true;
+            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // sub_departamentoTableAdapter
+            // departamentoBindingSource
             // 
-            this.sub_departamentoTableAdapter.ClearBeforeFill = true;
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.supermecadoDataSet1;
             // 
-            // setorTableAdapter
+            // departamentoTableAdapter1
             // 
-            this.setorTableAdapter.ClearBeforeFill = true;
+            this.departamentoTableAdapter1.ClearBeforeFill = true;
             // 
-            // marcaTableAdapter
+            // subdepartamentoBindingSource
             // 
-            this.marcaTableAdapter.ClearBeforeFill = true;
+            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
+            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // sub_departamentoTableAdapter1
+            // 
+            this.sub_departamentoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // setorBindingSource
+            // 
+            this.setorBindingSource.DataMember = "Setor";
+            this.setorBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // setorTableAdapter1
+            // 
+            this.setorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // marcaBindingSource
+            // 
+            this.marcaBindingSource.DataMember = "Marca";
+            this.marcaBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // marcaTableAdapter1
+            // 
+            this.marcaTableAdapter1.ClearBeforeFill = true;
             // 
             // Cadastros
             // 
@@ -1097,23 +1090,22 @@
             this.tabFuncionario.PerformLayout();
             this.tabProduto.ResumeLayout(false);
             this.tabProduto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabMarca.ResumeLayout(false);
             this.tabMarca.PerformLayout();
             this.tabSetor.ResumeLayout(false);
             this.tabSetor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
             this.tabSubDepartamento.ResumeLayout(false);
             this.tabSubDepartamento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource1)).EndInit();
             this.tabDepartamento.ResumeLayout(false);
             this.tabDepartamento.PerformLayout();
             this.tabControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1204,15 +1196,19 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label Funcionario_lbConfirmar;
         private SupermecadoDataSet supermecadoDataSet;
-        private System.Windows.Forms.BindingSource departamentoBindingSource;
         private SupermecadoDataSetTableAdapters.DepartamentoTableAdapter departamentoTableAdapter;
-        private System.Windows.Forms.BindingSource subdepartamentoBindingSource;
         private SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter sub_departamentoTableAdapter;
-        private System.Windows.Forms.BindingSource setorBindingSource;
         private SupermecadoDataSetTableAdapters.SetorTableAdapter setorTableAdapter;
-        private System.Windows.Forms.BindingSource marcaBindingSource;
         private SupermecadoDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter;
-        private System.Windows.Forms.BindingSource departamentoBindingSource1;
         private System.Windows.Forms.MaskedTextBox Funcionario_tbcCPF;
+        private SupermecadoDataSet supermecadoDataSet1;
+        private System.Windows.Forms.BindingSource departamentoBindingSource;
+        private SupermecadoDataSetTableAdapters.DepartamentoTableAdapter departamentoTableAdapter1;
+        private System.Windows.Forms.BindingSource subdepartamentoBindingSource;
+        private SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter sub_departamentoTableAdapter1;
+        private System.Windows.Forms.BindingSource setorBindingSource;
+        private SupermecadoDataSetTableAdapters.SetorTableAdapter setorTableAdapter1;
+        private System.Windows.Forms.BindingSource marcaBindingSource;
+        private SupermecadoDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter1;
     }
 }

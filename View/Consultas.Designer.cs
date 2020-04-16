@@ -42,15 +42,9 @@
             this.Departamento_Nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Departamento_dg = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.supermecadoDataSet = new Trabalho_A1_Supermecado.SupermecadoDataSet();
             this.tabSubDepartamento = new System.Windows.Forms.TabPage();
             this.SubDepartamento_Id = new System.Windows.Forms.NumericUpDown();
             this.SubDepartamento_cbDepartamento = new System.Windows.Forms.ComboBox();
-            this.fKSubdepartamentoDepartamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.SubDepartamento_Limpar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,16 +52,9 @@
             this.SubDepartamento_Nome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SubDepartamento_dg = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkdepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabSetor = new System.Windows.Forms.TabPage();
             this.Setor_Id = new System.Windows.Forms.NumericUpDown();
             this.Setor_cbSubDepartamento = new System.Windows.Forms.ComboBox();
-            this.fKSetorSubdepartamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.fKSubdepartamentoDepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.Setor_Limpar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,12 +62,6 @@
             this.Setor_Nome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Setor_dg = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fksubdepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdestoqueDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabMarca = new System.Windows.Forms.TabPage();
             this.Marca_Id = new System.Windows.Forms.NumericUpDown();
             this.Marca_Cnpj = new System.Windows.Forms.TextBox();
@@ -91,13 +72,6 @@
             this.Marca_Nome = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Marca_dg = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.complementoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Fornecedor_Id = new System.Windows.Forms.NumericUpDown();
             this.Fornecedor_Cnpj = new System.Windows.Forms.TextBox();
@@ -108,13 +82,6 @@
             this.Fornecedor_Nome = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Fornecedor_dg = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.complementoDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cnpjDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabProduto = new System.Windows.Forms.TabPage();
             this.Item_Id = new System.Windows.Forms.NumericUpDown();
             this.Item_cbSetor = new System.Windows.Forms.ComboBox();
@@ -127,14 +94,6 @@
             this.Item_Nome = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Item_dg = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.complementoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdestoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imagem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkmarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fksetorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabFuncionario = new System.Windows.Forms.TabPage();
             this.Funcionario_Id = new System.Windows.Forms.NumericUpDown();
             this.Funcionario_Limpar = new System.Windows.Forms.Button();
@@ -143,63 +102,91 @@
             this.Funcionario_Nome = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.Funcionario_dg = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomecompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funcaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fKItemSetorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fKItemMarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fKSetorSubdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
-            this.departamentoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
-            this.sub_departamentoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
-            this.setorTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
-            this.marcaTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
-            this.fornecedorTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
-            this.empregadoTableAdapter = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.Funcionario = new System.Windows.Forms.DataGridView();
-            this.fKItemMarcaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
+            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
+            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sub_departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
+            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.setorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
+            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marcaTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
+            this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.empregadoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.Marca_.SuspendLayout();
             this.tabDepartamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).BeginInit();
             this.tabSubDepartamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_Id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSubdepartamentoDepartamentoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
             this.tabSetor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_Id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSetorSubdepartamentoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSubdepartamentoDepartamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
             this.tabMarca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
             this.tabProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.tabFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKItemSetorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKItemMarcaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSetorSubdepartamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKItemMarcaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -227,13 +214,13 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
             this.perfilToolStripMenuItem.Text = "Perfil";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(127, 30);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -332,46 +319,15 @@
             this.Departamento_dg.AutoGenerateColumns = false;
             this.Departamento_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Departamento_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
             this.Departamento_dg.DataSource = this.departamentoBindingSource;
             this.Departamento_dg.Location = new System.Drawing.Point(179, 6);
             this.Departamento_dg.Name = "Departamento_dg";
             this.Departamento_dg.ReadOnly = true;
             this.Departamento_dg.Size = new System.Drawing.Size(372, 150);
             this.Departamento_dg.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn3.HeaderText = "id";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataMember = "Departamento";
-            this.departamentoBindingSource.DataSource = this.supermecadoDataSet;
-            // 
-            // supermecadoDataSet
-            // 
-            this.supermecadoDataSet.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabSubDepartamento
             // 
@@ -401,20 +357,13 @@
             // 
             // SubDepartamento_cbDepartamento
             // 
-            this.SubDepartamento_cbDepartamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.departamentoBindingSource, "id", true));
-            this.SubDepartamento_cbDepartamento.DataSource = this.fKSubdepartamentoDepartamentoBindingSource1;
-            this.SubDepartamento_cbDepartamento.DisplayMember = "nome";
+            this.SubDepartamento_cbDepartamento.DisplayMember = "id";
             this.SubDepartamento_cbDepartamento.FormattingEnabled = true;
             this.SubDepartamento_cbDepartamento.Location = new System.Drawing.Point(400, 224);
             this.SubDepartamento_cbDepartamento.Name = "SubDepartamento_cbDepartamento";
             this.SubDepartamento_cbDepartamento.Size = new System.Drawing.Size(176, 21);
             this.SubDepartamento_cbDepartamento.TabIndex = 15;
             this.SubDepartamento_cbDepartamento.ValueMember = "id";
-            // 
-            // fKSubdepartamentoDepartamentoBindingSource1
-            // 
-            this.fKSubdepartamentoDepartamentoBindingSource1.DataMember = "FK_Sub_departamento_Departamento";
-            this.fKSubdepartamentoDepartamentoBindingSource1.DataSource = this.departamentoBindingSource;
             // 
             // label5
             // 
@@ -482,49 +431,16 @@
             this.SubDepartamento_dg.AutoGenerateColumns = false;
             this.SubDepartamento_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SubDepartamento_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.fkdepartamentoDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23});
             this.SubDepartamento_dg.DataSource = this.subdepartamentoBindingSource;
             this.SubDepartamento_dg.Location = new System.Drawing.Point(149, 6);
             this.SubDepartamento_dg.Name = "SubDepartamento_dg";
             this.SubDepartamento_dg.ReadOnly = true;
             this.SubDepartamento_dg.Size = new System.Drawing.Size(466, 150);
             this.SubDepartamento_dg.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn6.HeaderText = "id";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // fkdepartamentoDataGridViewTextBoxColumn
-            // 
-            this.fkdepartamentoDataGridViewTextBoxColumn.DataPropertyName = "fk_departamento";
-            this.fkdepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento";
-            this.fkdepartamentoDataGridViewTextBoxColumn.Name = "fkdepartamentoDataGridViewTextBoxColumn";
-            this.fkdepartamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // subdepartamentoBindingSource
-            // 
-            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
-            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet;
             // 
             // tabSetor
             // 
@@ -554,25 +470,13 @@
             // 
             // Setor_cbSubDepartamento
             // 
-            this.Setor_cbSubDepartamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subdepartamentoBindingSource, "id", true));
-            this.Setor_cbSubDepartamento.DataSource = this.fKSetorSubdepartamentoBindingSource1;
-            this.Setor_cbSubDepartamento.DisplayMember = "nome";
+            this.Setor_cbSubDepartamento.DisplayMember = "id";
             this.Setor_cbSubDepartamento.FormattingEnabled = true;
             this.Setor_cbSubDepartamento.Location = new System.Drawing.Point(343, 247);
             this.Setor_cbSubDepartamento.Name = "Setor_cbSubDepartamento";
             this.Setor_cbSubDepartamento.Size = new System.Drawing.Size(156, 21);
             this.Setor_cbSubDepartamento.TabIndex = 23;
             this.Setor_cbSubDepartamento.ValueMember = "id";
-            // 
-            // fKSetorSubdepartamentoBindingSource1
-            // 
-            this.fKSetorSubdepartamentoBindingSource1.DataMember = "FK_Setor_Sub_departamento";
-            this.fKSetorSubdepartamentoBindingSource1.DataSource = this.fKSubdepartamentoDepartamentoBindingSource;
-            // 
-            // fKSubdepartamentoDepartamentoBindingSource
-            // 
-            this.fKSubdepartamentoDepartamentoBindingSource.DataMember = "FK_Sub_departamento_Departamento";
-            this.fKSubdepartamentoDepartamentoBindingSource.DataSource = this.departamentoBindingSource;
             // 
             // label6
             // 
@@ -640,58 +544,17 @@
             this.Setor_dg.AutoGenerateColumns = false;
             this.Setor_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Setor_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.fksubdepartamentoDataGridViewTextBoxColumn,
-            this.qtdestoqueDataGridViewTextBoxColumn1});
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28});
             this.Setor_dg.DataSource = this.setorBindingSource;
             this.Setor_dg.Location = new System.Drawing.Point(90, 6);
             this.Setor_dg.Name = "Setor_dg";
             this.Setor_dg.ReadOnly = true;
             this.Setor_dg.Size = new System.Drawing.Size(565, 187);
             this.Setor_dg.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn9.HeaderText = "id";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 50;
-            // 
-            // fksubdepartamentoDataGridViewTextBoxColumn
-            // 
-            this.fksubdepartamentoDataGridViewTextBoxColumn.DataPropertyName = "fk_sub_departamento";
-            this.fksubdepartamentoDataGridViewTextBoxColumn.HeaderText = "Sub departamento";
-            this.fksubdepartamentoDataGridViewTextBoxColumn.Name = "fksubdepartamentoDataGridViewTextBoxColumn";
-            this.fksubdepartamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdestoqueDataGridViewTextBoxColumn1
-            // 
-            this.qtdestoqueDataGridViewTextBoxColumn1.DataPropertyName = "qtd_estoque";
-            this.qtdestoqueDataGridViewTextBoxColumn1.HeaderText = "Quantidade";
-            this.qtdestoqueDataGridViewTextBoxColumn1.Name = "qtdestoqueDataGridViewTextBoxColumn1";
-            this.qtdestoqueDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // setorBindingSource
-            // 
-            this.setorBindingSource.DataMember = "Setor";
-            this.setorBindingSource.DataSource = this.supermecadoDataSet;
             // 
             // tabMarca
             // 
@@ -792,65 +655,18 @@
             this.Marca_dg.AutoGenerateColumns = false;
             this.Marca_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Marca_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.complementoDataGridViewTextBoxColumn1,
-            this.cnpjDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn,
-            this.telefoneDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34});
             this.Marca_dg.DataSource = this.marcaBindingSource;
             this.Marca_dg.Location = new System.Drawing.Point(50, 6);
             this.Marca_dg.Name = "Marca_dg";
             this.Marca_dg.ReadOnly = true;
             this.Marca_dg.Size = new System.Drawing.Size(665, 150);
             this.Marca_dg.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn12.HeaderText = "id";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // complementoDataGridViewTextBoxColumn1
-            // 
-            this.complementoDataGridViewTextBoxColumn1.DataPropertyName = "complemento";
-            this.complementoDataGridViewTextBoxColumn1.HeaderText = "Complemento";
-            this.complementoDataGridViewTextBoxColumn1.Name = "complementoDataGridViewTextBoxColumn1";
-            this.complementoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // cnpjDataGridViewTextBoxColumn
-            // 
-            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "cnpj";
-            this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ";
-            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
-            this.cnpjDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefoneDataGridViewTextBoxColumn
-            // 
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // marcaBindingSource
-            // 
-            this.marcaBindingSource.DataMember = "Marca";
-            this.marcaBindingSource.DataSource = this.supermecadoDataSet;
             // 
             // tabPage1
             // 
@@ -950,65 +766,18 @@
             this.Fornecedor_dg.AutoGenerateColumns = false;
             this.Fornecedor_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Fornecedor_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.complementoDataGridViewTextBoxColumn2,
-            this.cnpjDataGridViewTextBoxColumn1,
-            this.enderecoDataGridViewTextBoxColumn1,
-            this.telefoneDataGridViewTextBoxColumn1});
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40});
             this.Fornecedor_dg.DataSource = this.fornecedorBindingSource;
             this.Fornecedor_dg.Location = new System.Drawing.Point(50, 3);
             this.Fornecedor_dg.Name = "Fornecedor_dg";
             this.Fornecedor_dg.ReadOnly = true;
             this.Fornecedor_dg.Size = new System.Drawing.Size(667, 169);
             this.Fornecedor_dg.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn14.HeaderText = "id";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            // 
-            // complementoDataGridViewTextBoxColumn2
-            // 
-            this.complementoDataGridViewTextBoxColumn2.DataPropertyName = "complemento";
-            this.complementoDataGridViewTextBoxColumn2.HeaderText = "Complemento";
-            this.complementoDataGridViewTextBoxColumn2.Name = "complementoDataGridViewTextBoxColumn2";
-            this.complementoDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // cnpjDataGridViewTextBoxColumn1
-            // 
-            this.cnpjDataGridViewTextBoxColumn1.DataPropertyName = "cnpj";
-            this.cnpjDataGridViewTextBoxColumn1.HeaderText = "CNPJ";
-            this.cnpjDataGridViewTextBoxColumn1.Name = "cnpjDataGridViewTextBoxColumn1";
-            this.cnpjDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // enderecoDataGridViewTextBoxColumn1
-            // 
-            this.enderecoDataGridViewTextBoxColumn1.DataPropertyName = "endereco";
-            this.enderecoDataGridViewTextBoxColumn1.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn1.Name = "enderecoDataGridViewTextBoxColumn1";
-            this.enderecoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // telefoneDataGridViewTextBoxColumn1
-            // 
-            this.telefoneDataGridViewTextBoxColumn1.DataPropertyName = "telefone";
-            this.telefoneDataGridViewTextBoxColumn1.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn1.Name = "telefoneDataGridViewTextBoxColumn1";
-            this.telefoneDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fornecedorBindingSource
-            // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet;
             // 
             // tabProduto
             // 
@@ -1040,9 +809,7 @@
             // 
             // Item_cbSetor
             // 
-            this.Item_cbSetor.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.setorBindingSource, "id", true));
-            this.Item_cbSetor.DataSource = this.setorBindingSource;
-            this.Item_cbSetor.DisplayMember = "nome";
+            this.Item_cbSetor.DisplayMember = "id";
             this.Item_cbSetor.FormattingEnabled = true;
             this.Item_cbSetor.Location = new System.Drawing.Point(492, 236);
             this.Item_cbSetor.Name = "Item_cbSetor";
@@ -1052,9 +819,7 @@
             // 
             // Item_cbMarca
             // 
-            this.Item_cbMarca.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.marcaBindingSource, "id", true));
-            this.Item_cbMarca.DataSource = this.marcaBindingSource;
-            this.Item_cbMarca.DisplayMember = "nome";
+            this.Item_cbMarca.DisplayMember = "id";
             this.Item_cbMarca.FormattingEnabled = true;
             this.Item_cbMarca.Location = new System.Drawing.Point(280, 236);
             this.Item_cbMarca.Name = "Item_cbMarca";
@@ -1138,73 +903,19 @@
             this.Item_dg.AutoGenerateColumns = false;
             this.Item_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Item_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.complementoDataGridViewTextBoxColumn,
-            this.qtdestoqueDataGridViewTextBoxColumn,
-            this.imagem,
-            this.fkmarcaDataGridViewTextBoxColumn,
-            this.fksetorDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.imagemDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46});
             this.Item_dg.DataSource = this.itemBindingSource;
             this.Item_dg.Location = new System.Drawing.Point(4, 6);
             this.Item_dg.Name = "Item_dg";
             this.Item_dg.ReadOnly = true;
             this.Item_dg.Size = new System.Drawing.Size(755, 150);
             this.Item_dg.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // complementoDataGridViewTextBoxColumn
-            // 
-            this.complementoDataGridViewTextBoxColumn.DataPropertyName = "complemento";
-            this.complementoDataGridViewTextBoxColumn.HeaderText = "Complemento";
-            this.complementoDataGridViewTextBoxColumn.Name = "complementoDataGridViewTextBoxColumn";
-            this.complementoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdestoqueDataGridViewTextBoxColumn
-            // 
-            this.qtdestoqueDataGridViewTextBoxColumn.DataPropertyName = "qtd_estoque";
-            this.qtdestoqueDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.qtdestoqueDataGridViewTextBoxColumn.Name = "qtdestoqueDataGridViewTextBoxColumn";
-            this.qtdestoqueDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imagem
-            // 
-            this.imagem.DataPropertyName = "imagem";
-            this.imagem.HeaderText = "Imagem";
-            this.imagem.Name = "imagem";
-            this.imagem.ReadOnly = true;
-            // 
-            // fkmarcaDataGridViewTextBoxColumn
-            // 
-            this.fkmarcaDataGridViewTextBoxColumn.DataPropertyName = "fk_marca";
-            this.fkmarcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.fkmarcaDataGridViewTextBoxColumn.Name = "fkmarcaDataGridViewTextBoxColumn";
-            this.fkmarcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fksetorDataGridViewTextBoxColumn
-            // 
-            this.fksetorDataGridViewTextBoxColumn.DataPropertyName = "fk_setor";
-            this.fksetorDataGridViewTextBoxColumn.HeaderText = "Setor";
-            this.fksetorDataGridViewTextBoxColumn.Name = "fksetorDataGridViewTextBoxColumn";
-            this.fksetorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataMember = "Item";
-            this.itemBindingSource.DataSource = this.supermecadoDataSet;
             // 
             // tabFuncionario
             // 
@@ -1286,92 +997,17 @@
             this.Funcionario_dg.AutoGenerateColumns = false;
             this.Funcionario_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Funcionario_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn16,
-            this.nomecompletoDataGridViewTextBoxColumn,
-            this.cpfDataGridViewTextBoxColumn,
-            this.funcaoDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48,
+            this.dataGridViewTextBoxColumn49,
+            this.senhaDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn50});
             this.Funcionario_dg.DataSource = this.empregadoBindingSource;
             this.Funcionario_dg.Location = new System.Drawing.Point(150, 6);
             this.Funcionario_dg.Name = "Funcionario_dg";
             this.Funcionario_dg.ReadOnly = true;
             this.Funcionario_dg.Size = new System.Drawing.Size(465, 150);
             this.Funcionario_dg.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn16.HeaderText = "id";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // nomecompletoDataGridViewTextBoxColumn
-            // 
-            this.nomecompletoDataGridViewTextBoxColumn.DataPropertyName = "nome_completo";
-            this.nomecompletoDataGridViewTextBoxColumn.HeaderText = "Nome Completo";
-            this.nomecompletoDataGridViewTextBoxColumn.Name = "nomecompletoDataGridViewTextBoxColumn";
-            this.nomecompletoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cpfDataGridViewTextBoxColumn
-            // 
-            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "cpf";
-            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
-            this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // funcaoDataGridViewTextBoxColumn
-            // 
-            this.funcaoDataGridViewTextBoxColumn.DataPropertyName = "funcao";
-            this.funcaoDataGridViewTextBoxColumn.HeaderText = "Funcao";
-            this.funcaoDataGridViewTextBoxColumn.Name = "funcaoDataGridViewTextBoxColumn";
-            this.funcaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // empregadoBindingSource
-            // 
-            this.empregadoBindingSource.DataMember = "Empregado";
-            this.empregadoBindingSource.DataSource = this.supermecadoDataSet;
-            // 
-            // fKItemSetorBindingSource
-            // 
-            this.fKItemSetorBindingSource.DataMember = "FK_Item_Setor";
-            this.fKItemSetorBindingSource.DataSource = this.setorBindingSource;
-            // 
-            // fKItemMarcaBindingSource
-            // 
-            this.fKItemMarcaBindingSource.DataMember = "FK_Item_Marca";
-            this.fKItemMarcaBindingSource.DataSource = this.marcaBindingSource;
-            // 
-            // fKSetorSubdepartamentoBindingSource
-            // 
-            this.fKSetorSubdepartamentoBindingSource.DataMember = "FK_Setor_Sub_departamento";
-            this.fKSetorSubdepartamentoBindingSource.DataSource = this.subdepartamentoBindingSource;
-            // 
-            // itemTableAdapter
-            // 
-            this.itemTableAdapter.ClearBeforeFill = true;
-            // 
-            // departamentoTableAdapter
-            // 
-            this.departamentoTableAdapter.ClearBeforeFill = true;
-            // 
-            // sub_departamentoTableAdapter
-            // 
-            this.sub_departamentoTableAdapter.ClearBeforeFill = true;
-            // 
-            // setorTableAdapter
-            // 
-            this.setorTableAdapter.ClearBeforeFill = true;
-            // 
-            // marcaTableAdapter
-            // 
-            this.marcaTableAdapter.ClearBeforeFill = true;
-            // 
-            // fornecedorTableAdapter
-            // 
-            this.fornecedorTableAdapter.ClearBeforeFill = true;
-            // 
-            // empregadoTableAdapter
-            // 
-            this.empregadoTableAdapter.ClearBeforeFill = true;
             // 
             // btn_voltar
             // 
@@ -1390,17 +1026,334 @@
             this.Funcionario.AllowUserToDeleteRows = false;
             this.Funcionario.AutoGenerateColumns = false;
             this.Funcionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Funcionario.DataSource = this.empregadoBindingSource;
             this.Funcionario.Location = new System.Drawing.Point(150, 6);
             this.Funcionario.Name = "Funcionario";
             this.Funcionario.ReadOnly = true;
             this.Funcionario.Size = new System.Drawing.Size(465, 150);
             this.Funcionario.TabIndex = 1;
             // 
-            // fKItemMarcaBindingSource1
+            // supermecadoDataSet1
             // 
-            this.fKItemMarcaBindingSource1.DataMember = "FK_Item_Marca";
-            this.fKItemMarcaBindingSource1.DataSource = this.marcaBindingSource;
+            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // departamentoBindingSource
+            // 
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // departamentoTableAdapter1
+            // 
+            this.departamentoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // subdepartamentoBindingSource
+            // 
+            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
+            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // sub_departamentoTableAdapter1
+            // 
+            this.sub_departamentoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // setorBindingSource
+            // 
+            this.setorBindingSource.DataMember = "Setor";
+            this.setorBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // setorTableAdapter1
+            // 
+            this.setorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // marcaBindingSource
+            // 
+            this.marcaBindingSource.DataMember = "Marca";
+            this.marcaBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // marcaTableAdapter1
+            // 
+            this.marcaTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // fornecedorTableAdapter1
+            // 
+            this.fornecedorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataMember = "Item";
+            this.itemBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // itemTableAdapter1
+            // 
+            this.itemTableAdapter1.ClearBeforeFill = true;
+            // 
+            // empregadoBindingSource
+            // 
+            this.empregadoBindingSource.DataMember = "Empregado";
+            this.empregadoBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // empregadoTableAdapter1
+            // 
+            this.empregadoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn47.HeaderText = "id";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "nome_completo";
+            this.dataGridViewTextBoxColumn48.HeaderText = "Nome completo";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "cpf";
+            this.dataGridViewTextBoxColumn49.HeaderText = "CPF";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            this.dataGridViewTextBoxColumn49.Width = 50;
+            // 
+            // senhaDataGridViewTextBoxColumn
+            // 
+            this.senhaDataGridViewTextBoxColumn.DataPropertyName = "senha";
+            this.senhaDataGridViewTextBoxColumn.HeaderText = "Senha";
+            this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
+            this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "funcao";
+            this.dataGridViewTextBoxColumn50.HeaderText = "Função";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn41.HeaderText = "id";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            this.dataGridViewTextBoxColumn41.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn42.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "complemento";
+            this.dataGridViewTextBoxColumn43.HeaderText = "Complemento";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.ReadOnly = true;
+            // 
+            // imagemDataGridViewTextBoxColumn
+            // 
+            this.imagemDataGridViewTextBoxColumn.DataPropertyName = "imagem";
+            this.imagemDataGridViewTextBoxColumn.HeaderText = "Imagem";
+            this.imagemDataGridViewTextBoxColumn.Name = "imagemDataGridViewTextBoxColumn";
+            this.imagemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "qtd_estoque";
+            this.dataGridViewTextBoxColumn44.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "fk_marca";
+            this.dataGridViewTextBoxColumn45.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "fk_setor";
+            this.dataGridViewTextBoxColumn46.HeaderText = "Setor";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn35.HeaderText = "id";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "complemento";
+            this.dataGridViewTextBoxColumn37.HeaderText = "Complemento";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "cnpj";
+            this.dataGridViewTextBoxColumn38.HeaderText = "CNPJ";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "endereco";
+            this.dataGridViewTextBoxColumn39.HeaderText = "Endereco";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "telefone";
+            this.dataGridViewTextBoxColumn40.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn29.HeaderText = "id";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "complemento";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Complemento";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "cnpj";
+            this.dataGridViewTextBoxColumn32.HeaderText = "CNPJ";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "endereco";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Endereco";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "telefone";
+            this.dataGridViewTextBoxColumn34.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn24.HeaderText = "id";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "fk_sub_departamento";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Sub departamento";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "qtd_estoque";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn20.HeaderText = "id";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "fk_departamento";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Departamento";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn17.HeaderText = "id";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
             // 
             // Consultas
             // 
@@ -1423,46 +1376,39 @@
             this.tabDepartamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet)).EndInit();
             this.tabSubDepartamento.ResumeLayout(false);
             this.tabSubDepartamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_Id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSubdepartamentoDepartamentoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
             this.tabSetor.ResumeLayout(false);
             this.tabSetor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_Id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSetorSubdepartamentoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSubdepartamentoDepartamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
             this.tabMarca.ResumeLayout(false);
             this.tabMarca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
             this.tabProduto.ResumeLayout(false);
             this.tabProduto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             this.tabFuncionario.ResumeLayout(false);
             this.tabFuncionario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKItemSetorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKItemMarcaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKSetorSubdepartamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKItemMarcaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1492,26 +1438,18 @@
         private System.Windows.Forms.DataGridView Item_dg;
         private System.Windows.Forms.DataGridView Funcionario_dg;
         private SupermecadoDataSet supermecadoDataSet;
-        private System.Windows.Forms.BindingSource itemBindingSource;
         private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn complementoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdestoqueDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imagem;
         private System.Windows.Forms.DataGridViewTextBoxColumn fkmarcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fksetorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource departamentoBindingSource;
         private SupermecadoDataSetTableAdapters.DepartamentoTableAdapter departamentoTableAdapter;
-        private System.Windows.Forms.BindingSource subdepartamentoBindingSource;
         private SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter sub_departamentoTableAdapter;
-        private System.Windows.Forms.BindingSource setorBindingSource;
         private SupermecadoDataSetTableAdapters.SetorTableAdapter setorTableAdapter;
-        private System.Windows.Forms.BindingSource marcaBindingSource;
         private SupermecadoDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter;
-        private System.Windows.Forms.BindingSource fornecedorBindingSource;
         private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter;
-        private System.Windows.Forms.BindingSource empregadoBindingSource;
         private SupermecadoDataSetTableAdapters.EmpregadoTableAdapter empregadoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
@@ -1582,12 +1520,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView Funcionario;
-        private System.Windows.Forms.BindingSource fKSubdepartamentoDepartamentoBindingSource;
-        private System.Windows.Forms.BindingSource fKSetorSubdepartamentoBindingSource;
-        private System.Windows.Forms.BindingSource fKItemSetorBindingSource;
-        private System.Windows.Forms.BindingSource fKItemMarcaBindingSource;
-        private System.Windows.Forms.BindingSource fKSubdepartamentoDepartamentoBindingSource1;
-        private System.Windows.Forms.BindingSource fKSetorSubdepartamentoBindingSource1;
         private System.Windows.Forms.TextBox Marca_Cnpj;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox Fornecedor_Cnpj;
@@ -1599,11 +1531,61 @@
         private System.Windows.Forms.NumericUpDown Fornecedor_Id;
         private System.Windows.Forms.NumericUpDown Item_Id;
         private System.Windows.Forms.NumericUpDown Funcionario_Id;
-        private System.Windows.Forms.BindingSource fKItemMarcaBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn fksubdepartamentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdestoqueDataGridViewTextBoxColumn1;
+        private SupermecadoDataSet supermecadoDataSet1;
+        private System.Windows.Forms.BindingSource departamentoBindingSource;
+        private SupermecadoDataSetTableAdapters.DepartamentoTableAdapter departamentoTableAdapter1;
+        private System.Windows.Forms.BindingSource subdepartamentoBindingSource;
+        private SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter sub_departamentoTableAdapter1;
+        private System.Windows.Forms.BindingSource setorBindingSource;
+        private SupermecadoDataSetTableAdapters.SetorTableAdapter setorTableAdapter1;
+        private System.Windows.Forms.BindingSource marcaBindingSource;
+        private SupermecadoDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter1;
+        private System.Windows.Forms.BindingSource fornecedorBindingSource;
+        private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter1;
+        private System.Windows.Forms.BindingSource itemBindingSource;
+        private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
+        private System.Windows.Forms.BindingSource empregadoBindingSource;
+        private SupermecadoDataSetTableAdapters.EmpregadoTableAdapter empregadoTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagemDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
     }
 }

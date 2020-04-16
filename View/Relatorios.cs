@@ -63,6 +63,12 @@ namespace Trabalho_A1_Supermecado
 
         private void Relatorios_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
+            this.fornecedorTableAdapter1.Fill(this.supermecadoDataSet1.Fornecedor);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Item'. Você pode movê-la ou removê-la conforme necessário.
+            this.itemTableAdapter1.Fill(this.supermecadoDataSet1.Item);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Empregado'. Você pode movê-la ou removê-la conforme necessário.
+            this.empregadoTableAdapter1.Fill(this.supermecadoDataSet1.Empregado);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Empregado'. Você pode movê-la ou removê-la conforme necessário.
             this.empregadoTableAdapter.Fill(this.supermecadoDataSet.Empregado);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
