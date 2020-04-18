@@ -14,8 +14,8 @@ namespace Trabalho_A1_Supermecado.DAO
         public Lote insert(Lote lote)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Lote(tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor) output INSERTED.id " +
-                                      "values (@tipo_estoque, @dias_validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor)";
+            cmd.CommandText = "INSERT INTO Lote(tipo_estoque, validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, data_entrada, data_fabricacao, codigo) output INSERTED.id " +
+                                      "values (@tipo_estoque, @dias_validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor, @data_entrada, @data_fabricacao, @codigo)";
             cmd.Parameters.AddWithValue("@tipo_estoque", lote.Tipo_estoque);
             cmd.Parameters.AddWithValue("@dias_validade", lote.Dias_validade);
             cmd.Parameters.AddWithValue("@peso_kg", lote.Peso_kg);
@@ -33,8 +33,8 @@ namespace Trabalho_A1_Supermecado.DAO
         public Lote update(Lote lote)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Lote set tipo_estoque = @tipo_estoque, dias_validade = @dias_validade, peso_kg = @peso_kg, " +
-                "valor_compra = @valor_compra, qtd_estoque = @qtd_estoque, fk_item = @fk_item, fk_fornecedor = @fk_fornecedor, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Lote set tipo_estoque = @tipo_estoque, validade = @dias_validade, peso_kg = @peso_kg, " +
+                "valor_compra = @valor_compra, qtd_estoque = @qtd_estoque, fk_item = @fk_item, fk_fornecedor = @fk_fornecedor, data_entrada = @data_entrada, data_fabricacao = @data_fabricacao, codigo = @codigo, id = @id where id = @id";
             cmd.Parameters.AddWithValue("@id", lote.Id);
             cmd.Parameters.AddWithValue("@tipo_estoque", lote.Tipo_estoque);
             cmd.Parameters.AddWithValue("@dias_validade", lote.Dias_validade);
@@ -70,12 +70,15 @@ namespace Trabalho_A1_Supermecado.DAO
                 dr.Read();
                 obj.Id = (int)dr["id"];
                 obj.Tipo_estoque = dr["tipo_estoque"].ToString();
-                obj.Dias_validade = (DateTime)dr["dias_validade"];
-                obj.Peso_kg = (float)dr["peso_kg"];
-                obj.Valor_compra = (float)dr["valor_compra"];
+                obj.Dias_validade = (DateTime)dr["validade"];
+                obj.Peso_kg = (Decimal)dr["peso_kg"];
+                obj.Valor_compra = (Decimal)dr["valor_compra"];
                 obj.Qtd_estoque = (int)dr["qtd_estoque"];
                 obj.Item = ItemDAO.findById((int)dr["fk_item"]);
                 obj.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
+                obj.DataEntrada = (DateTime)dr["data_entrada"];
+                obj.DataFabricacao = (DateTime)dr["data_fabricacao"];
+                obj.Codigo = (String)dr["codigo"];
             }
             else
             {
@@ -96,9 +99,9 @@ namespace Trabalho_A1_Supermecado.DAO
                 dr.Read();
                 obj.Id = (int)dr["id"];
                 obj.Tipo_estoque = dr["tipo_estoque"].ToString();
-                obj.Dias_validade = (DateTime)dr["dias_validade"];
-                obj.Peso_kg = (float)dr["peso_kg"];
-                obj.Valor_compra = (float)dr["valor_compra"];
+                obj.Dias_validade = (DateTime)dr["validade"];
+                obj.Valor_compra = (Decimal)dr["valor_compra"];
+                obj.Peso_kg = (Decimal)dr["peso_kg"];
                 obj.Qtd_estoque = (int)dr["qtd_estoque"];
                 obj.Item = ItemDAO.findById((int)dr["fk_item"]);
                 obj.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
@@ -126,9 +129,9 @@ namespace Trabalho_A1_Supermecado.DAO
                     Lote obj = new Lote();
                     obj.Id = (int)dr["id"];
                     obj.Tipo_estoque = dr["tipo_estoque"].ToString();
-                    obj.Dias_validade = (DateTime)dr["dias_validade"];
-                    obj.Peso_kg = (float)dr["peso_kg"];
-                    obj.Valor_compra = (float)dr["valor_compra"];
+                    obj.Dias_validade = (DateTime)dr["validade"];
+                    obj.Peso_kg = (Decimal)dr["peso_kg"];
+                    obj.Valor_compra = (Decimal)dr["valor_compra"];
                     obj.Qtd_estoque = (int)dr["qtd_estoque"];
                     obj.Item = ItemDAO.findById((int)dr["fk_item"]);
                     obj.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);

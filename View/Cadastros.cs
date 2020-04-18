@@ -275,22 +275,6 @@ namespace Trabalho_A1_Supermecado
             this.sub_departamentoTableAdapter1.Fill(this.supermecadoDataSet1.Sub_departamento);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Departamento'. Você pode movê-la ou removê-la conforme necessário.
             this.departamentoTableAdapter1.Fill(this.supermecadoDataSet1.Departamento);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Marca'. Você pode movê-la ou removê-la conforme necessário.
-            this.marcaTableAdapter.Fill(this.supermecadoDataSet.Marca);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Setor'. Você pode movê-la ou removê-la conforme necessário.
-            this.setorTableAdapter.Fill(this.supermecadoDataSet.Setor);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Sub_departamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.sub_departamentoTableAdapter.Fill(this.supermecadoDataSet.Sub_departamento);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Departamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.departamentoTableAdapter.Fill(this.supermecadoDataSet.Departamento);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Marca'. Você pode movê-la ou removê-la conforme necessário.
-            this.marcaTableAdapter.Fill(this.supermecadoDataSet.Marca);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Setor'. Você pode movê-la ou removê-la conforme necessário.
-            this.setorTableAdapter.Fill(this.supermecadoDataSet.Setor);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Sub_departamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.sub_departamentoTableAdapter.Fill(this.supermecadoDataSet.Sub_departamento);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Departamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.departamentoTableAdapter.Fill(this.supermecadoDataSet.Departamento);
 
         }
     }

@@ -13,8 +13,8 @@ namespace Trabalho_A1_Supermecado.DAO
         public Historico insert(Historico historico)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Historico(datetime, operacao, fk_id_lote, tipo_estoque, dias_validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado) output INSERTED.id " +
-                                      "values (@datetime, @operacao, @fk_id_lote, @tipo_estoque, @dias_validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor, @fk_empregado)";
+            cmd.CommandText = "INSERT INTO Historico(datetime, operacao, fk_id_lote, tipo_estoque, validade, peso_kg, valor_compra, qtd_estoque, fk_item, fk_fornecedor, fk_empregado, data_entrada, data_fabricacao, codigo) output INSERTED.id " +
+                                      "values (@datetime, @operacao, @fk_id_lote, @tipo_estoque, @dias_validade, @peso_kg, @valor_compra, @qtd_estoque, @fk_item, @fk_fornecedor, @fk_empregado, @data_entrada, @data_fabricacao, @codigo)";
             cmd.Parameters.AddWithValue("@datetime", historico.Datetime);
             cmd.Parameters.AddWithValue("@operacao", historico.Operacao);
             cmd.Parameters.AddWithValue("@fk_id_lote", historico.Lote.Id);
@@ -37,8 +37,9 @@ namespace Trabalho_A1_Supermecado.DAO
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UPDATE Historico set datetime = @datetime, operacao = @operacao, fk_id_lote = @fk_id_lote, " +
-                "tipo_estoque = @tipo_estoque, dias_validade = @dias_validade, peso_kg = @peso_kg, valor_compra = @valor_compra," +
-                "qtd_estoque = @qtd_estoque, fk_item = @fk_item, fk_fornecedor = @fk_fornecedor, fk_empregado = @fk_empregado,  id = @id where id = @id";
+                "tipo_estoque = @tipo_estoque, validade = @dias_validade, peso_kg = @peso_kg, valor_compra = @valor_compra," +
+                "qtd_estoque = @qtd_estoque, fk_item = @fk_item, fk_fornecedor = @fk_fornecedor, fk_empregado = @fk_empregado," +
+                " data_entrada = @data_entrada, data_fabricacao = @data_fabricacao, codigo = @codigo,  id = @id where id = @id";
             cmd.Parameters.AddWithValue("@id", historico.Id);
             cmd.Parameters.AddWithValue("@datetime", historico.Datetime);
             cmd.Parameters.AddWithValue("@operacao", historico.Operacao);
@@ -81,9 +82,9 @@ namespace Trabalho_A1_Supermecado.DAO
                 obj.Operacao = dr["operacao"].ToString();
                 obj.Lote.Id = (int)dr["fk_id_lote"];
                 obj.Lote.Tipo_estoque = dr["tipo_estoque"].ToString();
-                obj.Lote.Dias_validade = (DateTime)dr["dias_validade"];
-                obj.Lote.Peso_kg = (float)dr["peso_kg"];
-                obj.Lote.Valor_compra = (float)dr["valor_compra"];
+                obj.Lote.Dias_validade = (DateTime)dr["validade"];
+                obj.Lote.Peso_kg = (Decimal)dr["peso_kg"];
+                obj.Lote.Valor_compra = (Decimal)dr["valor_compra"];
                 obj.Lote.Qtd_estoque = (int)dr["qtd_estoque"];
                 obj.Lote.Item = ItemDAO.findById((int)dr["fk_item"]);
                 obj.Lote.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);
@@ -115,9 +116,9 @@ namespace Trabalho_A1_Supermecado.DAO
                     obj.Operacao = dr["operacao"].ToString();
                     obj.Lote.Id = (int)dr["fk_id_lote"];
                     obj.Lote.Tipo_estoque = dr["tipo_estoque"].ToString();
-                    obj.Lote.Dias_validade = (DateTime)dr["dias_validade"];
-                    obj.Lote.Peso_kg = (float)dr["peso_kg"];
-                    obj.Lote.Valor_compra = (float)dr["valor_compra"];
+                    obj.Lote.Dias_validade = (DateTime)dr["validade"];
+                    obj.Lote.Peso_kg = (Decimal)dr["peso_kg"];
+                    obj.Lote.Valor_compra = (Decimal)dr["valor_compra"];
                     obj.Lote.Qtd_estoque = (int)dr["qtd_estoque"];
                     obj.Lote.Item = ItemDAO.findById((int)dr["fk_item"]);
                     obj.Lote.Fornecedor = FornecedorDAO.findById((int)dr["fk_fornecedor"]);

@@ -70,14 +70,6 @@ namespace Trabalho_A1_Supermecado.Forms
             this.fornecedorTableAdapter1.Fill(this.supermecadoDataSet2.Fornecedor);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet2.Item'. Você pode movê-la ou removê-la conforme necessário.
             this.itemTableAdapter1.Fill(this.supermecadoDataSet2.Item);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
-            this.fornecedorTableAdapter.Fill(this.supermecadoDataSet1.Fornecedor);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Item'. Você pode movê-la ou removê-la conforme necessário.
-            this.itemTableAdapter.Fill(this.supermecadoDataSet1.Item);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Lote'. Você pode movê-la ou removê-la conforme necessário.
-            this.loteTableAdapter.Fill(this.supermecadoDataSet1.Lote);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Lote'. Você pode movê-la ou removê-la conforme necessário.
-            this.loteTableAdapter.Fill(this.supermecadoDataSet.Lote);
 
         }
 

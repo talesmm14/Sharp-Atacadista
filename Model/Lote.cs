@@ -11,8 +11,8 @@ namespace Trabalho_A1_Supermecado.Classes
         private int id;
         private String tipo_estoque;
         private DateTime dias_validade;
-        private float peso_kg;
-        private float valor_compra;
+        private Decimal peso_kg;
+        private Decimal valor_compra;
         private int qtd_estoque;
         private Fornecedor fornecedor;
         private Item item;
@@ -23,8 +23,8 @@ namespace Trabalho_A1_Supermecado.Classes
         public int Id { get => id; set => id = value; }
         public string Tipo_estoque { get => tipo_estoque; set => tipo_estoque = value; }
         public DateTime Dias_validade { get => dias_validade; set => dias_validade = value; }
-        public float Peso_kg { get => peso_kg; set => peso_kg = value; }
-        public float Valor_compra { get => valor_compra; set => valor_compra = value; }
+        public Decimal Peso_kg { get => peso_kg; set => peso_kg = value; }
+        public Decimal Valor_compra { get => valor_compra; set => valor_compra = value; }
         public int Qtd_estoque { get => qtd_estoque; set => qtd_estoque = value; }
         public Fornecedor Fornecedor { get => fornecedor; set => fornecedor = value; }
         public Item Item { get => item; set => item = value; }

@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.valorCompra = new System.Windows.Forms.NumericUpDown();
-            this.cbEstoqueTipo = new System.Windows.Forms.ComboBox();
-            this.pesoKg = new System.Windows.Forms.NumericUpDown();
             this.estoque = new System.Windows.Forms.NumericUpDown();
             this.cbItem = new System.Windows.Forms.ComboBox();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
             this.cbFornecedor = new System.Windows.Forms.ComboBox();
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,28 +48,23 @@
             this.btnAddF = new System.Windows.Forms.Button();
             this.btnAddI = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.codFornecedor = new System.Windows.Forms.NumericUpDown();
-            this.codItem = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.dtFabricacao = new System.Windows.Forms.DateTimePicker();
             this.validadeDias = new System.Windows.Forms.DateTimePicker();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
-            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
+            this.pesoKg = new System.Windows.Forms.NumericUpDown();
+            this.cbEstoqueTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.valorCompra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesoKg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoque)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.codFornecedor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pesoKg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,34 +91,6 @@
             this.valorCompra.TabIndex = 41;
             this.valorCompra.ThousandsSeparator = true;
             // 
-            // cbEstoqueTipo
-            // 
-            this.cbEstoqueTipo.FormattingEnabled = true;
-            this.cbEstoqueTipo.Items.AddRange(new object[] {
-            "Estoque de proteção",
-            "Estoque em trânsito",
-            "Estoque de antecipação",
-            "Estoque consignado",
-            "Dropshipping"});
-            this.cbEstoqueTipo.Location = new System.Drawing.Point(180, 310);
-            this.cbEstoqueTipo.Name = "cbEstoqueTipo";
-            this.cbEstoqueTipo.Size = new System.Drawing.Size(193, 21);
-            this.cbEstoqueTipo.TabIndex = 42;
-            // 
-            // pesoKg
-            // 
-            this.pesoKg.DecimalPlaces = 2;
-            this.pesoKg.Location = new System.Drawing.Point(180, 158);
-            this.pesoKg.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.pesoKg.Name = "pesoKg";
-            this.pesoKg.Size = new System.Drawing.Size(137, 20);
-            this.pesoKg.TabIndex = 44;
-            this.pesoKg.ThousandsSeparator = true;
-            // 
             // estoque
             // 
             this.estoque.Location = new System.Drawing.Point(180, 82);
@@ -138,7 +106,6 @@
             // 
             // cbItem
             // 
-            this.cbItem.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.itemBindingSource, "id", true));
             this.cbItem.DataSource = this.itemBindingSource;
             this.cbItem.DisplayMember = "nome";
             this.cbItem.FormattingEnabled = true;
@@ -147,6 +114,16 @@
             this.cbItem.Size = new System.Drawing.Size(193, 21);
             this.cbItem.TabIndex = 46;
             this.cbItem.ValueMember = "id";
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataMember = "Item";
+            this.itemBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // supermecadoDataSet1
+            // 
+            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbFornecedor
             // 
@@ -159,6 +136,11 @@
             this.cbFornecedor.Size = new System.Drawing.Size(193, 21);
             this.cbFornecedor.TabIndex = 47;
             this.cbFornecedor.ValueMember = "id";
+            // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // label2
             // 
@@ -246,7 +228,7 @@
             // 
             this.btnAddF.BackColor = System.Drawing.Color.Lime;
             this.btnAddF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddF.Location = new System.Drawing.Point(443, 196);
+            this.btnAddF.Location = new System.Drawing.Point(389, 196);
             this.btnAddF.Name = "btnAddF";
             this.btnAddF.Size = new System.Drawing.Size(29, 29);
             this.btnAddF.TabIndex = 58;
@@ -259,7 +241,7 @@
             // 
             this.btnAddI.BackColor = System.Drawing.Color.Lime;
             this.btnAddI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddI.Location = new System.Drawing.Point(443, 234);
+            this.btnAddI.Location = new System.Drawing.Point(389, 234);
             this.btnAddI.Name = "btnAddI";
             this.btnAddI.Size = new System.Drawing.Size(29, 29);
             this.btnAddI.TabIndex = 59;
@@ -271,8 +253,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -287,17 +268,15 @@
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.valorCompra, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pesoKg, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddF, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.codFornecedor, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddI, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.codItem, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.cbEstoqueTipo, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.tbxCodigo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtFabricacao, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.validadeDias, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddF, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddI, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.pesoKg, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 67);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -311,34 +290,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(479, 351);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 351);
             this.tableLayoutPanel1.TabIndex = 60;
-            // 
-            // codFornecedor
-            // 
-            this.codFornecedor.Location = new System.Drawing.Point(389, 196);
-            this.codFornecedor.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.codFornecedor.Name = "codFornecedor";
-            this.codFornecedor.Size = new System.Drawing.Size(45, 20);
-            this.codFornecedor.TabIndex = 60;
-            this.codFornecedor.ValueChanged += new System.EventHandler(this.codFornecedor_ValueChanged);
-            // 
-            // codItem
-            // 
-            this.codItem.Location = new System.Drawing.Point(389, 234);
-            this.codItem.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.codItem.Name = "codItem";
-            this.codItem.Size = new System.Drawing.Size(45, 20);
-            this.codItem.TabIndex = 61;
-            this.codItem.ValueChanged += new System.EventHandler(this.codItem_ValueChanged);
             // 
             // label9
             // 
@@ -384,7 +337,7 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(372, 12);
+            this.btnVoltar.Location = new System.Drawing.Point(322, 12);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(119, 34);
             this.btnVoltar.TabIndex = 61;
@@ -392,34 +345,47 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // supermecadoDataSet1
-            // 
-            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fornecedorBindingSource
-            // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
             // fornecedorTableAdapter1
             // 
             this.fornecedorTableAdapter1.ClearBeforeFill = true;
-            // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataMember = "Item";
-            this.itemBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // itemTableAdapter1
             // 
             this.itemTableAdapter1.ClearBeforeFill = true;
             // 
+            // pesoKg
+            // 
+            this.pesoKg.DecimalPlaces = 2;
+            this.pesoKg.Location = new System.Drawing.Point(180, 158);
+            this.pesoKg.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.pesoKg.Name = "pesoKg";
+            this.pesoKg.Size = new System.Drawing.Size(107, 20);
+            this.pesoKg.TabIndex = 67;
+            this.pesoKg.ThousandsSeparator = true;
+            // 
+            // cbEstoqueTipo
+            // 
+            this.cbEstoqueTipo.FormattingEnabled = true;
+            this.cbEstoqueTipo.Items.AddRange(new object[] {
+            "Estoque de proteção",
+            "Estoque em trânsito",
+            "Estoque de antecipação",
+            "Estoque consignado",
+            "Dropshipping"});
+            this.cbEstoqueTipo.Location = new System.Drawing.Point(180, 310);
+            this.cbEstoqueTipo.Name = "cbEstoqueTipo";
+            this.cbEstoqueTipo.Size = new System.Drawing.Size(193, 21);
+            this.cbEstoqueTipo.TabIndex = 42;
+            // 
             // Entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 487);
+            this.ClientSize = new System.Drawing.Size(454, 487);
             this.ControlBox = false;
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -430,15 +396,13 @@
             this.Text = "Entrada";
             this.Load += new System.EventHandler(this.Entrada_Load);
             ((System.ComponentModel.ISupportInitialize)(this.valorCompra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesoKg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoque)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.codFornecedor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pesoKg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,8 +412,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown valorCompra;
-        private System.Windows.Forms.ComboBox cbEstoqueTipo;
-        private System.Windows.Forms.NumericUpDown pesoKg;
         private System.Windows.Forms.NumericUpDown estoque;
         private System.Windows.Forms.ComboBox cbItem;
         private System.Windows.Forms.ComboBox cbFornecedor;
@@ -465,8 +427,6 @@
         private System.Windows.Forms.Button btnAddI;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.NumericUpDown codFornecedor;
-        private System.Windows.Forms.NumericUpDown codItem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbxCodigo;
@@ -480,5 +440,7 @@
         private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter1;
         private System.Windows.Forms.BindingSource itemBindingSource;
         private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
+        private System.Windows.Forms.ComboBox cbEstoqueTipo;
+        private System.Windows.Forms.NumericUpDown pesoKg;
     }
 }

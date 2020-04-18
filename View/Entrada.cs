@@ -24,13 +24,13 @@ namespace Trabalho_A1_Supermecado.View
         {
             EntradaController con = new EntradaController();
             Lote obj = new Lote();
-            obj.Tipo_estoque = cbEstoqueTipo.SelectedValue.ToString();
+            obj.Tipo_estoque = cbEstoqueTipo.Text;
             obj.Dias_validade = (DateTime)validadeDias.Value;
-            obj.Peso_kg = (float)pesoKg.Value;
+            obj.Peso_kg = (Decimal)pesoKg.Value;
             obj.Qtd_estoque = (int)estoque.Value;
             obj.Item = ItemDAO.findById((int)cbItem.SelectedValue);
             obj.Fornecedor = FornecedorDAO.findById((int)cbFornecedor.SelectedValue);
-            obj.Valor_compra = (float)valorCompra.Value;
+            obj.Valor_compra = (Decimal)valorCompra.Value;
             obj.DataFabricacao = (DateTime)dtFabricacao.Value;
             obj.Codigo = (String)tbxCodigo.Text;
 
@@ -82,29 +82,12 @@ namespace Trabalho_A1_Supermecado.View
                 Application.Exit();
             }
         }
-
-        private void codFornecedor_ValueChanged(object sender, EventArgs e)
-        {
-            if(codFornecedor.Value != 0)
-                cbFornecedor.DataSource = FornecedorDAO.returnDataSource();
-        }
-
-        private void codItem_ValueChanged(object sender, EventArgs e)
-        {
-            if (codFornecedor.Value != 0)
-                cbItem.DataSource = ItemDAO.returnDataSource();
-        }
-
         private void Entrada_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Item'. Você pode movê-la ou removê-la conforme necessário.
             this.itemTableAdapter1.Fill(this.supermecadoDataSet1.Item);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
             this.fornecedorTableAdapter1.Fill(this.supermecadoDataSet1.Fornecedor);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Item'. Você pode movê-la ou removê-la conforme necessário.
-            this.itemTableAdapter.Fill(this.supermecadoDataSet.Item);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
-            this.fornecedorTableAdapter.Fill(this.supermecadoDataSet.Fornecedor);
 
         }
     }
