@@ -69,39 +69,78 @@ namespace Trabalho_A1_Supermecado
             this.itemTableAdapter1.Fill(this.supermecadoDataSet1.Item);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Empregado'. Você pode movê-la ou removê-la conforme necessário.
             this.empregadoTableAdapter1.Fill(this.supermecadoDataSet1.Empregado);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Empregado'. Você pode movê-la ou removê-la conforme necessário.
-            this.empregadoTableAdapter.Fill(this.supermecadoDataSet.Empregado);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
-            this.fornecedorTableAdapter.Fill(this.supermecadoDataSet.Fornecedor);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Item'. Você pode movê-la ou removê-la conforme necessário.
-            this.itemTableAdapter.Fill(this.supermecadoDataSet.Item);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Historico'. Você pode movê-la ou removê-la conforme necessário.
-            this.historicoTableAdapter.Fill(this.supermecadoDataSet.Historico);
 
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)
         {
+            String consulta = "SELECT * FROM Historico WHERE ";
+            int count = 0;
+            if (checkData.Checked)
+            {
+                if (count != 0)
+                    consulta += " AND ";
+                consulta += "(cast ([datetime] as date) = '" + dateTIme.Value.Date.ToString("yyyy-MM-dd") + "')";
+                count += 1;
+            }
+            if (checkProtudo.Checked)
+            {
+                if (count != 0)
+                    consulta += " AND ";
+                consulta += "(fk_item = " + (int)cb_produto.SelectedValue + ")";
+                count += 1;
+            }
+            if (checkResponsavel.Checked)
+            {
+                if (count != 0)
+                    consulta += " AND ";
+                consulta += "(fk_empregado = " + (int)cb_empregado.SelectedValue + ")";
+                count += 1;
+            }
+            if (checkFornecedor.Checked)
+            {
+                if (count != 0)
+                    consulta += " AND ";
+                consulta += "(fk_fornecedor = " + (int)cb_fornecedor.SelectedValue + ")";
+                count += 1;
+            }
             if (id.Text == "0" || id.Text == "")
             {
-                dataGrid.DataSource = Conexao.pesquisar("SELECT * FROM Item WHERE " +
-                    "(datetime IS NULL OR datetime '" + DateTIme.Value.ToString() + "') " +
-                    "AND (" +
-                    "(fk_item = " + ((int)cb_produto.SelectedValue) + ")" +
-                    "AND " +
-                    "(fk_empregado = " + ((int)cb_empregado.SelectedValue) + ")" +
-                    "AND " +
-                    "(fk_fornecedor = " + ((int)cb_fornecedor.SelectedValue) + "))");
+                if (count == 0)
+                    dataGrid.DataSource = Conexao.pesquisar("SELECT * FROM Historico");
+                else
+                    dataGrid.DataSource = Conexao.pesquisar(consulta);
             }
             else
             {
-                dataGrid.DataSource = Conexao.pesquisar("SELECT * FROM Empregado WHERE (id = " + id.Text + ")");
+                dataGrid.DataSource = Conexao.pesquisar("SELECT * FROM Historico WHERE (id = " + id.Text + ")");
+                checkProtudo.Checked = false;
+                checkData.Checked = false;
+                checkFornecedor.Checked = false;
+                checkResponsavel.Checked = false;
             }
         }
 
         private void btn_limpar_Click(object sender, EventArgs e)
         {
             dataGrid.DataSource = Conexao.pesquisar("SELECT * FROM Historico");
+            checkProtudo.Checked = false;
+            checkData.Checked = false;
+            checkFornecedor.Checked = false;
+            checkResponsavel.Checked = false;
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.empregadoTableAdapter1.FillBy(this.supermecadoDataSet1.Empregado);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

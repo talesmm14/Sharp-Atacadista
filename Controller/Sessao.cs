@@ -12,6 +12,7 @@ namespace Trabalho_A1_Supermecado.Controller
     {
         private static int _usuarioId;
         private static String _nomeUsuario;
+        private static String _funcaoUsuario;
 
         //get e set
         public static int UsuarioId
@@ -24,6 +25,11 @@ namespace Trabalho_A1_Supermecado.Controller
             get { return Sessao._nomeUsuario; }
             set { Sessao._nomeUsuario = value; }
         }
+        public static String FuncaoUsuario
+        {
+            get { return Sessao._funcaoUsuario; }
+            set { Sessao._funcaoUsuario = value; }
+        }
 
         public static Empregado login(String cpf, String senha)
         {
@@ -32,6 +38,7 @@ namespace Trabalho_A1_Supermecado.Controller
             {
                 Sessao.NomeUsuario = user.NomeCompleto;
                 Sessao.UsuarioId = user.Id;
+                Sessao.FuncaoUsuario = user.Funcao;
                 return user;
             }
             return null;
@@ -40,6 +47,7 @@ namespace Trabalho_A1_Supermecado.Controller
         {
             Sessao.NomeUsuario = null;
             Sessao.UsuarioId = 0;
+            Sessao.FuncaoUsuario = null;
         }
         public static Boolean active()
         {

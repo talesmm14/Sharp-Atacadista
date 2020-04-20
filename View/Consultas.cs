@@ -66,20 +66,6 @@ namespace Trabalho_A1_Supermecado
             this.sub_departamentoTableAdapter1.Fill(this.supermecadoDataSet1.Sub_departamento);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Departamento'. Você pode movê-la ou removê-la conforme necessário.
             this.departamentoTableAdapter1.Fill(this.supermecadoDataSet1.Departamento);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Empregado'. Você pode movê-la ou removê-la conforme necessário.
-            this.empregadoTableAdapter.Fill(this.supermecadoDataSet.Empregado);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
-            this.fornecedorTableAdapter.Fill(this.supermecadoDataSet.Fornecedor);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Marca'. Você pode movê-la ou removê-la conforme necessário.
-            this.marcaTableAdapter.Fill(this.supermecadoDataSet.Marca);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Setor'. Você pode movê-la ou removê-la conforme necessário.
-            this.setorTableAdapter.Fill(this.supermecadoDataSet.Setor);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Sub_departamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.sub_departamentoTableAdapter.Fill(this.supermecadoDataSet.Sub_departamento);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Departamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.departamentoTableAdapter.Fill(this.supermecadoDataSet.Departamento);
-            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet.Item'. Você pode movê-la ou removê-la conforme necessário.
-            this.itemTableAdapter.Fill(this.supermecadoDataSet.Item);
 
         }
 
@@ -170,12 +156,25 @@ namespace Trabalho_A1_Supermecado
 
         private void Marca_Buscar_Click(object sender, EventArgs e)
         {
+            String consulta = "SELECT * FROM Marca WHERE ";
+            int count = 0;
             if (Marca_Id.Text == "0" || Marca_Id.Text == "")
             {
-                Marca_dg.DataSource = Conexao.pesquisar("SELECT * FROM Marca WHERE " +
-                    "((nome LIKE '%" + Marca_Nome.Text + "%')" +
-                    "AND " +
-                    "(cnpj LIKE '%" + Marca_Cnpj.Text + "%'))");
+                if (Marca_Nome.Text != "")
+                {
+                    if (count != 0)
+                        consulta += " AND ";
+                    consulta += "(nome LIKE '%" + Marca_Nome.Text + "%')";
+                    count += 1;
+                }
+                if (Marca_Cnpj.Text != "")
+                {
+                    if (count != 0)
+                        consulta += " AND ";
+                    consulta += "(cnpj LIKE '%" + Marca_Cnpj.Text + "%')";
+                    count += 1;
+                }
+                Marca_dg.DataSource = Conexao.pesquisar(consulta);
             }
             else
             {
@@ -195,12 +194,27 @@ namespace Trabalho_A1_Supermecado
 
         private void Fornecedor_Buscar_Click(object sender, EventArgs e)
         {
+            String consulta = "SELECT * FROM Fornecedor WHERE ";
+            int count = 0;
             if (Fornecedor_Id.Text == "0" || Fornecedor_Id.Text == "")
             {
-                Fornecedor_dg.DataSource = Conexao.pesquisar("SELECT * FROM Fornecedor WHERE " +
-                    "((nome LIKE '%" + Fornecedor_Nome.Text + "%')" +
-                    "AND " +
-                    "(cnpj LIKE '%" + Fornecedor_Cnpj.Text + "%'))");
+                if (Fornecedor_Nome.Text != "")
+                {
+                    if (count != 0)
+                        consulta += " AND ";
+                    consulta += "(nome LIKE '%" + Fornecedor_Nome.Text + "%')";
+                    count += 1;
+                }
+                if (Fornecedor_Cnpj.Text != "")
+                {
+                    if (count != 0)
+                        consulta += " AND ";
+                    consulta += "(cnpj LIKE '%" + Fornecedor_Cnpj.Text + "%')";
+                    count += 1;
+                }
+                if (count == 0)
+                    consulta = "SELECT * FROM Historico";
+                Marca_dg.DataSource = Conexao.pesquisar(consulta);
             }
             else
             {

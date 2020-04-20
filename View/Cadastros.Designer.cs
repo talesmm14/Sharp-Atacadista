@@ -34,6 +34,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tabFuncionario = new System.Windows.Forms.TabPage();
+            this.panelFuncionario = new System.Windows.Forms.Panel();
             this.Funcionario_tbcCPF = new System.Windows.Forms.MaskedTextBox();
             this.Funcionario_lbConfirmar = new System.Windows.Forms.Label();
             this.Funcionario_tbxConfirmar = new System.Windows.Forms.TextBox();
@@ -52,9 +53,12 @@
             this.Item_tbxComplemento = new System.Windows.Forms.TextBox();
             this.Item_tbxNome = new System.Windows.Forms.TextBox();
             this.Item_cbSetor = new System.Windows.Forms.ComboBox();
+            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
             this.label8 = new System.Windows.Forms.Label();
             this.btnImagem = new System.Windows.Forms.Button();
             this.Item_cbMarca = new System.Windows.Forms.ComboBox();
+            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
@@ -90,6 +94,7 @@
             this.tabSetor = new System.Windows.Forms.TabPage();
             this.lbSubDepartamento = new System.Windows.Forms.Label();
             this.Setor_cbSubDepartamento = new System.Windows.Forms.ComboBox();
+            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.Setor_btnCadastrar = new System.Windows.Forms.Button();
             this.Setor_tbxDescricao = new System.Windows.Forms.TextBox();
@@ -99,6 +104,7 @@
             this.tabSubDepartamento = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.SubDepartamento_cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.SubDepartamnto_btnCadastrar = new System.Windows.Forms.Button();
             this.SubDepartamento_tbxDescricao = new System.Windows.Forms.TextBox();
@@ -113,29 +119,25 @@
             this.lbDescricao = new System.Windows.Forms.Label();
             this.lbNome = new System.Windows.Forms.Label();
             this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
-            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
-            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sub_departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
-            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.setorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
-            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.marcaTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.tabFuncionario.SuspendLayout();
+            this.panelFuncionario.SuspendLayout();
             this.tabProduto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabMarca.SuspendLayout();
             this.tabSetor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
             this.tabSubDepartamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
             this.tabDepartamento.SuspendLayout();
             this.tabControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // usuarioToolStripMenuItem
@@ -175,19 +177,7 @@
             // 
             // tabFuncionario
             // 
-            this.tabFuncionario.Controls.Add(this.Funcionario_tbcCPF);
-            this.tabFuncionario.Controls.Add(this.Funcionario_lbConfirmar);
-            this.tabFuncionario.Controls.Add(this.Funcionario_tbxConfirmar);
-            this.tabFuncionario.Controls.Add(this.label17);
-            this.tabFuncionario.Controls.Add(this.Funcionario_cbFuncao);
-            this.tabFuncionario.Controls.Add(this.Funcionario_tbxSenha);
-            this.tabFuncionario.Controls.Add(this.Funcionario_NomeCompleto);
-            this.tabFuncionario.Controls.Add(this.label10);
-            this.tabFuncionario.Controls.Add(this.label11);
-            this.tabFuncionario.Controls.Add(this.button7);
-            this.tabFuncionario.Controls.Add(this.Funcionario_btnCadastrar);
-            this.tabFuncionario.Controls.Add(this.label12);
-            this.tabFuncionario.Controls.Add(this.label13);
+            this.tabFuncionario.Controls.Add(this.panelFuncionario);
             this.tabFuncionario.Location = new System.Drawing.Point(4, 22);
             this.tabFuncionario.Name = "tabFuncionario";
             this.tabFuncionario.Padding = new System.Windows.Forms.Padding(3);
@@ -196,41 +186,62 @@
             this.tabFuncionario.Text = "Funcionario";
             this.tabFuncionario.UseVisualStyleBackColor = true;
             // 
+            // panelFuncionario
+            // 
+            this.panelFuncionario.Controls.Add(this.Funcionario_tbcCPF);
+            this.panelFuncionario.Controls.Add(this.Funcionario_lbConfirmar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_tbxConfirmar);
+            this.panelFuncionario.Controls.Add(this.label17);
+            this.panelFuncionario.Controls.Add(this.Funcionario_cbFuncao);
+            this.panelFuncionario.Controls.Add(this.Funcionario_tbxSenha);
+            this.panelFuncionario.Controls.Add(this.Funcionario_NomeCompleto);
+            this.panelFuncionario.Controls.Add(this.label10);
+            this.panelFuncionario.Controls.Add(this.label11);
+            this.panelFuncionario.Controls.Add(this.button7);
+            this.panelFuncionario.Controls.Add(this.Funcionario_btnCadastrar);
+            this.panelFuncionario.Controls.Add(this.label12);
+            this.panelFuncionario.Controls.Add(this.label13);
+            this.panelFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFuncionario.Location = new System.Drawing.Point(3, 3);
+            this.panelFuncionario.Name = "panelFuncionario";
+            this.panelFuncionario.Size = new System.Drawing.Size(761, 369);
+            this.panelFuncionario.TabIndex = 53;
+            // 
             // Funcionario_tbcCPF
             // 
-            this.Funcionario_tbcCPF.Location = new System.Drawing.Point(13, 125);
+            this.Funcionario_tbcCPF.Location = new System.Drawing.Point(6, 118);
             this.Funcionario_tbcCPF.Mask = "000,000,000-00";
             this.Funcionario_tbcCPF.Name = "Funcionario_tbcCPF";
             this.Funcionario_tbcCPF.Size = new System.Drawing.Size(243, 20);
-            this.Funcionario_tbcCPF.TabIndex = 52;
+            this.Funcionario_tbcCPF.TabIndex = 65;
             this.Funcionario_tbcCPF.ValidatingType = typeof(int);
             // 
             // Funcionario_lbConfirmar
             // 
             this.Funcionario_lbConfirmar.AutoSize = true;
             this.Funcionario_lbConfirmar.ForeColor = System.Drawing.Color.Red;
-            this.Funcionario_lbConfirmar.Location = new System.Drawing.Point(13, 226);
+            this.Funcionario_lbConfirmar.Location = new System.Drawing.Point(6, 219);
             this.Funcionario_lbConfirmar.Name = "Funcionario_lbConfirmar";
             this.Funcionario_lbConfirmar.Size = new System.Drawing.Size(0, 13);
-            this.Funcionario_lbConfirmar.TabIndex = 51;
+            this.Funcionario_lbConfirmar.TabIndex = 64;
             // 
             // Funcionario_tbxConfirmar
             // 
-            this.Funcionario_tbxConfirmar.Location = new System.Drawing.Point(13, 260);
+            this.Funcionario_tbxConfirmar.Location = new System.Drawing.Point(6, 253);
             this.Funcionario_tbxConfirmar.Name = "Funcionario_tbxConfirmar";
             this.Funcionario_tbxConfirmar.PasswordChar = '*';
             this.Funcionario_tbxConfirmar.Size = new System.Drawing.Size(243, 20);
-            this.Funcionario_tbxConfirmar.TabIndex = 50;
+            this.Funcionario_tbxConfirmar.TabIndex = 63;
             this.Funcionario_tbxConfirmar.UseSystemPasswordChar = true;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(13, 226);
+            this.label17.Location = new System.Drawing.Point(6, 219);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(214, 31);
-            this.label17.TabIndex = 49;
+            this.label17.TabIndex = 62;
             this.label17.Text = "Confirmar senha";
             // 
             // Funcionario_cbFuncao
@@ -240,55 +251,55 @@
             "ADMIN",
             "Gerente",
             "Comum"});
-            this.Funcionario_cbFuncao.Location = new System.Drawing.Point(349, 49);
+            this.Funcionario_cbFuncao.Location = new System.Drawing.Point(342, 42);
             this.Funcionario_cbFuncao.Name = "Funcionario_cbFuncao";
             this.Funcionario_cbFuncao.Size = new System.Drawing.Size(307, 21);
-            this.Funcionario_cbFuncao.TabIndex = 47;
+            this.Funcionario_cbFuncao.TabIndex = 61;
             // 
             // Funcionario_tbxSenha
             // 
-            this.Funcionario_tbxSenha.Location = new System.Drawing.Point(13, 199);
+            this.Funcionario_tbxSenha.Location = new System.Drawing.Point(6, 192);
             this.Funcionario_tbxSenha.Name = "Funcionario_tbxSenha";
             this.Funcionario_tbxSenha.PasswordChar = '*';
             this.Funcionario_tbxSenha.Size = new System.Drawing.Size(243, 20);
-            this.Funcionario_tbxSenha.TabIndex = 45;
+            this.Funcionario_tbxSenha.TabIndex = 60;
             this.Funcionario_tbxSenha.UseSystemPasswordChar = true;
             // 
             // Funcionario_NomeCompleto
             // 
-            this.Funcionario_NomeCompleto.Location = new System.Drawing.Point(13, 49);
+            this.Funcionario_NomeCompleto.Location = new System.Drawing.Point(6, 42);
             this.Funcionario_NomeCompleto.Name = "Funcionario_NomeCompleto";
             this.Funcionario_NomeCompleto.Size = new System.Drawing.Size(243, 20);
-            this.Funcionario_NomeCompleto.TabIndex = 37;
+            this.Funcionario_NomeCompleto.TabIndex = 54;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(13, 165);
+            this.label10.Location = new System.Drawing.Point(6, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 31);
-            this.label10.TabIndex = 44;
+            this.label10.TabIndex = 59;
             this.label10.Text = "Senha";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 91);
+            this.label11.Location = new System.Drawing.Point(6, 84);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 31);
-            this.label11.TabIndex = 42;
+            this.label11.TabIndex = 58;
             this.label11.Text = "CPF";
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.OrangeRed;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(670, 334);
+            this.button7.Location = new System.Drawing.Point(663, 327);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(91, 35);
-            this.button7.TabIndex = 41;
+            this.button7.TabIndex = 57;
             this.button7.Text = "Sair";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.btnSair_Click);
@@ -297,10 +308,10 @@
             // 
             this.Funcionario_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Funcionario_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Funcionario_btnCadastrar.Location = new System.Drawing.Point(543, 334);
+            this.Funcionario_btnCadastrar.Location = new System.Drawing.Point(536, 327);
             this.Funcionario_btnCadastrar.Name = "Funcionario_btnCadastrar";
             this.Funcionario_btnCadastrar.Size = new System.Drawing.Size(121, 35);
-            this.Funcionario_btnCadastrar.TabIndex = 40;
+            this.Funcionario_btnCadastrar.TabIndex = 56;
             this.Funcionario_btnCadastrar.Text = "Cadastrar";
             this.Funcionario_btnCadastrar.UseVisualStyleBackColor = false;
             this.Funcionario_btnCadastrar.Click += new System.EventHandler(this.Funcionario_btnCadastrar_Click);
@@ -309,20 +320,20 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(343, 14);
+            this.label12.Location = new System.Drawing.Point(336, 7);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 31);
-            this.label12.TabIndex = 38;
+            this.label12.TabIndex = 55;
             this.label12.Text = "Função";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 14);
+            this.label13.Location = new System.Drawing.Point(6, 7);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(203, 31);
-            this.label13.TabIndex = 36;
+            this.label13.TabIndex = 53;
             this.label13.Text = "Nome completo";
             // 
             // tabProduto
@@ -382,6 +393,16 @@
             this.Item_cbSetor.TabIndex = 52;
             this.Item_cbSetor.ValueMember = "id";
             // 
+            // setorBindingSource
+            // 
+            this.setorBindingSource.DataMember = "Setor";
+            this.setorBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // supermecadoDataSet1
+            // 
+            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -413,6 +434,11 @@
             this.Item_cbMarca.Size = new System.Drawing.Size(121, 21);
             this.Item_cbMarca.TabIndex = 46;
             this.Item_cbMarca.ValueMember = "id";
+            // 
+            // marcaBindingSource
+            // 
+            this.marcaBindingSource.DataMember = "Marca";
+            this.marcaBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // label18
             // 
@@ -783,6 +809,11 @@
             this.Setor_cbSubDepartamento.TabIndex = 20;
             this.Setor_cbSubDepartamento.ValueMember = "id";
             // 
+            // subdepartamentoBindingSource
+            // 
+            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
+            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.OrangeRed;
@@ -881,6 +912,11 @@
             this.SubDepartamento_cbDepartamento.Size = new System.Drawing.Size(180, 21);
             this.SubDepartamento_cbDepartamento.TabIndex = 12;
             this.SubDepartamento_cbDepartamento.ValueMember = "id";
+            // 
+            // departamentoBindingSource
+            // 
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // button1
             // 
@@ -1031,42 +1067,17 @@
             this.tabControl4.Size = new System.Drawing.Size(775, 401);
             this.tabControl4.TabIndex = 3;
             // 
-            // supermecadoDataSet1
-            // 
-            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataMember = "Departamento";
-            this.departamentoBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
             // departamentoTableAdapter1
             // 
             this.departamentoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // subdepartamentoBindingSource
-            // 
-            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
-            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // sub_departamentoTableAdapter1
             // 
             this.sub_departamentoTableAdapter1.ClearBeforeFill = true;
             // 
-            // setorBindingSource
-            // 
-            this.setorBindingSource.DataMember = "Setor";
-            this.setorBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
             // setorTableAdapter1
             // 
             this.setorTableAdapter1.ClearBeforeFill = true;
-            // 
-            // marcaBindingSource
-            // 
-            this.marcaBindingSource.DataMember = "Marca";
-            this.marcaBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // marcaTableAdapter1
             // 
@@ -1087,25 +1098,26 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabFuncionario.ResumeLayout(false);
-            this.tabFuncionario.PerformLayout();
+            this.panelFuncionario.ResumeLayout(false);
+            this.panelFuncionario.PerformLayout();
             this.tabProduto.ResumeLayout(false);
             this.tabProduto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabMarca.ResumeLayout(false);
             this.tabMarca.PerformLayout();
             this.tabSetor.ResumeLayout(false);
             this.tabSetor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
             this.tabSubDepartamento.ResumeLayout(false);
             this.tabSubDepartamento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
             this.tabDepartamento.ResumeLayout(false);
             this.tabDepartamento.PerformLayout();
             this.tabControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1117,15 +1129,6 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TabPage tabFuncionario;
-        private System.Windows.Forms.ComboBox Funcionario_cbFuncao;
-        private System.Windows.Forms.TextBox Funcionario_tbxSenha;
-        private System.Windows.Forms.TextBox Funcionario_NomeCompleto;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button Funcionario_btnCadastrar;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TabPage tabProduto;
         private System.Windows.Forms.TextBox Item_tbxImagem;
         private System.Windows.Forms.TextBox Item_tbxComplemento;
@@ -1192,15 +1195,11 @@
         private System.Windows.Forms.Label lbDescricao;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.TabControl tabControl4;
-        private System.Windows.Forms.TextBox Funcionario_tbxConfirmar;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label Funcionario_lbConfirmar;
         private SupermecadoDataSet supermecadoDataSet;
         private SupermecadoDataSetTableAdapters.DepartamentoTableAdapter departamentoTableAdapter;
         private SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter sub_departamentoTableAdapter;
         private SupermecadoDataSetTableAdapters.SetorTableAdapter setorTableAdapter;
         private SupermecadoDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter;
-        private System.Windows.Forms.MaskedTextBox Funcionario_tbcCPF;
         private SupermecadoDataSet supermecadoDataSet1;
         private System.Windows.Forms.BindingSource departamentoBindingSource;
         private SupermecadoDataSetTableAdapters.DepartamentoTableAdapter departamentoTableAdapter1;
@@ -1210,5 +1209,19 @@
         private SupermecadoDataSetTableAdapters.SetorTableAdapter setorTableAdapter1;
         private System.Windows.Forms.BindingSource marcaBindingSource;
         private SupermecadoDataSetTableAdapters.MarcaTableAdapter marcaTableAdapter1;
+        private System.Windows.Forms.Panel panelFuncionario;
+        private System.Windows.Forms.MaskedTextBox Funcionario_tbcCPF;
+        private System.Windows.Forms.Label Funcionario_lbConfirmar;
+        private System.Windows.Forms.TextBox Funcionario_tbxConfirmar;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox Funcionario_cbFuncao;
+        private System.Windows.Forms.TextBox Funcionario_tbxSenha;
+        private System.Windows.Forms.TextBox Funcionario_NomeCompleto;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Funcionario_btnCadastrar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }

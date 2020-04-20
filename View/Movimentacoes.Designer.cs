@@ -38,28 +38,16 @@
             this.nuRetirar = new System.Windows.Forms.NumericUpDown();
             this.btnRetirarTudo = new System.Windows.Forms.Button();
             this.cbPesquisarFornecedor = new System.Windows.Forms.ComboBox();
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supermecadoDataSet2 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
             this.cbPesquisarProduto = new System.Windows.Forms.ComboBox();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbEstoque = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nValidade = new System.Windows.Forms.DateTimePicker();
-            this.supermecadoDataSet2 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
-            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
-            this.codPesquisarLote = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.NumericUpDown();
-            this.loteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loteTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.LoteTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,15 +59,27 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbEstoque = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nValidade = new System.Windows.Forms.DateTimePicker();
+            this.codPesquisarLote = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.NumericUpDown();
+            this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
+            this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
+            this.loteTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.LoteTableAdapter();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuRetirar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.id)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -181,6 +181,16 @@
             this.cbPesquisarFornecedor.TabIndex = 60;
             this.cbPesquisarFornecedor.ValueMember = "id";
             // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet2;
+            // 
+            // supermecadoDataSet2
+            // 
+            this.supermecadoDataSet2.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbPesquisarProduto
             // 
             this.cbPesquisarProduto.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.itemBindingSource, "id", true));
@@ -192,6 +202,11 @@
             this.cbPesquisarProduto.Size = new System.Drawing.Size(121, 21);
             this.cbPesquisarProduto.TabIndex = 59;
             this.cbPesquisarProduto.ValueMember = "id";
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataMember = "Item";
+            this.itemBindingSource.DataSource = this.supermecadoDataSet2;
             // 
             // label11
             // 
@@ -268,133 +283,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(612, 272);
             this.dataGridView1.TabIndex = 61;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cbEstoque, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbPesquisarProduto, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbPesquisarFornecedor, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.nValidade, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.codPesquisarLote, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.id, 3, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 336);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(516, 101);
-            this.tableLayoutPanel1.TabIndex = 62;
-            // 
-            // cbEstoque
-            // 
-            this.cbEstoque.FormattingEnabled = true;
-            this.cbEstoque.Items.AddRange(new object[] {
-            "Estoque de proteção",
-            "Estoque em trânsito",
-            "Estoque de antecipação",
-            "Estoque consignado",
-            "Dropshipping"});
-            this.cbEstoque.Location = new System.Drawing.Point(387, 35);
-            this.cbEstoque.Name = "cbEstoque";
-            this.cbEstoque.Size = new System.Drawing.Size(121, 21);
-            this.cbEstoque.TabIndex = 66;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(246, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 20);
-            this.label3.TabIndex = 65;
-            this.label3.Text = "Estoque (Tipo)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Validade (Dias)";
-            // 
-            // nValidade
-            // 
-            this.nValidade.Location = new System.Drawing.Point(387, 6);
-            this.nValidade.Name = "nValidade";
-            this.nValidade.Size = new System.Drawing.Size(121, 20);
-            this.nValidade.TabIndex = 67;
-            // 
-            // supermecadoDataSet2
-            // 
-            this.supermecadoDataSet2.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataMember = "Item";
-            this.itemBindingSource.DataSource = this.supermecadoDataSet2;
-            // 
-            // itemTableAdapter1
-            // 
-            this.itemTableAdapter1.ClearBeforeFill = true;
-            // 
-            // fornecedorBindingSource
-            // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet2;
-            // 
-            // fornecedorTableAdapter1
-            // 
-            this.fornecedorTableAdapter1.ClearBeforeFill = true;
-            // 
-            // codPesquisarLote
-            // 
-            this.codPesquisarLote.Location = new System.Drawing.Point(116, 6);
-            this.codPesquisarLote.Name = "codPesquisarLote";
-            this.codPesquisarLote.Size = new System.Drawing.Size(121, 20);
-            this.codPesquisarLote.TabIndex = 68;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(246, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 20);
-            this.label4.TabIndex = 69;
-            this.label4.Text = "ID";
-            // 
-            // id
-            // 
-            this.id.Location = new System.Drawing.Point(387, 65);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(120, 20);
-            this.id.TabIndex = 70;
-            // 
-            // loteBindingSource
-            // 
-            this.loteBindingSource.DataMember = "Lote";
-            this.loteBindingSource.DataSource = this.supermecadoDataSet2;
-            // 
-            // loteTableAdapter1
-            // 
-            this.loteTableAdapter1.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -484,6 +372,118 @@
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 60;
             // 
+            // loteBindingSource
+            // 
+            this.loteBindingSource.DataMember = "Lote";
+            this.loteBindingSource.DataSource = this.supermecadoDataSet2;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cbEstoque, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbPesquisarProduto, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbPesquisarFornecedor, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.nValidade, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.codPesquisarLote, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.id, 3, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 336);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(516, 101);
+            this.tableLayoutPanel1.TabIndex = 62;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(246, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 20);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "ID";
+            // 
+            // cbEstoque
+            // 
+            this.cbEstoque.FormattingEnabled = true;
+            this.cbEstoque.Items.AddRange(new object[] {
+            "Estoque de proteção",
+            "Estoque em trânsito",
+            "Estoque de antecipação",
+            "Estoque consignado",
+            "Dropshipping"});
+            this.cbEstoque.Location = new System.Drawing.Point(387, 35);
+            this.cbEstoque.Name = "cbEstoque";
+            this.cbEstoque.Size = new System.Drawing.Size(121, 21);
+            this.cbEstoque.TabIndex = 66;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(246, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 20);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Estoque (Tipo)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(246, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 20);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Validade (Dias)";
+            // 
+            // nValidade
+            // 
+            this.nValidade.Location = new System.Drawing.Point(387, 6);
+            this.nValidade.Name = "nValidade";
+            this.nValidade.Size = new System.Drawing.Size(121, 20);
+            this.nValidade.TabIndex = 67;
+            // 
+            // codPesquisarLote
+            // 
+            this.codPesquisarLote.Location = new System.Drawing.Point(116, 6);
+            this.codPesquisarLote.Name = "codPesquisarLote";
+            this.codPesquisarLote.Size = new System.Drawing.Size(121, 20);
+            this.codPesquisarLote.TabIndex = 68;
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(387, 65);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(120, 20);
+            this.id.TabIndex = 70;
+            // 
+            // itemTableAdapter1
+            // 
+            this.itemTableAdapter1.ClearBeforeFill = true;
+            // 
+            // fornecedorTableAdapter1
+            // 
+            this.fornecedorTableAdapter1.ClearBeforeFill = true;
+            // 
+            // loteTableAdapter1
+            // 
+            this.loteTableAdapter1.ClearBeforeFill = true;
+            // 
             // Movimentacoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -505,14 +505,14 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuRetirar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.id)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

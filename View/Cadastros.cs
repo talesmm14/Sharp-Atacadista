@@ -21,6 +21,9 @@ namespace Trabalho_A1_Supermecado
         {
             InitializeComponent();
             perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
+            if(Sessao.FuncaoUsuario != "ADMIN") {
+                panelFuncionario.Visible = false;
+            }
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
