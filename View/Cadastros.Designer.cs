@@ -65,7 +65,7 @@
             this.Item_btnCadastrar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabFornecedor = new System.Windows.Forms.TabPage();
             this.Fornecedor_tbxEndereco = new System.Windows.Forms.TextBox();
             this.Fornecedor_tbxTelefone = new System.Windows.Forms.TextBox();
             this.Fornecedor_tbxCNPJ = new System.Windows.Forms.TextBox();
@@ -130,7 +130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tabFornecedor.SuspendLayout();
             this.tabMarca.SuspendLayout();
             this.tabSetor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
@@ -294,13 +294,13 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.OrangeRed;
+            this.button7.BackColor = System.Drawing.SystemColors.Control;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(663, 327);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(91, 35);
             this.button7.TabIndex = 57;
-            this.button7.Text = "Sair";
+            this.button7.Text = "Voltar";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -462,13 +462,13 @@
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.OrangeRed;
+            this.button9.BackColor = System.Drawing.SystemColors.Control;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(670, 334);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(91, 35);
             this.button9.TabIndex = 27;
-            this.button9.Text = "Sair";
+            this.button9.Text = "Voltar";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -504,26 +504,26 @@
             this.label15.TabIndex = 22;
             this.label15.Text = "Nome";
             // 
-            // tabPage1
+            // tabFornecedor
             // 
-            this.tabPage1.Controls.Add(this.Fornecedor_tbxEndereco);
-            this.tabPage1.Controls.Add(this.Fornecedor_tbxTelefone);
-            this.tabPage1.Controls.Add(this.Fornecedor_tbxCNPJ);
-            this.tabPage1.Controls.Add(this.Fornecedor_tbxDescricao);
-            this.tabPage1.Controls.Add(this.Fornecedor_tbxNome);
-            this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.label25);
-            this.tabPage1.Controls.Add(this.label26);
-            this.tabPage1.Controls.Add(this.button11);
-            this.tabPage1.Controls.Add(this.Fornecedor_btnCadastrar);
-            this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.label28);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(767, 375);
-            this.tabPage1.TabIndex = 6;
-            this.tabPage1.Text = "Fornecedor";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabFornecedor.Controls.Add(this.Fornecedor_tbxEndereco);
+            this.tabFornecedor.Controls.Add(this.Fornecedor_tbxTelefone);
+            this.tabFornecedor.Controls.Add(this.Fornecedor_tbxCNPJ);
+            this.tabFornecedor.Controls.Add(this.Fornecedor_tbxDescricao);
+            this.tabFornecedor.Controls.Add(this.Fornecedor_tbxNome);
+            this.tabFornecedor.Controls.Add(this.label19);
+            this.tabFornecedor.Controls.Add(this.label25);
+            this.tabFornecedor.Controls.Add(this.label26);
+            this.tabFornecedor.Controls.Add(this.button11);
+            this.tabFornecedor.Controls.Add(this.Fornecedor_btnCadastrar);
+            this.tabFornecedor.Controls.Add(this.label27);
+            this.tabFornecedor.Controls.Add(this.label28);
+            this.tabFornecedor.Location = new System.Drawing.Point(4, 22);
+            this.tabFornecedor.Name = "tabFornecedor";
+            this.tabFornecedor.Size = new System.Drawing.Size(767, 375);
+            this.tabFornecedor.TabIndex = 6;
+            this.tabFornecedor.Text = "Fornecedor";
+            this.tabFornecedor.UseVisualStyleBackColor = true;
             // 
             // Fornecedor_tbxEndereco
             // 
@@ -594,13 +594,13 @@
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.OrangeRed;
+            this.button11.BackColor = System.Drawing.SystemColors.Control;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.Location = new System.Drawing.Point(673, 337);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(91, 35);
             this.button11.TabIndex = 41;
-            this.button11.Text = "Sair";
+            this.button11.Text = "Voltar";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -727,13 +727,13 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.OrangeRed;
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(670, 334);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(91, 35);
             this.button5.TabIndex = 27;
-            this.button5.Text = "Sair";
+            this.button5.Text = "Voltar";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -816,13 +816,13 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(670, 334);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(91, 35);
             this.button3.TabIndex = 19;
-            this.button3.Text = "Sair";
+            this.button3.Text = "Voltar";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -920,13 +920,13 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(670, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 35);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Sair";
+            this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -995,13 +995,13 @@
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSair.BackColor = System.Drawing.SystemColors.Control;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.Location = new System.Drawing.Point(670, 334);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(91, 35);
             this.btnSair.TabIndex = 5;
-            this.btnSair.Text = "Sair";
+            this.btnSair.Text = "Voltar";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
@@ -1058,7 +1058,7 @@
             this.tabControl4.Controls.Add(this.tabSubDepartamento);
             this.tabControl4.Controls.Add(this.tabSetor);
             this.tabControl4.Controls.Add(this.tabMarca);
-            this.tabControl4.Controls.Add(this.tabPage1);
+            this.tabControl4.Controls.Add(this.tabFornecedor);
             this.tabControl4.Controls.Add(this.tabProduto);
             this.tabControl4.Controls.Add(this.tabFuncionario);
             this.tabControl4.Location = new System.Drawing.Point(13, 37);
@@ -1105,8 +1105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabFornecedor.ResumeLayout(false);
+            this.tabFornecedor.PerformLayout();
             this.tabMarca.ResumeLayout(false);
             this.tabMarca.PerformLayout();
             this.tabSetor.ResumeLayout(false);
@@ -1143,7 +1143,7 @@
         private System.Windows.Forms.Button Item_btnCadastrar;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabFornecedor;
         private System.Windows.Forms.TextBox Fornecedor_tbxEndereco;
         private System.Windows.Forms.TextBox Fornecedor_tbxTelefone;
         private System.Windows.Forms.TextBox Fornecedor_tbxCNPJ;

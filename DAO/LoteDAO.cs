@@ -34,7 +34,7 @@ namespace Trabalho_A1_Supermecado.DAO
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "UPDATE Lote set tipo_estoque = @tipo_estoque, validade = @dias_validade, peso_kg = @peso_kg, " +
-                "valor_compra = @valor_compra, qtd_estoque = @qtd_estoque, fk_item = @fk_item, fk_fornecedor = @fk_fornecedor, data_entrada = @data_entrada, data_fabricacao = @data_fabricacao, codigo = @codigo, id = @id where id = @id";
+                "valor_compra = @valor_compra, qtd_estoque = @qtd_estoque, fk_item = @fk_item, fk_fornecedor = @fk_fornecedor, data_entrada = @data_entrada, data_fabricacao = @data_fabricacao, codigo = @codigo where id = @id";
             cmd.Parameters.AddWithValue("@id", lote.Id);
             cmd.Parameters.AddWithValue("@tipo_estoque", lote.Tipo_estoque);
             cmd.Parameters.AddWithValue("@dias_validade", lote.Dias_validade);

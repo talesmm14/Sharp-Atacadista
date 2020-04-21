@@ -63,6 +63,20 @@ namespace Trabalho_A1_Supermecado.DAO
             }
             return obj;
         }
+        public static Boolean isExists(string nome)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Sub_departamento WHERE nome = @nome";
+            cmd.Parameters.AddWithValue("@nome", nome);
+            SqlDataReader dr = Conexao.selecionar(cmd);
+
+            Departamento obj = new Departamento();
+            if (dr.HasRows)
+            {
+                return true;
+            }
+            return false;
+        }
         public List<Subdepartamento> findAll()
         {
             SqlCommand cmd = new SqlCommand();

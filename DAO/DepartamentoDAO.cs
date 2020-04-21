@@ -60,6 +60,20 @@ namespace Trabalho_A1_Supermecado.DAO
             }
             return obj;
         }
+        public static Boolean isExists(string nome)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Departamento WHERE nome = @nome";
+            cmd.Parameters.AddWithValue("@nome", nome);
+            SqlDataReader dr = Conexao.selecionar(cmd);
+
+            Departamento obj = new Departamento();
+            if (dr.HasRows)
+            {
+                return true;
+            }
+            return false;
+        }
         public List<Departamento> findAll()
         {
             SqlCommand cmd = new SqlCommand();
@@ -84,7 +98,8 @@ namespace Trabalho_A1_Supermecado.DAO
             }
             return objs;
         }
-        public static DataTable returnDataSource() {
+        public static DataTable returnDataSource()
+        {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM Departamento";
             SqlDataReader dr = Conexao.selecionar(cmd);

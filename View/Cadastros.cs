@@ -21,7 +21,8 @@ namespace Trabalho_A1_Supermecado
         {
             InitializeComponent();
             perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
-            if(Sessao.FuncaoUsuario != "ADMIN") {
+            if (Sessao.FuncaoUsuario != "ADMIN")
+            {
                 panelFuncionario.Visible = false;
             }
         }
@@ -54,18 +55,22 @@ namespace Trabalho_A1_Supermecado
             obj.Descricao = Departamento_tbxDescricao.Text;
             if (Departamento_tbxNome.Text != "")
             {
-                if (controller.cadastrarDepartamento(obj) != null)
+                if (DepartamentoDAO.isExists(Departamento_tbxNome.Text) == false)
                 {
-                    MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                    DataTable dt = new DataTable();
-                    dt = DepartamentoDAO.returnDataSource();
-                    SubDepartamento_cbDepartamento.DataSource = dt;
-                    Departamento_tbxNome.Text = "";
-                    Departamento_tbxDescricao.Text = "";
+                    if (controller.cadastrarDepartamento(obj) != null)
+                    {
+                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        DataTable dt = new DataTable();
+                        dt = DepartamentoDAO.returnDataSource();
+                        SubDepartamento_cbDepartamento.DataSource = dt;
+                        Departamento_tbxNome.Text = "";
+                        Departamento_tbxDescricao.Text = "";
+                        tabDepartamento.ForeColor = Color.Black;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cadastro não realizado de :" + obj.Nome);
+                    tabDepartamento.ForeColor = Color.Red;
                 }
             }
         }
@@ -77,18 +82,22 @@ namespace Trabalho_A1_Supermecado
             obj.Departamento = DepartamentoDAO.findById((int)SubDepartamento_cbDepartamento.SelectedValue);
             if (SubDepartamento_tbxNome.Text != "" || SubDepartamento_cbDepartamento.SelectedValue != null)
             {
-                if (controller.CadastrarSubDepartamento(obj) != null)
+                if (SubdepartamentoDAO.isExists(SubDepartamento_tbxNome.Text) == false)
                 {
-                    MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                    DataTable dt = new DataTable();
-                    dt = SetorDAO.returnDataSource();
-                    Setor_cbSubDepartamento.DataSource = dt;
-                    SubDepartamento_tbxNome.Text = "";
-                    SubDepartamento_tbxDescricao.Text = "";
+                    if (controller.CadastrarSubDepartamento(obj) != null)
+                    {
+                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        DataTable dt = new DataTable();
+                        dt = SubdepartamentoDAO.returnDataSource();
+                        Setor_cbSubDepartamento.DataSource = dt;
+                        SubDepartamento_tbxNome.Text = "";
+                        SubDepartamento_tbxDescricao.Text = "";
+                        tabSubDepartamento.ForeColor = Color.Black;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cadastro não realizado de :" + obj.Nome);
+                    tabSubDepartamento.ForeColor = Color.Red;
                 }
             }
         }
@@ -100,18 +109,22 @@ namespace Trabalho_A1_Supermecado
             obj.SubDepartamento = SubdepartamentoDAO.findById((int)Setor_cbSubDepartamento.SelectedValue);
             if (Setor_tbxNome.Text != "" || Setor_cbSubDepartamento.SelectedValue != null)
             {
-                if (controller.CadastrarSetor(obj) != null)
+                if (SetorDAO.isExists(Setor_tbxNome.Text) == false)
                 {
-                    MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                    DataTable dt = new DataTable();
-                    dt = SetorDAO.returnDataSource();
-                    Item_cbSetor.DataSource = dt;
-                    Setor_tbxNome.Text = "";
-                    Setor_tbxDescricao.Text = "";
+                    if (controller.CadastrarSetor(obj) != null)
+                    {
+                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        DataTable dt = new DataTable();
+                        dt = SetorDAO.returnDataSource();
+                        Item_cbSetor.DataSource = dt;
+                        Setor_tbxNome.Text = "";
+                        Setor_tbxDescricao.Text = "";
+                        tabSetor.ForeColor = Color.Black;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cadastro não realizado de :" + obj.Nome);
+                    tabSetor.ForeColor = Color.Red;
                 }
             }
         }
@@ -125,21 +138,25 @@ namespace Trabalho_A1_Supermecado
             obj.Telefone = Marca_tbxTelefone.Text;
             if (Marca_tbxNome.Text != "")
             {
-                if (controller.CadastrarMarca(obj) != null)
+                if (MarcaDAO.isExists(Marca_tbxNome.Text) == false)
                 {
-                    MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                    DataTable dt = new DataTable();
-                    dt = MarcaDAO.returnDataSource();
-                    Item_cbMarca.DataSource = dt;
-                    Marca_tbxNome.Text = "";
-                    Marca_tbxDescricao.Text = "";
-                    Marca_tbxEndereco.Text = "";
-                    Marca_tbxCNPJ.Text = "";
-                    Marca_tbxTelefone.Text = "";
+                    if (controller.CadastrarMarca(obj) != null)
+                    {
+                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        DataTable dt = new DataTable();
+                        dt = MarcaDAO.returnDataSource();
+                        Item_cbMarca.DataSource = dt;
+                        Marca_tbxNome.Text = "";
+                        Marca_tbxDescricao.Text = "";
+                        Marca_tbxEndereco.Text = "";
+                        Marca_tbxCNPJ.Text = "";
+                        Marca_tbxTelefone.Text = "";
+                        tabMarca.ForeColor = Color.Black;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cadastro não realizado de :" + obj.Nome);
+                    tabMarca.ForeColor = Color.Red;
                 }
             }
         }
@@ -154,18 +171,22 @@ namespace Trabalho_A1_Supermecado
             if (Fornecedor_tbxNome.Text != "" || Fornecedor_tbxEndereco.Text != "" || Fornecedor_tbxCNPJ.Text != "" ||
                 Fornecedor_tbxTelefone.Text != "")
             {
-                if (controller.CadastrarFornecedor(obj) != null)
+                if (FornecedorDAO.isExists(Fornecedor_tbxNome.Text) == false)
                 {
-                    MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                    Fornecedor_tbxNome.Text = "";
-                    Fornecedor_tbxDescricao.Text = "";
-                    Fornecedor_tbxEndereco.Text = "";
-                    Fornecedor_tbxCNPJ.Text = "";
-                    Fornecedor_tbxTelefone.Text = "";
+                    if (controller.CadastrarFornecedor(obj) != null)
+                    {
+                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        Fornecedor_tbxNome.Text = "";
+                        Fornecedor_tbxDescricao.Text = "";
+                        Fornecedor_tbxEndereco.Text = "";
+                        Fornecedor_tbxCNPJ.Text = "";
+                        Fornecedor_tbxTelefone.Text = "";
+                        tabFornecedor.ForeColor = Color.Black;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cadastro não realizado de :" + obj.Nome);
+                    tabFornecedor.ForeColor = Color.Red;
                 }
             }
         }
@@ -179,15 +200,19 @@ namespace Trabalho_A1_Supermecado
             obj.Imagem = Item_tbxImagem.Text;
             if (Item_tbxNome.Text != "" || Item_cbSetor.SelectedValue != null || Item_cbMarca.SelectedValue != null)
             {
-                if (controller.CadastrarItem(obj) != null)
+                if (ItemDAO.isExists(Item_tbxNome.Text) == false)
                 {
-                    MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                    Item_tbxNome.Text = "";
-                    Item_tbxImagem.Text = "";
+                    if (controller.CadastrarItem(obj) != null)
+                    {
+                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        Item_tbxNome.Text = "";
+                        Item_tbxImagem.Text = "";
+                        tabProduto.ForeColor = Color.Black;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cadastro não realizado de :" + obj.Nome);
+                    tabProduto.ForeColor = Color.Red;
                 }
             }
         }
@@ -200,17 +225,33 @@ namespace Trabalho_A1_Supermecado
             obj.Funcao = Funcionario_tbxSenha.Text;
             if (Funcionario_NomeCompleto.Text != "" || Funcionario_tbcCPF.Text != "" || Funcionario_tbxSenha.Text != "" ||
                 Funcionario_tbxSenha.Text != "")
+            {
                 if (Funcionario_tbxSenha.Text == Funcionario_tbxConfirmar.Text)
                 {
-                    controller.CadastrarFuncionario(obj);
-                    MessageBox.Show("Ação realizada!!");
-                    Funcionario_NomeCompleto.Text = "";
-                    Funcionario_tbcCPF.Text = "";
-                    Funcionario_tbxSenha.Text = "";
-                    Funcionario_tbxSenha.Text = "";
+                    if (EmpregadoDAO.isExists(Funcionario_NomeCompleto.Text) == false)
+                    {
+                        if (controller.CadastrarFuncionario(obj) != null)
+                        {
+                            MessageBox.Show("Ação realizada!!");
+                            Funcionario_NomeCompleto.Text = "";
+                            Funcionario_tbcCPF.Text = "";
+                            Funcionario_tbxSenha.Text = "";
+                            Funcionario_tbxSenha.Text = "";
+                            Funcionario_tbxConfirmar.Text = "";
+                            Funcionario_lbConfirmar.Text = "";
+                            Funcionario_NomeCompleto.ForeColor = Color.Black;
+                        }
+                    }
+                    else
+                    {
+                        Funcionario_NomeCompleto.ForeColor = Color.Red;
+                    }
                 }
                 else
+                {
                     Funcionario_lbConfirmar.Text = "As senhas não são iguais!!";
+                }
+            }
         }
 
         private void sair()
