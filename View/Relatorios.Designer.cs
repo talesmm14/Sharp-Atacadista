@@ -88,7 +88,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuarioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -133,12 +133,13 @@
             // 
             // btn_pesquisar
             // 
+            this.btn_pesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.btn_pesquisar.Location = new System.Drawing.Point(575, 90);
             this.btn_pesquisar.Name = "btn_pesquisar";
             this.btn_pesquisar.Size = new System.Drawing.Size(121, 40);
             this.btn_pesquisar.TabIndex = 6;
             this.btn_pesquisar.Text = "Pesquisar";
-            this.btn_pesquisar.UseVisualStyleBackColor = true;
+            this.btn_pesquisar.UseVisualStyleBackColor = false;
             this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
             // dateTIme
@@ -407,12 +408,13 @@
             // 
             // btn_limpar
             // 
+            this.btn_limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.btn_limpar.Location = new System.Drawing.Point(700, 90);
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(88, 40);
             this.btn_limpar.TabIndex = 22;
             this.btn_limpar.Text = "Limpar";
-            this.btn_limpar.UseVisualStyleBackColor = true;
+            this.btn_limpar.UseVisualStyleBackColor = false;
             this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
             // 
             // empregadoTableAdapter1
@@ -471,6 +473,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(808, 458);
             this.ControlBox = false;
             this.Controls.Add(this.checkResponsavel);

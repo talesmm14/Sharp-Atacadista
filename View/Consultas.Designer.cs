@@ -133,12 +133,15 @@
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabFuncionario = new System.Windows.Forms.TabPage();
+            this.panelFuncionario = new System.Windows.Forms.Panel();
+            this.Funcionario_btnDeletar = new System.Windows.Forms.Button();
             this.Funcionario_Id = new System.Windows.Forms.NumericUpDown();
+            this.Funcionario_btnLimpar = new System.Windows.Forms.Button();
             this.Funcionario_Limpar = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.Funcionario_btnCadastrar = new System.Windows.Forms.Button();
             this.Funcionario_Buscar = new System.Windows.Forms.Button();
-            this.Funcionario_Nome = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.Funcionario_dg = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,6 +149,8 @@
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Funcionario_Nome = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.Funcionario = new System.Windows.Forms.DataGridView();
             this.departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
@@ -155,11 +160,6 @@
             this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
             this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
             this.empregadoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
-            this.panelFuncionario = new System.Windows.Forms.Panel();
-            this.Funcionario_btnDeletar = new System.Windows.Forms.Button();
-            this.Funcionario_btnLimpar = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.Funcionario_btnCadastrar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.Marca_.SuspendLayout();
             this.tabDepartamento.SuspendLayout();
@@ -188,16 +188,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.Item_dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.tabFuncionario.SuspendLayout();
+            this.panelFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).BeginInit();
-            this.panelFuncionario.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuarioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -271,13 +271,14 @@
             // 
             // Departamento_btnLimpar
             // 
+            this.Departamento_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Departamento_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Departamento_btnLimpar.Location = new System.Drawing.Point(375, 235);
             this.Departamento_btnLimpar.Name = "Departamento_btnLimpar";
             this.Departamento_btnLimpar.Size = new System.Drawing.Size(99, 31);
             this.Departamento_btnLimpar.TabIndex = 7;
             this.Departamento_btnLimpar.Text = "Limpar";
-            this.Departamento_btnLimpar.UseVisualStyleBackColor = true;
+            this.Departamento_btnLimpar.UseVisualStyleBackColor = false;
             this.Departamento_btnLimpar.Click += new System.EventHandler(this.Departamento_btnLimpar_Click);
             // 
             // label2
@@ -292,13 +293,14 @@
             // 
             // Departamento_btnBuscar
             // 
+            this.Departamento_btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.Departamento_btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Departamento_btnBuscar.Location = new System.Drawing.Point(270, 235);
             this.Departamento_btnBuscar.Name = "Departamento_btnBuscar";
             this.Departamento_btnBuscar.Size = new System.Drawing.Size(99, 31);
             this.Departamento_btnBuscar.TabIndex = 4;
             this.Departamento_btnBuscar.Text = "Buscar";
-            this.Departamento_btnBuscar.UseVisualStyleBackColor = true;
+            this.Departamento_btnBuscar.UseVisualStyleBackColor = false;
             this.Departamento_btnBuscar.Click += new System.EventHandler(this.Departamento_btnBuscar_Click);
             // 
             // Departamento_Nome
@@ -387,24 +389,26 @@
             // 
             // SubDepartamento_Limpar
             // 
+            this.SubDepartamento_Limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.SubDepartamento_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubDepartamento_Limpar.Location = new System.Drawing.Point(392, 276);
             this.SubDepartamento_Limpar.Name = "SubDepartamento_Limpar";
             this.SubDepartamento_Limpar.Size = new System.Drawing.Size(99, 31);
             this.SubDepartamento_Limpar.TabIndex = 13;
             this.SubDepartamento_Limpar.Text = "Limpar";
-            this.SubDepartamento_Limpar.UseVisualStyleBackColor = true;
+            this.SubDepartamento_Limpar.UseVisualStyleBackColor = false;
             this.SubDepartamento_Limpar.Click += new System.EventHandler(this.SubDepartamento_Limpar_Click);
             // 
             // SubDepartamento_Buscar
             // 
+            this.SubDepartamento_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.SubDepartamento_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubDepartamento_Buscar.Location = new System.Drawing.Point(287, 276);
             this.SubDepartamento_Buscar.Name = "SubDepartamento_Buscar";
             this.SubDepartamento_Buscar.Size = new System.Drawing.Size(99, 31);
             this.SubDepartamento_Buscar.TabIndex = 10;
             this.SubDepartamento_Buscar.Text = "Buscar";
-            this.SubDepartamento_Buscar.UseVisualStyleBackColor = true;
+            this.SubDepartamento_Buscar.UseVisualStyleBackColor = false;
             this.SubDepartamento_Buscar.Click += new System.EventHandler(this.SubDepartamento_Buscar_Click);
             // 
             // SubDepartamento_Id
@@ -560,13 +564,14 @@
             // 
             // Setor_Limpar
             // 
+            this.Setor_Limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Setor_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Setor_Limpar.Location = new System.Drawing.Point(388, 299);
             this.Setor_Limpar.Name = "Setor_Limpar";
             this.Setor_Limpar.Size = new System.Drawing.Size(99, 31);
             this.Setor_Limpar.TabIndex = 21;
             this.Setor_Limpar.Text = "Limpar";
-            this.Setor_Limpar.UseVisualStyleBackColor = true;
+            this.Setor_Limpar.UseVisualStyleBackColor = false;
             this.Setor_Limpar.Click += new System.EventHandler(this.Setor_Limpar_Click);
             // 
             // label7
@@ -581,13 +586,14 @@
             // 
             // Setor_Buscar
             // 
+            this.Setor_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.Setor_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Setor_Buscar.Location = new System.Drawing.Point(283, 299);
             this.Setor_Buscar.Name = "Setor_Buscar";
             this.Setor_Buscar.Size = new System.Drawing.Size(99, 31);
             this.Setor_Buscar.TabIndex = 18;
             this.Setor_Buscar.Text = "Buscar";
-            this.Setor_Buscar.UseVisualStyleBackColor = true;
+            this.Setor_Buscar.UseVisualStyleBackColor = false;
             this.Setor_Buscar.Click += new System.EventHandler(this.Setor_Buscar_Click);
             // 
             // Setor_Nome
@@ -711,13 +717,14 @@
             // 
             // Marca_Limpar
             // 
+            this.Marca_Limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Marca_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca_Limpar.Location = new System.Drawing.Point(381, 272);
             this.Marca_Limpar.Name = "Marca_Limpar";
             this.Marca_Limpar.Size = new System.Drawing.Size(99, 31);
             this.Marca_Limpar.TabIndex = 29;
             this.Marca_Limpar.Text = "Limpar";
-            this.Marca_Limpar.UseVisualStyleBackColor = true;
+            this.Marca_Limpar.UseVisualStyleBackColor = false;
             this.Marca_Limpar.Click += new System.EventHandler(this.Marca_Limpar_Click);
             // 
             // label10
@@ -732,13 +739,14 @@
             // 
             // Marca_Buscar
             // 
+            this.Marca_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.Marca_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca_Buscar.Location = new System.Drawing.Point(276, 272);
             this.Marca_Buscar.Name = "Marca_Buscar";
             this.Marca_Buscar.Size = new System.Drawing.Size(99, 31);
             this.Marca_Buscar.TabIndex = 26;
             this.Marca_Buscar.Text = "Buscar";
-            this.Marca_Buscar.UseVisualStyleBackColor = true;
+            this.Marca_Buscar.UseVisualStyleBackColor = false;
             this.Marca_Buscar.Click += new System.EventHandler(this.Marca_Buscar_Click);
             // 
             // Marca_Nome
@@ -869,13 +877,14 @@
             // 
             // Fornecedor_Limpar
             // 
+            this.Fornecedor_Limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Fornecedor_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fornecedor_Limpar.Location = new System.Drawing.Point(393, 275);
             this.Fornecedor_Limpar.Name = "Fornecedor_Limpar";
             this.Fornecedor_Limpar.Size = new System.Drawing.Size(99, 31);
             this.Fornecedor_Limpar.TabIndex = 35;
             this.Fornecedor_Limpar.Text = "Limpar";
-            this.Fornecedor_Limpar.UseVisualStyleBackColor = true;
+            this.Fornecedor_Limpar.UseVisualStyleBackColor = false;
             this.Fornecedor_Limpar.Click += new System.EventHandler(this.Fornecedor_Limpar_Click);
             // 
             // label9
@@ -890,13 +899,14 @@
             // 
             // Fornecedor_Buscar
             // 
+            this.Fornecedor_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.Fornecedor_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fornecedor_Buscar.Location = new System.Drawing.Point(288, 275);
             this.Fornecedor_Buscar.Name = "Fornecedor_Buscar";
             this.Fornecedor_Buscar.Size = new System.Drawing.Size(99, 31);
             this.Fornecedor_Buscar.TabIndex = 32;
             this.Fornecedor_Buscar.Text = "Buscar";
-            this.Fornecedor_Buscar.UseVisualStyleBackColor = true;
+            this.Fornecedor_Buscar.UseVisualStyleBackColor = false;
             this.Fornecedor_Buscar.Click += new System.EventHandler(this.Fornecedor_Buscar_Click);
             // 
             // Fornecedor_Nome
@@ -1053,13 +1063,14 @@
             // 
             // Item_Limpar
             // 
+            this.Item_Limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Item_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item_Limpar.Location = new System.Drawing.Point(387, 285);
             this.Item_Limpar.Name = "Item_Limpar";
             this.Item_Limpar.Size = new System.Drawing.Size(99, 31);
             this.Item_Limpar.TabIndex = 35;
             this.Item_Limpar.Text = "Limpar";
-            this.Item_Limpar.UseVisualStyleBackColor = true;
+            this.Item_Limpar.UseVisualStyleBackColor = false;
             this.Item_Limpar.Click += new System.EventHandler(this.Item_Limpar_Click);
             // 
             // label13
@@ -1074,13 +1085,14 @@
             // 
             // Item_Buscar
             // 
+            this.Item_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.Item_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item_Buscar.Location = new System.Drawing.Point(282, 285);
             this.Item_Buscar.Name = "Item_Buscar";
             this.Item_Buscar.Size = new System.Drawing.Size(99, 31);
             this.Item_Buscar.TabIndex = 32;
             this.Item_Buscar.Text = "Buscar";
-            this.Item_Buscar.UseVisualStyleBackColor = true;
+            this.Item_Buscar.UseVisualStyleBackColor = false;
             this.Item_Buscar.Click += new System.EventHandler(this.Item_Buscar_Click);
             // 
             // Item_Nome
@@ -1187,6 +1199,37 @@
             this.tabFuncionario.Text = "Funcionario";
             this.tabFuncionario.UseVisualStyleBackColor = true;
             // 
+            // panelFuncionario
+            // 
+            this.panelFuncionario.Controls.Add(this.Funcionario_btnDeletar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Id);
+            this.panelFuncionario.Controls.Add(this.Funcionario_btnLimpar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Limpar);
+            this.panelFuncionario.Controls.Add(this.button7);
+            this.panelFuncionario.Controls.Add(this.label19);
+            this.panelFuncionario.Controls.Add(this.Funcionario_btnCadastrar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Buscar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_dg);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Nome);
+            this.panelFuncionario.Controls.Add(this.label20);
+            this.panelFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFuncionario.Location = new System.Drawing.Point(3, 3);
+            this.panelFuncionario.Name = "panelFuncionario";
+            this.panelFuncionario.Size = new System.Drawing.Size(761, 330);
+            this.panelFuncionario.TabIndex = 54;
+            // 
+            // Funcionario_btnDeletar
+            // 
+            this.Funcionario_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Funcionario_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_btnDeletar.Location = new System.Drawing.Point(118, 327);
+            this.Funcionario_btnDeletar.Name = "Funcionario_btnDeletar";
+            this.Funcionario_btnDeletar.Size = new System.Drawing.Size(91, 35);
+            this.Funcionario_btnDeletar.TabIndex = 71;
+            this.Funcionario_btnDeletar.Text = "Deletar";
+            this.Funcionario_btnDeletar.UseVisualStyleBackColor = false;
+            this.Funcionario_btnDeletar.Visible = false;
+            // 
             // Funcionario_Id
             // 
             this.Funcionario_Id.Location = new System.Drawing.Point(480, 194);
@@ -1194,16 +1237,39 @@
             this.Funcionario_Id.Size = new System.Drawing.Size(120, 20);
             this.Funcionario_Id.TabIndex = 46;
             // 
+            // Funcionario_btnLimpar
+            // 
+            this.Funcionario_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Funcionario_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_btnLimpar.Location = new System.Drawing.Point(21, 327);
+            this.Funcionario_btnLimpar.Name = "Funcionario_btnLimpar";
+            this.Funcionario_btnLimpar.Size = new System.Drawing.Size(91, 35);
+            this.Funcionario_btnLimpar.TabIndex = 70;
+            this.Funcionario_btnLimpar.Text = "Limpar";
+            this.Funcionario_btnLimpar.UseVisualStyleBackColor = false;
+            // 
             // Funcionario_Limpar
             // 
+            this.Funcionario_Limpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Funcionario_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Funcionario_Limpar.Location = new System.Drawing.Point(374, 273);
             this.Funcionario_Limpar.Name = "Funcionario_Limpar";
             this.Funcionario_Limpar.Size = new System.Drawing.Size(99, 31);
             this.Funcionario_Limpar.TabIndex = 45;
             this.Funcionario_Limpar.Text = "Limpar";
-            this.Funcionario_Limpar.UseVisualStyleBackColor = true;
+            this.Funcionario_Limpar.UseVisualStyleBackColor = false;
             this.Funcionario_Limpar.Click += new System.EventHandler(this.Funcionario_Limpar_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.Control;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(663, 327);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(91, 35);
+            this.button7.TabIndex = 57;
+            this.button7.Text = "Voltar";
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // label19
             // 
@@ -1215,33 +1281,28 @@
             this.label19.TabIndex = 43;
             this.label19.Text = "ID";
             // 
+            // Funcionario_btnCadastrar
+            // 
+            this.Funcionario_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Funcionario_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_btnCadastrar.Location = new System.Drawing.Point(536, 327);
+            this.Funcionario_btnCadastrar.Name = "Funcionario_btnCadastrar";
+            this.Funcionario_btnCadastrar.Size = new System.Drawing.Size(121, 35);
+            this.Funcionario_btnCadastrar.TabIndex = 56;
+            this.Funcionario_btnCadastrar.Text = "Cadastrar";
+            this.Funcionario_btnCadastrar.UseVisualStyleBackColor = false;
+            // 
             // Funcionario_Buscar
             // 
+            this.Funcionario_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(232)))), ((int)(((byte)(230)))));
             this.Funcionario_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Funcionario_Buscar.Location = new System.Drawing.Point(269, 273);
             this.Funcionario_Buscar.Name = "Funcionario_Buscar";
             this.Funcionario_Buscar.Size = new System.Drawing.Size(99, 31);
             this.Funcionario_Buscar.TabIndex = 42;
             this.Funcionario_Buscar.Text = "Buscar";
-            this.Funcionario_Buscar.UseVisualStyleBackColor = true;
+            this.Funcionario_Buscar.UseVisualStyleBackColor = false;
             this.Funcionario_Buscar.Click += new System.EventHandler(this.Funcionario_Buscar_Click);
-            // 
-            // Funcionario_Nome
-            // 
-            this.Funcionario_Nome.Location = new System.Drawing.Point(252, 195);
-            this.Funcionario_Nome.Name = "Funcionario_Nome";
-            this.Funcionario_Nome.Size = new System.Drawing.Size(171, 20);
-            this.Funcionario_Nome.TabIndex = 41;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(156, 190);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(90, 31);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "Nome";
             // 
             // Funcionario_dg
             // 
@@ -1304,15 +1365,33 @@
             this.empregadoBindingSource.DataMember = "Empregado";
             this.empregadoBindingSource.DataSource = this.supermecadoDataSet1;
             // 
+            // Funcionario_Nome
+            // 
+            this.Funcionario_Nome.Location = new System.Drawing.Point(252, 195);
+            this.Funcionario_Nome.Name = "Funcionario_Nome";
+            this.Funcionario_Nome.Size = new System.Drawing.Size(171, 20);
+            this.Funcionario_Nome.TabIndex = 41;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(156, 190);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(90, 31);
+            this.label20.TabIndex = 40;
+            this.label20.Text = "Nome";
+            // 
             // btn_voltar
             // 
+            this.btn_voltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.Location = new System.Drawing.Point(16, 400);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(767, 43);
             this.btn_voltar.TabIndex = 5;
             this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // Funcionario
@@ -1354,70 +1433,6 @@
             // empregadoTableAdapter1
             // 
             this.empregadoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // panelFuncionario
-            // 
-            this.panelFuncionario.Controls.Add(this.Funcionario_btnDeletar);
-            this.panelFuncionario.Controls.Add(this.Funcionario_Id);
-            this.panelFuncionario.Controls.Add(this.Funcionario_btnLimpar);
-            this.panelFuncionario.Controls.Add(this.Funcionario_Limpar);
-            this.panelFuncionario.Controls.Add(this.button7);
-            this.panelFuncionario.Controls.Add(this.label19);
-            this.panelFuncionario.Controls.Add(this.Funcionario_btnCadastrar);
-            this.panelFuncionario.Controls.Add(this.Funcionario_Buscar);
-            this.panelFuncionario.Controls.Add(this.Funcionario_dg);
-            this.panelFuncionario.Controls.Add(this.Funcionario_Nome);
-            this.panelFuncionario.Controls.Add(this.label20);
-            this.panelFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFuncionario.Location = new System.Drawing.Point(3, 3);
-            this.panelFuncionario.Name = "panelFuncionario";
-            this.panelFuncionario.Size = new System.Drawing.Size(761, 330);
-            this.panelFuncionario.TabIndex = 54;
-            // 
-            // Funcionario_btnDeletar
-            // 
-            this.Funcionario_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
-            this.Funcionario_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Funcionario_btnDeletar.Location = new System.Drawing.Point(118, 327);
-            this.Funcionario_btnDeletar.Name = "Funcionario_btnDeletar";
-            this.Funcionario_btnDeletar.Size = new System.Drawing.Size(91, 35);
-            this.Funcionario_btnDeletar.TabIndex = 71;
-            this.Funcionario_btnDeletar.Text = "Deletar";
-            this.Funcionario_btnDeletar.UseVisualStyleBackColor = false;
-            this.Funcionario_btnDeletar.Visible = false;
-            // 
-            // Funcionario_btnLimpar
-            // 
-            this.Funcionario_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
-            this.Funcionario_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Funcionario_btnLimpar.Location = new System.Drawing.Point(21, 327);
-            this.Funcionario_btnLimpar.Name = "Funcionario_btnLimpar";
-            this.Funcionario_btnLimpar.Size = new System.Drawing.Size(91, 35);
-            this.Funcionario_btnLimpar.TabIndex = 70;
-            this.Funcionario_btnLimpar.Text = "Limpar";
-            this.Funcionario_btnLimpar.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.Control;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(663, 327);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(91, 35);
-            this.button7.TabIndex = 57;
-            this.button7.Text = "Voltar";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // Funcionario_btnCadastrar
-            // 
-            this.Funcionario_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Funcionario_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Funcionario_btnCadastrar.Location = new System.Drawing.Point(536, 327);
-            this.Funcionario_btnCadastrar.Name = "Funcionario_btnCadastrar";
-            this.Funcionario_btnCadastrar.Size = new System.Drawing.Size(121, 35);
-            this.Funcionario_btnCadastrar.TabIndex = 56;
-            this.Funcionario_btnCadastrar.Text = "Cadastrar";
-            this.Funcionario_btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // Consultas
             // 
@@ -1468,12 +1483,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.Item_dg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             this.tabFuncionario.ResumeLayout(false);
+            this.panelFuncionario.ResumeLayout(false);
+            this.panelFuncionario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_dg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).EndInit();
-            this.panelFuncionario.ResumeLayout(false);
-            this.panelFuncionario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

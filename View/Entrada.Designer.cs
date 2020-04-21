@@ -50,14 +50,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cbEstoqueTipo = new System.Windows.Forms.ComboBox();
             this.tbxCodigo = new System.Windows.Forms.TextBox();
             this.dtFabricacao = new System.Windows.Forms.DateTimePicker();
             this.validadeDias = new System.Windows.Forms.DateTimePicker();
+            this.pesoKg = new System.Windows.Forms.NumericUpDown();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
             this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
-            this.pesoKg = new System.Windows.Forms.NumericUpDown();
-            this.cbEstoqueTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.valorCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
@@ -252,6 +252,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -313,6 +314,20 @@
             this.label10.TabIndex = 63;
             this.label10.Text = "Estoque (Tipo)";
             // 
+            // cbEstoqueTipo
+            // 
+            this.cbEstoqueTipo.FormattingEnabled = true;
+            this.cbEstoqueTipo.Items.AddRange(new object[] {
+            "Estoque de proteção",
+            "Estoque em trânsito",
+            "Estoque de antecipação",
+            "Estoque consignado",
+            "Dropshipping"});
+            this.cbEstoqueTipo.Location = new System.Drawing.Point(180, 310);
+            this.cbEstoqueTipo.Name = "cbEstoqueTipo";
+            this.cbEstoqueTipo.Size = new System.Drawing.Size(193, 21);
+            this.cbEstoqueTipo.TabIndex = 42;
+            // 
             // tbxCodigo
             // 
             this.tbxCodigo.Location = new System.Drawing.Point(180, 6);
@@ -334,6 +349,20 @@
             this.validadeDias.Size = new System.Drawing.Size(200, 20);
             this.validadeDias.TabIndex = 66;
             // 
+            // pesoKg
+            // 
+            this.pesoKg.DecimalPlaces = 2;
+            this.pesoKg.Location = new System.Drawing.Point(180, 158);
+            this.pesoKg.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.pesoKg.Name = "pesoKg";
+            this.pesoKg.Size = new System.Drawing.Size(107, 20);
+            this.pesoKg.TabIndex = 67;
+            this.pesoKg.ThousandsSeparator = true;
+            // 
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -353,38 +382,11 @@
             // 
             this.itemTableAdapter1.ClearBeforeFill = true;
             // 
-            // pesoKg
-            // 
-            this.pesoKg.DecimalPlaces = 2;
-            this.pesoKg.Location = new System.Drawing.Point(180, 158);
-            this.pesoKg.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.pesoKg.Name = "pesoKg";
-            this.pesoKg.Size = new System.Drawing.Size(107, 20);
-            this.pesoKg.TabIndex = 67;
-            this.pesoKg.ThousandsSeparator = true;
-            // 
-            // cbEstoqueTipo
-            // 
-            this.cbEstoqueTipo.FormattingEnabled = true;
-            this.cbEstoqueTipo.Items.AddRange(new object[] {
-            "Estoque de proteção",
-            "Estoque em trânsito",
-            "Estoque de antecipação",
-            "Estoque consignado",
-            "Dropshipping"});
-            this.cbEstoqueTipo.Location = new System.Drawing.Point(180, 310);
-            this.cbEstoqueTipo.Name = "cbEstoqueTipo";
-            this.cbEstoqueTipo.Size = new System.Drawing.Size(193, 21);
-            this.cbEstoqueTipo.TabIndex = 42;
-            // 
             // Entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.ClientSize = new System.Drawing.Size(454, 487);
             this.ControlBox = false;
             this.Controls.Add(this.btnVoltar);

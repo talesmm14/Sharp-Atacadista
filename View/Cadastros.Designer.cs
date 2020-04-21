@@ -242,7 +242,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuarioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -289,7 +289,7 @@
             // 
             // Funcionario_btnDeletar
             // 
-            this.Funcionario_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Funcionario_btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
             this.Funcionario_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Funcionario_btnDeletar.Location = new System.Drawing.Point(118, 327);
             this.Funcionario_btnDeletar.Name = "Funcionario_btnDeletar";
@@ -302,7 +302,7 @@
             // 
             // Funcionario_btnLimpar
             // 
-            this.Funcionario_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Funcionario_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Funcionario_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Funcionario_btnLimpar.Location = new System.Drawing.Point(21, 327);
             this.Funcionario_btnLimpar.Name = "Funcionario_btnLimpar";
@@ -476,7 +476,7 @@
             // 
             // Funcionario_btnCadastrar
             // 
-            this.Funcionario_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Funcionario_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(255)))), ((int)(((byte)(113)))));
             this.Funcionario_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Funcionario_btnCadastrar.Location = new System.Drawing.Point(536, 327);
             this.Funcionario_btnCadastrar.Name = "Funcionario_btnCadastrar";
@@ -534,7 +534,7 @@
             // 
             // Item_btnDeletar
             // 
-            this.Item_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Item_btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
             this.Item_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item_btnDeletar.Location = new System.Drawing.Point(119, 334);
             this.Item_btnDeletar.Name = "Item_btnDeletar";
@@ -547,7 +547,7 @@
             // 
             // Item_btnLimpar
             // 
-            this.Item_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Item_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Item_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item_btnLimpar.Location = new System.Drawing.Point(22, 334);
             this.Item_btnLimpar.Name = "Item_btnLimpar";
@@ -743,7 +743,7 @@
             // 
             // Item_btnCadastrar
             // 
-            this.Item_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Item_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(255)))), ((int)(((byte)(113)))));
             this.Item_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Item_btnCadastrar.Location = new System.Drawing.Point(543, 334);
             this.Item_btnCadastrar.Name = "Item_btnCadastrar";
@@ -799,7 +799,7 @@
             // 
             // Fornecedor_btnDeletar
             // 
-            this.Fornecedor_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Fornecedor_btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
             this.Fornecedor_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fornecedor_btnDeletar.Location = new System.Drawing.Point(110, 333);
             this.Fornecedor_btnDeletar.Name = "Fornecedor_btnDeletar";
@@ -812,7 +812,7 @@
             // 
             // Fornecedor_btnLimpar
             // 
-            this.Fornecedor_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Fornecedor_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Fornecedor_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fornecedor_btnLimpar.Location = new System.Drawing.Point(13, 333);
             this.Fornecedor_btnLimpar.Name = "Fornecedor_btnLimpar";
@@ -971,7 +971,7 @@
             // 
             // Fornecedor_btnCadastrar
             // 
-            this.Fornecedor_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Fornecedor_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(255)))), ((int)(((byte)(113)))));
             this.Fornecedor_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fornecedor_btnCadastrar.Location = new System.Drawing.Point(546, 337);
             this.Fornecedor_btnCadastrar.Name = "Fornecedor_btnCadastrar";
@@ -1028,7 +1028,7 @@
             // 
             // Marca_btnDeletar
             // 
-            this.Marca_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Marca_btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
             this.Marca_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca_btnDeletar.Location = new System.Drawing.Point(107, 334);
             this.Marca_btnDeletar.Name = "Marca_btnDeletar";
@@ -1041,7 +1041,7 @@
             // 
             // Marca_btnLimpar
             // 
-            this.Marca_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Marca_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Marca_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca_btnLimpar.Location = new System.Drawing.Point(10, 334);
             this.Marca_btnLimpar.Name = "Marca_btnLimpar";
@@ -1195,7 +1195,7 @@
             // 
             // Marca_btnCadastrar
             // 
-            this.Marca_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Marca_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(255)))), ((int)(((byte)(113)))));
             this.Marca_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca_btnCadastrar.Location = new System.Drawing.Point(543, 334);
             this.Marca_btnCadastrar.Name = "Marca_btnCadastrar";
@@ -1248,7 +1248,7 @@
             // 
             // Setor_btnDeletar
             // 
-            this.Setor_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Setor_btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
             this.Setor_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Setor_btnDeletar.Location = new System.Drawing.Point(119, 334);
             this.Setor_btnDeletar.Name = "Setor_btnDeletar";
@@ -1261,7 +1261,7 @@
             // 
             // Setor_btnLimpar
             // 
-            this.Setor_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Setor_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Setor_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Setor_btnLimpar.Location = new System.Drawing.Point(22, 334);
             this.Setor_btnLimpar.Name = "Setor_btnLimpar";
@@ -1367,7 +1367,7 @@
             // 
             // Setor_btnCadastrar
             // 
-            this.Setor_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Setor_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(255)))), ((int)(((byte)(113)))));
             this.Setor_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Setor_btnCadastrar.Location = new System.Drawing.Point(543, 334);
             this.Setor_btnCadastrar.Name = "Setor_btnCadastrar";
@@ -1435,7 +1435,7 @@
             // 
             // SubDepartamnto_btnDeletar
             // 
-            this.SubDepartamnto_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.SubDepartamnto_btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
             this.SubDepartamnto_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubDepartamnto_btnDeletar.Location = new System.Drawing.Point(119, 334);
             this.SubDepartamnto_btnDeletar.Name = "SubDepartamnto_btnDeletar";
@@ -1448,7 +1448,7 @@
             // 
             // SubDepartamnto_btnLimpar
             // 
-            this.SubDepartamnto_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.SubDepartamnto_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.SubDepartamnto_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubDepartamnto_btnLimpar.Location = new System.Drawing.Point(22, 334);
             this.SubDepartamnto_btnLimpar.Name = "SubDepartamnto_btnLimpar";
@@ -1546,7 +1546,7 @@
             // 
             // SubDepartamnto_btnCadastrar
             // 
-            this.SubDepartamnto_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.SubDepartamnto_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(255)))), ((int)(((byte)(113)))));
             this.SubDepartamnto_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubDepartamnto_btnCadastrar.Location = new System.Drawing.Point(543, 334);
             this.SubDepartamnto_btnCadastrar.Name = "SubDepartamnto_btnCadastrar";
@@ -1612,7 +1612,7 @@
             // 
             // Departamento_btnDeletar
             // 
-            this.Departamento_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Departamento_btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(114)))), ((int)(((byte)(129)))));
             this.Departamento_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Departamento_btnDeletar.Location = new System.Drawing.Point(124, 334);
             this.Departamento_btnDeletar.Name = "Departamento_btnDeletar";
@@ -1625,7 +1625,7 @@
             // 
             // Departamento_btnLimpar
             // 
-            this.Departamento_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Departamento_btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.Departamento_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Departamento_btnLimpar.Location = new System.Drawing.Point(27, 334);
             this.Departamento_btnLimpar.Name = "Departamento_btnLimpar";
@@ -1688,7 +1688,7 @@
             // 
             // Departamento_btnCadastrar
             // 
-            this.Departamento_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Departamento_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(255)))), ((int)(((byte)(113)))));
             this.Departamento_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Departamento_btnCadastrar.Location = new System.Drawing.Point(543, 334);
             this.Departamento_btnCadastrar.Name = "Departamento_btnCadastrar";

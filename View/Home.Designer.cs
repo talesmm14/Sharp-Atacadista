@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.topmenu = new System.Windows.Forms.MenuStrip();
             this.cadastroMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,11 +40,11 @@
             this.sair = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_retirada = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btn_Entrada = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.topmenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -51,7 +52,7 @@
             // 
             // topmenu
             // 
-            this.topmenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.topmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.topmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.topmenu.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -103,7 +104,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(227)))), ((int)(((byte)(174)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuario});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -138,11 +139,13 @@
             // 
             // btn_retirada
             // 
+            this.btn_retirada.Image = ((System.Drawing.Image)(resources.GetObject("btn_retirada.Image")));
             this.btn_retirada.Location = new System.Drawing.Point(3, 3);
             this.btn_retirada.Name = "btn_retirada";
             this.btn_retirada.Size = new System.Drawing.Size(100, 100);
             this.btn_retirada.TabIndex = 2;
             this.btn_retirada.Text = "Retirada";
+            this.btn_retirada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_retirada.UseVisualStyleBackColor = true;
             this.btn_retirada.Click += new System.EventHandler(this.btn_retirada_Click);
             // 
@@ -166,55 +169,65 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(530, 276);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(355, 141);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 100);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Ajuda";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // button5
             // 
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(179, 141);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 100);
             this.button5.TabIndex = 7;
             this.button5.Text = "Cadastros";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.cadastroMenuItem_Click);
             // 
             // btn_Entrada
             // 
+            this.btn_Entrada.Image = ((System.Drawing.Image)(resources.GetObject("btn_Entrada.Image")));
             this.btn_Entrada.Location = new System.Drawing.Point(3, 141);
             this.btn_Entrada.Name = "btn_Entrada";
             this.btn_Entrada.Size = new System.Drawing.Size(100, 100);
             this.btn_Entrada.TabIndex = 6;
             this.btn_Entrada.Text = "Entrada";
+            this.btn_Entrada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Entrada.UseVisualStyleBackColor = true;
             this.btn_Entrada.Click += new System.EventHandler(this.btn_Entrada_Click);
             // 
             // button2
             // 
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(355, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 100);
             this.button2.TabIndex = 4;
             this.button2.Text = "Relatórios";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.relatoriosMenuItem_Click);
             // 
             // button1
             // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(179, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 100);
             this.button1.TabIndex = 3;
             this.button1.Text = "Consultas";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.consultasMenuItem_Click);
+            // 
+            // button7
+            // 
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(355, 141);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 100);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Ajuda";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Home
             // 
