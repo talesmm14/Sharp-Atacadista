@@ -26,7 +26,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public Empregado update(Empregado empregado)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Empregado set nome_completo = @nome_completo, cpf = @cpf, senha = @senha, funcao = @funcao, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Empregado set nome_completo = @nome_completo, cpf = @cpf, senha = @senha, funcao = @funcao where id = @id";
             cmd.Parameters.AddWithValue("@id", empregado.Id);
             cmd.Parameters.AddWithValue("@nome_completo", empregado.NomeCompleto);
             cmd.Parameters.AddWithValue("@cpf", empregado.Cpf);
@@ -36,12 +36,14 @@ namespace Trabalho_A1_Supermecado.DAO
                 return empregado;
             return null;
         }
-        public void delete(Empregado empregado)
+        public Empregado delete(Empregado empregado)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Empregado WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", empregado.Id);
-            Conexao.CRUD(cmd);
+            if (Conexao.CRUD(cmd))
+                return empregado;
+            return null;
         }
         public static Empregado findById(int id)
         {

@@ -38,7 +38,7 @@ namespace Trabalho_A1_Supermecado.View
                 cbItem.SelectedValue != null || cbFornecedor.SelectedValue != null || valorCompra.Value != 0 ||
                 tbxCodigo.Text != "")
             {
-                if (con.cadastrarLote(obj) != false)
+                if (con.cadastrarLote(obj))
                 {
                     MessageBox.Show("Cadastro realizado!!");
                     pesoKg.Value = 0;

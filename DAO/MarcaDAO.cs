@@ -27,7 +27,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public Marca update(Marca marca)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Marca set nome = @nome, complemento = @complemento, cnpj = @cnpj, endereco = @endereco, telefone = @telefone, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Marca set nome = @nome, complemento = @complemento, cnpj = @cnpj, endereco = @endereco, telefone = @telefone where id = @id";
             cmd.Parameters.AddWithValue("@id", marca.Id);
             cmd.Parameters.AddWithValue("@nome", marca.Nome);
             cmd.Parameters.AddWithValue("@complemento", marca.Descricao);
@@ -38,12 +38,14 @@ namespace Trabalho_A1_Supermecado.DAO
                 return marca;
             return null;
         }
-        public void delete(Marca marca)
+        public Marca delete(Marca marca)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Marca WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", marca.Id);
-            Conexao.CRUD(cmd);
+            if (Conexao.CRUD(cmd))
+                return marca;
+            return null;
         }
         public static Marca findById(int id)
         {

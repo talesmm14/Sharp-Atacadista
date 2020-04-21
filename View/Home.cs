@@ -65,10 +65,7 @@ namespace Trabalho_A1_Supermecado
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Sessao.logout();
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+            Application.Exit();
         }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)

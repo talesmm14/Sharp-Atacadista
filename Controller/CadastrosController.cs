@@ -85,5 +85,40 @@ namespace Trabalho_A1_Supermecado.Controller
             }
             return dao.insert(obj);
         }
+        public Departamento deletarDepartamento(Departamento obj)
+        {
+            DepartamentoDAO dao = new DepartamentoDAO();
+            return dao.delete(obj);
+        }
+        public Subdepartamento deletarSubDepartamento(Subdepartamento obj)
+        {
+               SubdepartamentoDAO dao = new SubdepartamentoDAO();
+               return dao.delete(obj);
+        }
+        public Setor deletarSetor(Setor obj)
+        {
+                SetorDAO dao = new SetorDAO();
+                return dao.delete(obj);
+        }
+        public Marca deletarMarca(Marca obj)
+        {
+            MarcaDAO dao = new MarcaDAO();
+            return dao.delete(obj);
+        }
+        public Fornecedor deletarFornecedor(Fornecedor obj)
+        {
+            FornecedorDAO dao = new FornecedorDAO();
+            return dao.delete(obj);
+        }
+        public Item deletarItem(Item obj)
+        {
+                ItemDAO dao = new ItemDAO();
+                return dao.delete(obj);
+        }
+        public Empregado deletarFuncionario(Empregado obj)
+        {
+            EmpregadoDAO dao = new EmpregadoDAO();
+            return dao.delete(obj);
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public Setor update(Setor setor)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Setor set nome = @nome, descricao = @descricao, fk_sub_departamento = @fk_sub_departamento, qtd_estoque = @qtd_estoque, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Setor set nome = @nome, descricao = @descricao, fk_sub_departamento = @fk_sub_departamento, qtd_estoque = @qtd_estoque where id = @id";
             cmd.Parameters.AddWithValue("@id", setor.Id);
             cmd.Parameters.AddWithValue("@nome", setor.Nome);
             cmd.Parameters.AddWithValue("@descricao", setor.Descricao);
@@ -36,12 +36,14 @@ namespace Trabalho_A1_Supermecado.DAO
                 return setor;
             return null;
         }
-        public void delete(Setor setor)
+        public Setor delete(Setor setor)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Setor WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", setor.Id);
-            Conexao.CRUD(cmd);
+            if (Conexao.CRUD(cmd))
+                return setor;
+            return null;
         }
         public static Setor findById(int id)
         {

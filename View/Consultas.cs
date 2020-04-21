@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Trabalho_A1_Supermecado.Classes;
 using Trabalho_A1_Supermecado.Controller;
 using Trabalho_A1_Supermecado.DAO;
 using Trabalho_A1_Supermecado.Forms;
@@ -16,18 +17,20 @@ namespace Trabalho_A1_Supermecado
 {
     public partial class Consultas : Form
     {
+        
         public Consultas()
         {
             InitializeComponent();
             perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
+            if (Sessao.FuncaoUsuario != "ADMIN")
+            {
+                panelFuncionario.Visible = false;
+            }
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Sessao.logout();
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+            Application.Exit();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -277,5 +280,6 @@ namespace Trabalho_A1_Supermecado
             Funcionario_Nome.Text = "";
             Funcionario_dg.DataSource = Conexao.pesquisar("SELECT * FROM Empregado");
         }
+
     }
 }

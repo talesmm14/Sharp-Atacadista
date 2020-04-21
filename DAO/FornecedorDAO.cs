@@ -27,7 +27,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public Fornecedor update(Fornecedor fornecedor)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Fornecedor set nome = @nome, complemento = @complemento, cnpj = @cnpj, endereco = @endereco, telefone = @telefone, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Fornecedor set nome = @nome, complemento = @complemento, cnpj = @cnpj, endereco = @endereco, telefone = @telefone where id = @id";
             cmd.Parameters.AddWithValue("@id", fornecedor.Id);
             cmd.Parameters.AddWithValue("@nome", fornecedor.Nome);
             cmd.Parameters.AddWithValue("@complemento", fornecedor.Descricao);
@@ -38,12 +38,14 @@ namespace Trabalho_A1_Supermecado.DAO
                 return fornecedor;
             return null;
         }
-        public void delete(Fornecedor fornecedor)
+        public Fornecedor delete(Fornecedor fornecedor)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Fornecedor WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", fornecedor.Id);
-            Conexao.CRUD(cmd);
+            if (Conexao.CRUD(cmd))
+                return fornecedor;
+            return null;
         }
         public static Fornecedor findById(int id)
         {

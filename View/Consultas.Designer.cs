@@ -42,16 +42,26 @@
             this.Departamento_Nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Departamento_dg = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
             this.tabSubDepartamento = new System.Windows.Forms.TabPage();
+            this.SubDepartamento_Limpar = new System.Windows.Forms.Button();
+            this.SubDepartamento_Buscar = new System.Windows.Forms.Button();
             this.SubDepartamento_Id = new System.Windows.Forms.NumericUpDown();
             this.SubDepartamento_cbDepartamento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.SubDepartamento_Limpar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.SubDepartamento_Buscar = new System.Windows.Forms.Button();
             this.SubDepartamento_Nome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SubDepartamento_dg = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabSetor = new System.Windows.Forms.TabPage();
             this.Setor_Id = new System.Windows.Forms.NumericUpDown();
             this.Setor_cbSubDepartamento = new System.Windows.Forms.ComboBox();
@@ -62,6 +72,12 @@
             this.Setor_Nome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Setor_dg = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabMarca = new System.Windows.Forms.TabPage();
             this.Marca_Id = new System.Windows.Forms.NumericUpDown();
             this.Marca_Cnpj = new System.Windows.Forms.TextBox();
@@ -72,6 +88,13 @@
             this.Marca_Nome = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Marca_dg = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Fornecedor_Id = new System.Windows.Forms.NumericUpDown();
             this.Fornecedor_Cnpj = new System.Windows.Forms.TextBox();
@@ -82,6 +105,13 @@
             this.Fornecedor_Nome = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Fornecedor_dg = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabProduto = new System.Windows.Forms.TabPage();
             this.Item_Id = new System.Windows.Forms.NumericUpDown();
             this.Item_cbSetor = new System.Windows.Forms.ComboBox();
@@ -94,6 +124,14 @@
             this.Item_Nome = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.Item_dg = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabFuncionario = new System.Windows.Forms.TabPage();
             this.Funcionario_Id = new System.Windows.Forms.NumericUpDown();
             this.Funcionario_Limpar = new System.Windows.Forms.Button();
@@ -102,91 +140,59 @@
             this.Funcionario_Nome = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.Funcionario_dg = new System.Windows.Forms.DataGridView();
-            this.btn_voltar = new System.Windows.Forms.Button();
-            this.Funcionario = new System.Windows.Forms.DataGridView();
-            this.supermecadoDataSet1 = new Trabalho_A1_Supermecado.SupermecadoDataSet();
-            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
-            this.subdepartamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sub_departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
-            this.setorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.setorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
-            this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marcaTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
-            this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
-            this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.empregadoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imagemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empregadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.Funcionario = new System.Windows.Forms.DataGridView();
+            this.departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.DepartamentoTableAdapter();
+            this.sub_departamentoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.Sub_departamentoTableAdapter();
+            this.setorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.SetorTableAdapter();
+            this.marcaTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.MarcaTableAdapter();
+            this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
+            this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
+            this.empregadoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
+            this.panelFuncionario = new System.Windows.Forms.Panel();
+            this.Funcionario_btnDeletar = new System.Windows.Forms.Button();
+            this.Funcionario_btnLimpar = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.Funcionario_btnCadastrar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.Marca_.SuspendLayout();
             this.tabDepartamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
             this.tabSubDepartamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
             this.tabSetor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
             this.tabMarca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
             this.tabProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item_dg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.tabFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_Id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_dg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).BeginInit();
+            this.panelFuncionario.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -319,24 +325,55 @@
             this.Departamento_dg.AutoGenerateColumns = false;
             this.Departamento_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Departamento_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn17,
+            this.id,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19});
             this.Departamento_dg.DataSource = this.departamentoBindingSource;
             this.Departamento_dg.Location = new System.Drawing.Point(179, 6);
             this.Departamento_dg.Name = "Departamento_dg";
             this.Departamento_dg.ReadOnly = true;
-            this.Departamento_dg.Size = new System.Drawing.Size(372, 150);
+            this.Departamento_dg.Size = new System.Drawing.Size(446, 150);
             this.Departamento_dg.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // departamentoBindingSource
+            // 
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
+            // supermecadoDataSet1
+            // 
+            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
+            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabSubDepartamento
             // 
+            this.tabSubDepartamento.Controls.Add(this.SubDepartamento_Limpar);
+            this.tabSubDepartamento.Controls.Add(this.SubDepartamento_Buscar);
             this.tabSubDepartamento.Controls.Add(this.SubDepartamento_Id);
             this.tabSubDepartamento.Controls.Add(this.SubDepartamento_cbDepartamento);
             this.tabSubDepartamento.Controls.Add(this.label5);
-            this.tabSubDepartamento.Controls.Add(this.SubDepartamento_Limpar);
             this.tabSubDepartamento.Controls.Add(this.label3);
-            this.tabSubDepartamento.Controls.Add(this.SubDepartamento_Buscar);
             this.tabSubDepartamento.Controls.Add(this.SubDepartamento_Nome);
             this.tabSubDepartamento.Controls.Add(this.label4);
             this.tabSubDepartamento.Controls.Add(this.SubDepartamento_dg);
@@ -347,6 +384,28 @@
             this.tabSubDepartamento.TabIndex = 1;
             this.tabSubDepartamento.Text = "Sub Departamento";
             this.tabSubDepartamento.UseVisualStyleBackColor = true;
+            // 
+            // SubDepartamento_Limpar
+            // 
+            this.SubDepartamento_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubDepartamento_Limpar.Location = new System.Drawing.Point(392, 276);
+            this.SubDepartamento_Limpar.Name = "SubDepartamento_Limpar";
+            this.SubDepartamento_Limpar.Size = new System.Drawing.Size(99, 31);
+            this.SubDepartamento_Limpar.TabIndex = 13;
+            this.SubDepartamento_Limpar.Text = "Limpar";
+            this.SubDepartamento_Limpar.UseVisualStyleBackColor = true;
+            this.SubDepartamento_Limpar.Click += new System.EventHandler(this.SubDepartamento_Limpar_Click);
+            // 
+            // SubDepartamento_Buscar
+            // 
+            this.SubDepartamento_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubDepartamento_Buscar.Location = new System.Drawing.Point(287, 276);
+            this.SubDepartamento_Buscar.Name = "SubDepartamento_Buscar";
+            this.SubDepartamento_Buscar.Size = new System.Drawing.Size(99, 31);
+            this.SubDepartamento_Buscar.TabIndex = 10;
+            this.SubDepartamento_Buscar.Text = "Buscar";
+            this.SubDepartamento_Buscar.UseVisualStyleBackColor = true;
+            this.SubDepartamento_Buscar.Click += new System.EventHandler(this.SubDepartamento_Buscar_Click);
             // 
             // SubDepartamento_Id
             // 
@@ -375,17 +434,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Departamento";
             // 
-            // SubDepartamento_Limpar
-            // 
-            this.SubDepartamento_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubDepartamento_Limpar.Location = new System.Drawing.Point(392, 276);
-            this.SubDepartamento_Limpar.Name = "SubDepartamento_Limpar";
-            this.SubDepartamento_Limpar.Size = new System.Drawing.Size(99, 31);
-            this.SubDepartamento_Limpar.TabIndex = 13;
-            this.SubDepartamento_Limpar.Text = "Limpar";
-            this.SubDepartamento_Limpar.UseVisualStyleBackColor = true;
-            this.SubDepartamento_Limpar.Click += new System.EventHandler(this.SubDepartamento_Limpar_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -395,17 +443,6 @@
             this.label3.Size = new System.Drawing.Size(44, 31);
             this.label3.TabIndex = 11;
             this.label3.Text = "ID";
-            // 
-            // SubDepartamento_Buscar
-            // 
-            this.SubDepartamento_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubDepartamento_Buscar.Location = new System.Drawing.Point(287, 276);
-            this.SubDepartamento_Buscar.Name = "SubDepartamento_Buscar";
-            this.SubDepartamento_Buscar.Size = new System.Drawing.Size(99, 31);
-            this.SubDepartamento_Buscar.TabIndex = 10;
-            this.SubDepartamento_Buscar.Text = "Buscar";
-            this.SubDepartamento_Buscar.UseVisualStyleBackColor = true;
-            this.SubDepartamento_Buscar.Click += new System.EventHandler(this.SubDepartamento_Buscar_Click);
             // 
             // SubDepartamento_Nome
             // 
@@ -436,11 +473,44 @@
             this.dataGridViewTextBoxColumn22,
             this.dataGridViewTextBoxColumn23});
             this.SubDepartamento_dg.DataSource = this.subdepartamentoBindingSource;
-            this.SubDepartamento_dg.Location = new System.Drawing.Point(149, 6);
+            this.SubDepartamento_dg.Location = new System.Drawing.Point(175, 6);
             this.SubDepartamento_dg.Name = "SubDepartamento_dg";
             this.SubDepartamento_dg.ReadOnly = true;
             this.SubDepartamento_dg.Size = new System.Drawing.Size(466, 150);
             this.SubDepartamento_dg.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn20.HeaderText = "id";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "fk_departamento";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Departamento";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // subdepartamentoBindingSource
+            // 
+            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
+            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // tabSetor
             // 
@@ -556,6 +626,46 @@
             this.Setor_dg.Size = new System.Drawing.Size(565, 187);
             this.Setor_dg.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn24.HeaderText = "id";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "descricao";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "fk_sub_departamento";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Sub departamento";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "qtd_estoque";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Estoque";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            // 
+            // setorBindingSource
+            // 
+            this.setorBindingSource.DataMember = "Setor";
+            this.setorBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
             // tabMarca
             // 
             this.tabMarca.Controls.Add(this.Marca_Id);
@@ -668,6 +778,53 @@
             this.Marca_dg.Size = new System.Drawing.Size(665, 150);
             this.Marca_dg.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn29.HeaderText = "id";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "complemento";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Complemento";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "cnpj";
+            this.dataGridViewTextBoxColumn32.HeaderText = "CNPJ";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "endereco";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Endereco";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "telefone";
+            this.dataGridViewTextBoxColumn34.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            // 
+            // marcaBindingSource
+            // 
+            this.marcaBindingSource.DataMember = "Marca";
+            this.marcaBindingSource.DataSource = this.supermecadoDataSet1;
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.Fornecedor_Id);
@@ -778,6 +935,53 @@
             this.Fornecedor_dg.ReadOnly = true;
             this.Fornecedor_dg.Size = new System.Drawing.Size(667, 169);
             this.Fornecedor_dg.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn35.HeaderText = "id";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "complemento";
+            this.dataGridViewTextBoxColumn37.HeaderText = "Complemento";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "cnpj";
+            this.dataGridViewTextBoxColumn38.HeaderText = "CNPJ";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "endereco";
+            this.dataGridViewTextBoxColumn39.HeaderText = "Endereco";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "telefone";
+            this.dataGridViewTextBoxColumn40.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet1;
             // 
             // tabProduto
             // 
@@ -917,226 +1121,6 @@
             this.Item_dg.Size = new System.Drawing.Size(755, 150);
             this.Item_dg.TabIndex = 1;
             // 
-            // tabFuncionario
-            // 
-            this.tabFuncionario.Controls.Add(this.Funcionario_Id);
-            this.tabFuncionario.Controls.Add(this.Funcionario_Limpar);
-            this.tabFuncionario.Controls.Add(this.label19);
-            this.tabFuncionario.Controls.Add(this.Funcionario_Buscar);
-            this.tabFuncionario.Controls.Add(this.Funcionario_Nome);
-            this.tabFuncionario.Controls.Add(this.label20);
-            this.tabFuncionario.Controls.Add(this.Funcionario_dg);
-            this.tabFuncionario.Location = new System.Drawing.Point(4, 22);
-            this.tabFuncionario.Name = "tabFuncionario";
-            this.tabFuncionario.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFuncionario.Size = new System.Drawing.Size(767, 336);
-            this.tabFuncionario.TabIndex = 5;
-            this.tabFuncionario.Text = "Funcionario";
-            this.tabFuncionario.UseVisualStyleBackColor = true;
-            // 
-            // Funcionario_Id
-            // 
-            this.Funcionario_Id.Location = new System.Drawing.Point(517, 200);
-            this.Funcionario_Id.Name = "Funcionario_Id";
-            this.Funcionario_Id.Size = new System.Drawing.Size(120, 20);
-            this.Funcionario_Id.TabIndex = 46;
-            // 
-            // Funcionario_Limpar
-            // 
-            this.Funcionario_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Funcionario_Limpar.Location = new System.Drawing.Point(387, 280);
-            this.Funcionario_Limpar.Name = "Funcionario_Limpar";
-            this.Funcionario_Limpar.Size = new System.Drawing.Size(99, 31);
-            this.Funcionario_Limpar.TabIndex = 45;
-            this.Funcionario_Limpar.Text = "Limpar";
-            this.Funcionario_Limpar.UseVisualStyleBackColor = true;
-            this.Funcionario_Limpar.Click += new System.EventHandler(this.Funcionario_Limpar_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(466, 196);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(44, 31);
-            this.label19.TabIndex = 43;
-            this.label19.Text = "ID";
-            // 
-            // Funcionario_Buscar
-            // 
-            this.Funcionario_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Funcionario_Buscar.Location = new System.Drawing.Point(282, 280);
-            this.Funcionario_Buscar.Name = "Funcionario_Buscar";
-            this.Funcionario_Buscar.Size = new System.Drawing.Size(99, 31);
-            this.Funcionario_Buscar.TabIndex = 42;
-            this.Funcionario_Buscar.Text = "Buscar";
-            this.Funcionario_Buscar.UseVisualStyleBackColor = true;
-            this.Funcionario_Buscar.Click += new System.EventHandler(this.Funcionario_Buscar_Click);
-            // 
-            // Funcionario_Nome
-            // 
-            this.Funcionario_Nome.Location = new System.Drawing.Point(289, 201);
-            this.Funcionario_Nome.Name = "Funcionario_Nome";
-            this.Funcionario_Nome.Size = new System.Drawing.Size(171, 20);
-            this.Funcionario_Nome.TabIndex = 41;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(193, 196);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(90, 31);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "Nome";
-            // 
-            // Funcionario_dg
-            // 
-            this.Funcionario_dg.AllowUserToAddRows = false;
-            this.Funcionario_dg.AllowUserToDeleteRows = false;
-            this.Funcionario_dg.AutoGenerateColumns = false;
-            this.Funcionario_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Funcionario_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn47,
-            this.dataGridViewTextBoxColumn48,
-            this.dataGridViewTextBoxColumn49,
-            this.senhaDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn50});
-            this.Funcionario_dg.DataSource = this.empregadoBindingSource;
-            this.Funcionario_dg.Location = new System.Drawing.Point(150, 6);
-            this.Funcionario_dg.Name = "Funcionario_dg";
-            this.Funcionario_dg.ReadOnly = true;
-            this.Funcionario_dg.Size = new System.Drawing.Size(465, 150);
-            this.Funcionario_dg.TabIndex = 1;
-            // 
-            // btn_voltar
-            // 
-            this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.Location = new System.Drawing.Point(16, 400);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(767, 43);
-            this.btn_voltar.TabIndex = 5;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = true;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
-            // 
-            // Funcionario
-            // 
-            this.Funcionario.AllowUserToAddRows = false;
-            this.Funcionario.AllowUserToDeleteRows = false;
-            this.Funcionario.AutoGenerateColumns = false;
-            this.Funcionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Funcionario.Location = new System.Drawing.Point(150, 6);
-            this.Funcionario.Name = "Funcionario";
-            this.Funcionario.ReadOnly = true;
-            this.Funcionario.Size = new System.Drawing.Size(465, 150);
-            this.Funcionario.TabIndex = 1;
-            // 
-            // supermecadoDataSet1
-            // 
-            this.supermecadoDataSet1.DataSetName = "SupermecadoDataSet";
-            this.supermecadoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataMember = "Departamento";
-            this.departamentoBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
-            // departamentoTableAdapter1
-            // 
-            this.departamentoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // subdepartamentoBindingSource
-            // 
-            this.subdepartamentoBindingSource.DataMember = "Sub_departamento";
-            this.subdepartamentoBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
-            // sub_departamentoTableAdapter1
-            // 
-            this.sub_departamentoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // setorBindingSource
-            // 
-            this.setorBindingSource.DataMember = "Setor";
-            this.setorBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
-            // setorTableAdapter1
-            // 
-            this.setorTableAdapter1.ClearBeforeFill = true;
-            // 
-            // marcaBindingSource
-            // 
-            this.marcaBindingSource.DataMember = "Marca";
-            this.marcaBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
-            // marcaTableAdapter1
-            // 
-            this.marcaTableAdapter1.ClearBeforeFill = true;
-            // 
-            // fornecedorBindingSource
-            // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
-            // fornecedorTableAdapter1
-            // 
-            this.fornecedorTableAdapter1.ClearBeforeFill = true;
-            // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataMember = "Item";
-            this.itemBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
-            // itemTableAdapter1
-            // 
-            this.itemTableAdapter1.ClearBeforeFill = true;
-            // 
-            // empregadoBindingSource
-            // 
-            this.empregadoBindingSource.DataMember = "Empregado";
-            this.empregadoBindingSource.DataSource = this.supermecadoDataSet1;
-            // 
-            // empregadoTableAdapter1
-            // 
-            this.empregadoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            this.dataGridViewTextBoxColumn47.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn47.HeaderText = "id";
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            this.dataGridViewTextBoxColumn47.ReadOnly = true;
-            this.dataGridViewTextBoxColumn47.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn48
-            // 
-            this.dataGridViewTextBoxColumn48.DataPropertyName = "nome_completo";
-            this.dataGridViewTextBoxColumn48.HeaderText = "Nome completo";
-            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
-            this.dataGridViewTextBoxColumn48.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn49
-            // 
-            this.dataGridViewTextBoxColumn49.DataPropertyName = "cpf";
-            this.dataGridViewTextBoxColumn49.HeaderText = "CPF";
-            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
-            this.dataGridViewTextBoxColumn49.ReadOnly = true;
-            this.dataGridViewTextBoxColumn49.Width = 50;
-            // 
-            // senhaDataGridViewTextBoxColumn
-            // 
-            this.senhaDataGridViewTextBoxColumn.DataPropertyName = "senha";
-            this.senhaDataGridViewTextBoxColumn.HeaderText = "Senha";
-            this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
-            this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn50
-            // 
-            this.dataGridViewTextBoxColumn50.DataPropertyName = "funcao";
-            this.dataGridViewTextBoxColumn50.HeaderText = "Função";
-            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
-            this.dataGridViewTextBoxColumn50.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn41
             // 
             this.dataGridViewTextBoxColumn41.DataPropertyName = "id";
@@ -1187,173 +1171,253 @@
             this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
             this.dataGridViewTextBoxColumn46.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn35
+            // itemBindingSource
             // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn35.HeaderText = "id";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            this.itemBindingSource.DataMember = "Item";
+            this.itemBindingSource.DataSource = this.supermecadoDataSet1;
             // 
-            // dataGridViewTextBoxColumn36
+            // tabFuncionario
             // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn36.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            this.tabFuncionario.Controls.Add(this.panelFuncionario);
+            this.tabFuncionario.Location = new System.Drawing.Point(4, 22);
+            this.tabFuncionario.Name = "tabFuncionario";
+            this.tabFuncionario.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFuncionario.Size = new System.Drawing.Size(767, 336);
+            this.tabFuncionario.TabIndex = 5;
+            this.tabFuncionario.Text = "Funcionario";
+            this.tabFuncionario.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn37
+            // Funcionario_Id
             // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "complemento";
-            this.dataGridViewTextBoxColumn37.HeaderText = "Complemento";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            this.Funcionario_Id.Location = new System.Drawing.Point(480, 194);
+            this.Funcionario_Id.Name = "Funcionario_Id";
+            this.Funcionario_Id.Size = new System.Drawing.Size(120, 20);
+            this.Funcionario_Id.TabIndex = 46;
             // 
-            // dataGridViewTextBoxColumn38
+            // Funcionario_Limpar
             // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "cnpj";
-            this.dataGridViewTextBoxColumn38.HeaderText = "CNPJ";
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            this.Funcionario_Limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_Limpar.Location = new System.Drawing.Point(374, 273);
+            this.Funcionario_Limpar.Name = "Funcionario_Limpar";
+            this.Funcionario_Limpar.Size = new System.Drawing.Size(99, 31);
+            this.Funcionario_Limpar.TabIndex = 45;
+            this.Funcionario_Limpar.Text = "Limpar";
+            this.Funcionario_Limpar.UseVisualStyleBackColor = true;
+            this.Funcionario_Limpar.Click += new System.EventHandler(this.Funcionario_Limpar_Click);
             // 
-            // dataGridViewTextBoxColumn39
+            // label19
             // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "endereco";
-            this.dataGridViewTextBoxColumn39.HeaderText = "Endereco";
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(429, 190);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 31);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "ID";
             // 
-            // dataGridViewTextBoxColumn40
+            // Funcionario_Buscar
             // 
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "telefone";
-            this.dataGridViewTextBoxColumn40.HeaderText = "Telefone";
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            this.Funcionario_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_Buscar.Location = new System.Drawing.Point(269, 273);
+            this.Funcionario_Buscar.Name = "Funcionario_Buscar";
+            this.Funcionario_Buscar.Size = new System.Drawing.Size(99, 31);
+            this.Funcionario_Buscar.TabIndex = 42;
+            this.Funcionario_Buscar.Text = "Buscar";
+            this.Funcionario_Buscar.UseVisualStyleBackColor = true;
+            this.Funcionario_Buscar.Click += new System.EventHandler(this.Funcionario_Buscar_Click);
             // 
-            // dataGridViewTextBoxColumn29
+            // Funcionario_Nome
             // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn29.HeaderText = "id";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            this.Funcionario_Nome.Location = new System.Drawing.Point(252, 195);
+            this.Funcionario_Nome.Name = "Funcionario_Nome";
+            this.Funcionario_Nome.Size = new System.Drawing.Size(171, 20);
+            this.Funcionario_Nome.TabIndex = 41;
             // 
-            // dataGridViewTextBoxColumn30
+            // label20
             // 
-            this.dataGridViewTextBoxColumn30.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn30.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(156, 190);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(90, 31);
+            this.label20.TabIndex = 40;
+            this.label20.Text = "Nome";
             // 
-            // dataGridViewTextBoxColumn31
+            // Funcionario_dg
             // 
-            this.dataGridViewTextBoxColumn31.DataPropertyName = "complemento";
-            this.dataGridViewTextBoxColumn31.HeaderText = "Complemento";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            this.Funcionario_dg.AllowUserToAddRows = false;
+            this.Funcionario_dg.AllowUserToDeleteRows = false;
+            this.Funcionario_dg.AutoGenerateColumns = false;
+            this.Funcionario_dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Funcionario_dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48,
+            this.dataGridViewTextBoxColumn49,
+            this.senhaDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn50});
+            this.Funcionario_dg.DataSource = this.empregadoBindingSource;
+            this.Funcionario_dg.Location = new System.Drawing.Point(143, 3);
+            this.Funcionario_dg.Name = "Funcionario_dg";
+            this.Funcionario_dg.ReadOnly = true;
+            this.Funcionario_dg.Size = new System.Drawing.Size(465, 150);
+            this.Funcionario_dg.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn32
+            // dataGridViewTextBoxColumn47
             // 
-            this.dataGridViewTextBoxColumn32.DataPropertyName = "cnpj";
-            this.dataGridViewTextBoxColumn32.HeaderText = "CNPJ";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn47.HeaderText = "id";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.Width = 30;
             // 
-            // dataGridViewTextBoxColumn33
+            // dataGridViewTextBoxColumn48
             // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "endereco";
-            this.dataGridViewTextBoxColumn33.HeaderText = "Endereco";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "nome_completo";
+            this.dataGridViewTextBoxColumn48.HeaderText = "Nome completo";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn34
+            // dataGridViewTextBoxColumn49
             // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "telefone";
-            this.dataGridViewTextBoxColumn34.HeaderText = "Telefone";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "cpf";
+            this.dataGridViewTextBoxColumn49.HeaderText = "CPF";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            this.dataGridViewTextBoxColumn49.Width = 50;
             // 
-            // dataGridViewTextBoxColumn24
+            // senhaDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn24.HeaderText = "id";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.senhaDataGridViewTextBoxColumn.DataPropertyName = "senha";
+            this.senhaDataGridViewTextBoxColumn.HeaderText = "Senha";
+            this.senhaDataGridViewTextBoxColumn.Name = "senhaDataGridViewTextBoxColumn";
+            this.senhaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn25
+            // dataGridViewTextBoxColumn50
             // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "funcao";
+            this.dataGridViewTextBoxColumn50.HeaderText = "Função";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn26
+            // empregadoBindingSource
             // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.empregadoBindingSource.DataMember = "Empregado";
+            this.empregadoBindingSource.DataSource = this.supermecadoDataSet1;
             // 
-            // dataGridViewTextBoxColumn27
+            // btn_voltar
             // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "fk_sub_departamento";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Sub departamento";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.Location = new System.Drawing.Point(16, 400);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(767, 43);
+            this.btn_voltar.TabIndex = 5;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
-            // dataGridViewTextBoxColumn28
+            // Funcionario
             // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "qtd_estoque";
-            this.dataGridViewTextBoxColumn28.HeaderText = "Estoque";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            this.Funcionario.AllowUserToAddRows = false;
+            this.Funcionario.AllowUserToDeleteRows = false;
+            this.Funcionario.AutoGenerateColumns = false;
+            this.Funcionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Funcionario.Location = new System.Drawing.Point(150, 6);
+            this.Funcionario.Name = "Funcionario";
+            this.Funcionario.ReadOnly = true;
+            this.Funcionario.Size = new System.Drawing.Size(465, 150);
+            this.Funcionario.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn20
+            // departamentoTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn20.HeaderText = "id";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.departamentoTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn21
+            // sub_departamentoTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.sub_departamentoTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn22
+            // setorTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.setorTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn23
+            // marcaTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "fk_departamento";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Departamento";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.marcaTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn17
+            // fornecedorTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn17.HeaderText = "id";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.fornecedorTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn18
+            // itemTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.itemTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn19
+            // empregadoTableAdapter1
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Descricao";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.empregadoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // panelFuncionario
+            // 
+            this.panelFuncionario.Controls.Add(this.Funcionario_btnDeletar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Id);
+            this.panelFuncionario.Controls.Add(this.Funcionario_btnLimpar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Limpar);
+            this.panelFuncionario.Controls.Add(this.button7);
+            this.panelFuncionario.Controls.Add(this.label19);
+            this.panelFuncionario.Controls.Add(this.Funcionario_btnCadastrar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Buscar);
+            this.panelFuncionario.Controls.Add(this.Funcionario_dg);
+            this.panelFuncionario.Controls.Add(this.Funcionario_Nome);
+            this.panelFuncionario.Controls.Add(this.label20);
+            this.panelFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFuncionario.Location = new System.Drawing.Point(3, 3);
+            this.panelFuncionario.Name = "panelFuncionario";
+            this.panelFuncionario.Size = new System.Drawing.Size(761, 330);
+            this.panelFuncionario.TabIndex = 54;
+            // 
+            // Funcionario_btnDeletar
+            // 
+            this.Funcionario_btnDeletar.BackColor = System.Drawing.SystemColors.Control;
+            this.Funcionario_btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_btnDeletar.Location = new System.Drawing.Point(118, 327);
+            this.Funcionario_btnDeletar.Name = "Funcionario_btnDeletar";
+            this.Funcionario_btnDeletar.Size = new System.Drawing.Size(91, 35);
+            this.Funcionario_btnDeletar.TabIndex = 71;
+            this.Funcionario_btnDeletar.Text = "Deletar";
+            this.Funcionario_btnDeletar.UseVisualStyleBackColor = false;
+            this.Funcionario_btnDeletar.Visible = false;
+            // 
+            // Funcionario_btnLimpar
+            // 
+            this.Funcionario_btnLimpar.BackColor = System.Drawing.SystemColors.Control;
+            this.Funcionario_btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_btnLimpar.Location = new System.Drawing.Point(21, 327);
+            this.Funcionario_btnLimpar.Name = "Funcionario_btnLimpar";
+            this.Funcionario_btnLimpar.Size = new System.Drawing.Size(91, 35);
+            this.Funcionario_btnLimpar.TabIndex = 70;
+            this.Funcionario_btnLimpar.Text = "Limpar";
+            this.Funcionario_btnLimpar.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.Control;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(663, 327);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(91, 35);
+            this.button7.TabIndex = 57;
+            this.button7.Text = "Voltar";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // Funcionario_btnCadastrar
+            // 
+            this.Funcionario_btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Funcionario_btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Funcionario_btnCadastrar.Location = new System.Drawing.Point(536, 327);
+            this.Funcionario_btnCadastrar.Name = "Funcionario_btnCadastrar";
+            this.Funcionario_btnCadastrar.Size = new System.Drawing.Size(121, 35);
+            this.Funcionario_btnCadastrar.TabIndex = 56;
+            this.Funcionario_btnCadastrar.Text = "Cadastrar";
+            this.Funcionario_btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // Consultas
             // 
@@ -1376,39 +1440,40 @@
             this.tabDepartamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Departamento_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
             this.tabSubDepartamento.ResumeLayout(false);
             this.tabSubDepartamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubDepartamento_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
             this.tabSetor.ResumeLayout(false);
             this.tabSetor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Setor_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
             this.tabMarca.ResumeLayout(false);
             this.tabMarca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Marca_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fornecedor_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
             this.tabProduto.ResumeLayout(false);
             this.tabProduto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item_dg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             this.tabFuncionario.ResumeLayout(false);
-            this.tabFuncionario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_Id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Funcionario_dg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subdepartamentoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.setorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Funcionario)).EndInit();
+            this.panelFuncionario.ResumeLayout(false);
+            this.panelFuncionario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1551,9 +1616,6 @@
         private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
         private System.Windows.Forms.BindingSource empregadoBindingSource;
         private SupermecadoDataSetTableAdapters.EmpregadoTableAdapter empregadoTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
@@ -1587,5 +1649,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.Panel panelFuncionario;
+        private System.Windows.Forms.Button Funcionario_btnDeletar;
+        private System.Windows.Forms.Button Funcionario_btnLimpar;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Funcionario_btnCadastrar;
     }
 }

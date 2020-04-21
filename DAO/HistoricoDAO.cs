@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -134,6 +135,16 @@ namespace Trabalho_A1_Supermecado.DAO
                 objs = null;
             }
             return objs;
+        }
+        public static DataTable returnDataSource()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT * FROM Historico";
+            SqlDataReader dr = Conexao.selecionar(cmd);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd.CommandText, Conexao.conectar());
+            da.Fill(dt);
+            return dt;
         }
     }
 }

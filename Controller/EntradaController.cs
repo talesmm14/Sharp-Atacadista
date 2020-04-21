@@ -19,10 +19,13 @@ namespace Trabalho_A1_Supermecado.Controller
                 historico(obj, "UPDATE");
                 return true;
             }
-            obj.DataEntrada = DateTime.Now;
-            dao.insert(obj);
-            historico(LoteDAO.findByCode(obj.Codigo), "INSERT");
-            return true;
+            else
+            {
+                obj.DataEntrada = DateTime.Now;
+                dao.insert(obj);
+                historico(LoteDAO.findByCode(obj.Codigo), "INSERT");
+                return true;
+            }
         }
         public void historico(Lote obj, String op)
         {

@@ -25,7 +25,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public Subdepartamento update(Subdepartamento subdepartamento)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Sub_departamento set nome = @nome, descricao = @descricao, fk_departamento = @fk_departamento, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Sub_departamento set nome = @nome, descricao = @descricao, fk_departamento = @fk_departamento where id = @id";
             cmd.Parameters.AddWithValue("@id", subdepartamento.Id);
             cmd.Parameters.AddWithValue("@nome", subdepartamento.Nome);
             cmd.Parameters.AddWithValue("@descricao", subdepartamento.Descricao);
@@ -34,12 +34,14 @@ namespace Trabalho_A1_Supermecado.DAO
                 return subdepartamento;
             return null;
         }
-        public void delete(Subdepartamento subdepartamento)
+        public Subdepartamento delete(Subdepartamento subdepartamento)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Sub_departamento WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", subdepartamento.Id);
-            Conexao.CRUD(cmd);
+            if (Conexao.CRUD(cmd))
+                return subdepartamento;
+            return null;
         }
         public static Subdepartamento findById(int id)
         {

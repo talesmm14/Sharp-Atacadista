@@ -10,32 +10,37 @@ namespace Trabalho_A1_Supermecado.Controller
 {
     class MovimentacoesController
     {
-        public Lote CadastrarItem(Lote obj)
+        public Boolean CadastrarLote(Lote obj)
         {
             if (obj.Item != null || obj.Fornecedor != null)
             {
                 LoteDAO dao = new LoteDAO();
                 if (obj.Id != 0)
                 {
-                    return dao.update(obj);
+                    dao.update(obj);
+                    historico(obj, "UPDATE");
+                    return true;
                 }
-                return dao.insert(obj);
+                else
+                {
+                    obj.DataEntrada = DateTime.Now;
+                    dao.insert(obj);
+                    historico(LoteDAO.findByCode(obj.Codigo), "INSERT");
+                    return true;
+                }
             }
-            return null;
+            return false;
         }
 
-        public Historico CadastrarHistorico(Historico obj)
+        public void historico(Lote obj, String op)
         {
-            if (obj.Empregado != null || obj.Lote != null)
-            {
-                HistoricoDAO dao = new HistoricoDAO();
-                if (obj.Id != 0)
-                {
-                    return dao.update(obj);
-                }
-                return dao.insert(obj);
-            }
-            return null;
+            HistoricoDAO dao = new HistoricoDAO();
+            Historico his = new Historico();
+            his.Lote = obj;
+            his.Operacao = op;
+            his.Empregado = EmpregadoDAO.findById(Sessao.UsuarioId);
+            his.Datetime = DateTime.Now;
+            dao.insert(his);
         }
     }
 }

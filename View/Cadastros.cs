@@ -16,6 +16,13 @@ namespace Trabalho_A1_Supermecado
 {
     public partial class Cadastros : Form
     {
+        Departamento objDepartamento = new Departamento();
+        Subdepartamento objSubDepartamento = new Subdepartamento();
+        Setor objSetor = new Setor();
+        Marca objMarca = new Marca();
+        Fornecedor objFornecedor = new Fornecedor();
+        Item objItem = new Item();
+        Empregado objEmpregado = new Empregado();
         CadastrosController controller = new CadastrosController();
         public Cadastros()
         {
@@ -29,10 +36,7 @@ namespace Trabalho_A1_Supermecado
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            Sessao.logout();
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+            Application.Exit();
         }
 
         private void btnImagem_Click(object sender, EventArgs e)
@@ -50,21 +54,20 @@ namespace Trabalho_A1_Supermecado
 
         private void Departamento()
         {
-            Departamento obj = new Departamento();
-            obj.Nome = Departamento_tbxNome.Text;
-            obj.Descricao = Departamento_tbxDescricao.Text;
+            objDepartamento.Id = 0;
+            objDepartamento.Nome = Departamento_tbxNome.Text;
+            objDepartamento.Descricao = Departamento_tbxDescricao.Text;
             if (Departamento_tbxNome.Text != "")
             {
                 if (DepartamentoDAO.isExists(Departamento_tbxNome.Text) == false)
                 {
-                    if (controller.cadastrarDepartamento(obj) != null)
+                    if (controller.cadastrarDepartamento(objDepartamento) != null)
                     {
-                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                        DataTable dt = new DataTable();
-                        dt = DepartamentoDAO.returnDataSource();
+                        MessageBox.Show("Cadastro realizado de :" + objDepartamento.Nome);
+                        DataTable dt = DepartamentoDAO.returnDataSource();
                         SubDepartamento_cbDepartamento.DataSource = dt;
-                        Departamento_tbxNome.Text = "";
-                        Departamento_tbxDescricao.Text = "";
+                        Departamento_tbxNome.Clear();
+                        Departamento_tbxDescricao.Clear();
                         tabDepartamento.ForeColor = Color.Black;
                     }
                 }
@@ -76,22 +79,22 @@ namespace Trabalho_A1_Supermecado
         }
         private void SubDepartamento()
         {
-            Subdepartamento obj = new Subdepartamento();
-            obj.Nome = SubDepartamento_tbxNome.Text;
-            obj.Descricao = SubDepartamento_tbxDescricao.Text;
-            obj.Departamento = DepartamentoDAO.findById((int)SubDepartamento_cbDepartamento.SelectedValue);
+            objSubDepartamento.Id = 0;
+            objSubDepartamento.Nome = SubDepartamento_tbxNome.Text;
+            objSubDepartamento.Descricao = SubDepartamento_tbxDescricao.Text;
+            objSubDepartamento.Departamento = DepartamentoDAO.findById((int)SubDepartamento_cbDepartamento.SelectedValue);
             if (SubDepartamento_tbxNome.Text != "" || SubDepartamento_cbDepartamento.SelectedValue != null)
             {
                 if (SubdepartamentoDAO.isExists(SubDepartamento_tbxNome.Text) == false)
                 {
-                    if (controller.CadastrarSubDepartamento(obj) != null)
+                    if (controller.CadastrarSubDepartamento(objSubDepartamento) != null)
                     {
-                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        MessageBox.Show("Cadastro realizado de :" + objSubDepartamento.Nome);
                         DataTable dt = new DataTable();
                         dt = SubdepartamentoDAO.returnDataSource();
                         Setor_cbSubDepartamento.DataSource = dt;
-                        SubDepartamento_tbxNome.Text = "";
-                        SubDepartamento_tbxDescricao.Text = "";
+                        SubDepartamento_tbxNome.Clear();
+                        SubDepartamento_tbxDescricao.Clear();
                         tabSubDepartamento.ForeColor = Color.Black;
                     }
                 }
@@ -103,22 +106,22 @@ namespace Trabalho_A1_Supermecado
         }
         private void Setor()
         {
-            Setor obj = new Setor();
-            obj.Nome = Setor_tbxNome.Text;
-            obj.Descricao = Setor_tbxDescricao.Text;
-            obj.SubDepartamento = SubdepartamentoDAO.findById((int)Setor_cbSubDepartamento.SelectedValue);
+            objSetor.Id = 0;
+            objSetor.Nome = Setor_tbxNome.Text;
+            objSetor.Descricao = Setor_tbxDescricao.Text;
+            objSetor.SubDepartamento = SubdepartamentoDAO.findById((int)Setor_cbSubDepartamento.SelectedValue);
             if (Setor_tbxNome.Text != "" || Setor_cbSubDepartamento.SelectedValue != null)
             {
                 if (SetorDAO.isExists(Setor_tbxNome.Text) == false)
                 {
-                    if (controller.CadastrarSetor(obj) != null)
+                    if (controller.CadastrarSetor(objSetor) != null)
                     {
-                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        MessageBox.Show("Cadastro realizado de :" + objSetor.Nome);
                         DataTable dt = new DataTable();
                         dt = SetorDAO.returnDataSource();
                         Item_cbSetor.DataSource = dt;
-                        Setor_tbxNome.Text = "";
-                        Setor_tbxDescricao.Text = "";
+                        Setor_tbxNome.Clear();
+                        Setor_tbxDescricao.Clear();
                         tabSetor.ForeColor = Color.Black;
                     }
                 }
@@ -130,27 +133,27 @@ namespace Trabalho_A1_Supermecado
         }
         private void Marca()
         {
-            Marca obj = new Marca();
-            obj.Nome = Marca_tbxNome.Text;
-            obj.Descricao = Marca_tbxDescricao.Text;
-            obj.Endereco = Marca_tbxEndereco.Text;
-            obj.Cnpj = Marca_tbxCNPJ.Text;
-            obj.Telefone = Marca_tbxTelefone.Text;
+            objMarca.Id = 0;
+            objMarca.Nome = Marca_tbxNome.Text;
+            objMarca.Descricao = Marca_tbxDescricao.Text;
+            objMarca.Endereco = Marca_tbxEndereco.Text;
+            objMarca.Cnpj = Marca_tbxCNPJ.Text;
+            objMarca.Telefone = Marca_tbxTelefone.Text;
             if (Marca_tbxNome.Text != "")
             {
                 if (MarcaDAO.isExists(Marca_tbxNome.Text) == false)
                 {
-                    if (controller.CadastrarMarca(obj) != null)
+                    if (controller.CadastrarMarca(objMarca) != null)
                     {
-                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
+                        MessageBox.Show("Cadastro realizado de :" + objMarca.Nome);
                         DataTable dt = new DataTable();
                         dt = MarcaDAO.returnDataSource();
                         Item_cbMarca.DataSource = dt;
-                        Marca_tbxNome.Text = "";
-                        Marca_tbxDescricao.Text = "";
-                        Marca_tbxEndereco.Text = "";
-                        Marca_tbxCNPJ.Text = "";
-                        Marca_tbxTelefone.Text = "";
+                        Marca_tbxNome.Clear();
+                        Marca_tbxDescricao.Clear();
+                        Marca_tbxEndereco.Clear();
+                        Marca_tbxCNPJ.Clear();
+                        Marca_tbxTelefone.Clear();
                         tabMarca.ForeColor = Color.Black;
                     }
                 }
@@ -162,25 +165,25 @@ namespace Trabalho_A1_Supermecado
         }
         private void Fornecedor()
         {
-            Fornecedor obj = new Fornecedor();
-            obj.Nome = Fornecedor_tbxNome.Text;
-            obj.Descricao = Fornecedor_tbxDescricao.Text;
-            obj.Endereco = Fornecedor_tbxEndereco.Text;
-            obj.Cnpj = Fornecedor_tbxCNPJ.Text;
-            obj.Telefone = Fornecedor_tbxTelefone.Text;
+            objFornecedor.Id = 0;
+            objFornecedor.Nome = Fornecedor_tbxNome.Text;
+            objFornecedor.Descricao = Fornecedor_tbxDescricao.Text;
+            objFornecedor.Endereco = Fornecedor_tbxEndereco.Text;
+            objFornecedor.Cnpj = Fornecedor_tbxCNPJ.Text;
+            objFornecedor.Telefone = Fornecedor_tbxTelefone.Text;
             if (Fornecedor_tbxNome.Text != "" || Fornecedor_tbxEndereco.Text != "" || Fornecedor_tbxCNPJ.Text != "" ||
                 Fornecedor_tbxTelefone.Text != "")
             {
                 if (FornecedorDAO.isExists(Fornecedor_tbxNome.Text) == false)
                 {
-                    if (controller.CadastrarFornecedor(obj) != null)
+                    if (controller.CadastrarFornecedor(objFornecedor) != null)
                     {
-                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                        Fornecedor_tbxNome.Text = "";
-                        Fornecedor_tbxDescricao.Text = "";
-                        Fornecedor_tbxEndereco.Text = "";
-                        Fornecedor_tbxCNPJ.Text = "";
-                        Fornecedor_tbxTelefone.Text = "";
+                        MessageBox.Show("Cadastro realizado de :" + objFornecedor.Nome);
+                        Fornecedor_tbxNome.Clear();
+                        Fornecedor_tbxDescricao.Clear();
+                        Fornecedor_tbxEndereco.Clear();
+                        Fornecedor_tbxCNPJ.Clear();
+                        Fornecedor_tbxTelefone.Clear();
                         tabFornecedor.ForeColor = Color.Black;
                     }
                 }
@@ -192,21 +195,22 @@ namespace Trabalho_A1_Supermecado
         }
         private void Item()
         {
-            Item obj = new Item();
-            obj.Nome = Item_tbxNome.Text;
-            obj.Setor = SetorDAO.findById((int)Item_cbSetor.SelectedValue);
-            obj.Marca = MarcaDAO.findById((int)Item_cbMarca.SelectedValue);
-            obj.Complemento = Item_tbxComplemento.Text;
-            obj.Imagem = Item_tbxImagem.Text;
+            objItem.Id = 0;
+            objItem.Nome = Item_tbxNome.Text;
+            objItem.Setor = SetorDAO.findById((int)Item_cbSetor.SelectedValue);
+            objItem.Marca = MarcaDAO.findById((int)Item_cbMarca.SelectedValue);
+            objItem.Complemento = Item_tbxComplemento.Text;
+            objItem.Imagem = Item_tbxImagem.Text;
             if (Item_tbxNome.Text != "" || Item_cbSetor.SelectedValue != null || Item_cbMarca.SelectedValue != null)
             {
                 if (ItemDAO.isExists(Item_tbxNome.Text) == false)
                 {
-                    if (controller.CadastrarItem(obj) != null)
+                    if (controller.CadastrarItem(objItem) != null)
                     {
-                        MessageBox.Show("Cadastro realizado de :" + obj.Nome);
-                        Item_tbxNome.Text = "";
-                        Item_tbxImagem.Text = "";
+                        MessageBox.Show("Cadastro realizado de :" + objItem.Nome);
+                        Item_tbxNome.Clear();
+                        Item_tbxComplemento.Clear();
+                        Item_tbxImagem.Clear();
                         tabProduto.ForeColor = Color.Black;
                     }
                 }
@@ -218,11 +222,11 @@ namespace Trabalho_A1_Supermecado
         }
         private void Funcionario()
         {
-            Empregado obj = new Empregado();
-            obj.NomeCompleto = Funcionario_NomeCompleto.Text;
-            obj.Cpf = Funcionario_tbcCPF.Text;
-            obj.Senha = Funcionario_tbxSenha.Text;
-            obj.Funcao = Funcionario_tbxSenha.Text;
+            objEmpregado.Id = 0;
+            objEmpregado.NomeCompleto = Funcionario_NomeCompleto.Text;
+            objEmpregado.Cpf = Funcionario_tbcCPF.Text;
+            objEmpregado.Senha = Funcionario_tbxSenha.Text;
+            objEmpregado.Funcao = Funcionario_tbxSenha.Text;
             if (Funcionario_NomeCompleto.Text != "" || Funcionario_tbcCPF.Text != "" || Funcionario_tbxSenha.Text != "" ||
                 Funcionario_tbxSenha.Text != "")
             {
@@ -230,21 +234,20 @@ namespace Trabalho_A1_Supermecado
                 {
                     if (EmpregadoDAO.isExists(Funcionario_NomeCompleto.Text) == false)
                     {
-                        if (controller.CadastrarFuncionario(obj) != null)
+                        if (controller.CadastrarFuncionario(objEmpregado) != null)
                         {
-                            MessageBox.Show("Ação realizada!!");
-                            Funcionario_NomeCompleto.Text = "";
-                            Funcionario_tbcCPF.Text = "";
-                            Funcionario_tbxSenha.Text = "";
-                            Funcionario_tbxSenha.Text = "";
-                            Funcionario_tbxConfirmar.Text = "";
+                            MessageBox.Show("Cadastro realizado de :" + objEmpregado.NomeCompleto);
+                            Funcionario_NomeCompleto.Clear();
+                            Funcionario_tbcCPF.Clear();
+                            Funcionario_tbxSenha.Clear();
+                            Funcionario_tbxConfirmar.Clear();
                             Funcionario_lbConfirmar.Text = "";
-                            Funcionario_NomeCompleto.ForeColor = Color.Black;
+                            tabFuncionario.ForeColor = Color.Black;
                         }
                     }
                     else
                     {
-                        Funcionario_NomeCompleto.ForeColor = Color.Red;
+                        tabFuncionario.ForeColor = Color.Red;
                     }
                 }
                 else
@@ -311,6 +314,12 @@ namespace Trabalho_A1_Supermecado
 
         private void Cadastros_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Empregado'. Você pode movê-la ou removê-la conforme necessário.
+            this.empregadoTableAdapter.Fill(this.supermecadoDataSet1.Empregado);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Item'. Você pode movê-la ou removê-la conforme necessário.
+            this.itemTableAdapter.Fill(this.supermecadoDataSet1.Item);
+            // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
+            this.fornecedorTableAdapter.Fill(this.supermecadoDataSet1.Fornecedor);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Marca'. Você pode movê-la ou removê-la conforme necessário.
             this.marcaTableAdapter1.Fill(this.supermecadoDataSet1.Marca);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Setor'. Você pode movê-la ou removê-la conforme necessário.
@@ -320,6 +329,247 @@ namespace Trabalho_A1_Supermecado
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Departamento'. Você pode movê-la ou removê-la conforme necessário.
             this.departamentoTableAdapter1.Fill(this.supermecadoDataSet1.Departamento);
 
+        }
+
+        private void dataGridDepartamento_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridDepartamento.Rows[e.RowIndex];
+                objDepartamento = DepartamentoDAO.findById((int)row.Cells["idDepartamento"].Value);
+                Departamento_tbxNome.Text = objDepartamento.Nome;
+                Departamento_tbxDescricao.Text = objDepartamento.Descricao;
+                Departamento_btnDeletar.Visible = true;
+            }
+        }
+
+        private void dataGridSubDepartamento_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridSubDepartamento.Rows[e.RowIndex];
+                objSubDepartamento = SubdepartamentoDAO.findById((int)row.Cells["idSubDepartamento"].Value);
+                SubDepartamento_tbxNome.Text = objSubDepartamento.Nome;
+                SubDepartamento_tbxDescricao.Text = objSubDepartamento.Descricao;
+                SubDepartamento_cbDepartamento.SelectedValue = objSubDepartamento.Departamento.Id;
+                SubDepartamnto_btnDeletar.Visible = true;
+            }
+        }
+
+        private void dataGridSetor_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridSetor.Rows[e.RowIndex];
+                objSetor = SetorDAO.findById((int)row.Cells["idSetor"].Value);
+                Setor_tbxNome.Text = objSetor.Nome;
+                Setor_tbxDescricao.Text = objSetor.Descricao;
+                Setor_cbSubDepartamento.SelectedValue = objSetor.SubDepartamento.Id;
+                Setor_btnDeletar.Visible = true;
+            }
+        }
+
+        private void dataGridMarca_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridMarca.Rows[e.RowIndex];
+                objMarca = MarcaDAO.findById((int)row.Cells["idMarca"].Value);
+                Marca_tbxNome.Text = objMarca.Nome;
+                Marca_tbxDescricao.Text = objMarca.Descricao;
+                Marca_tbxEndereco.Text = objMarca.Endereco;
+                Marca_tbxCNPJ.Text = objMarca.Cnpj;
+                Marca_tbxTelefone.Text = objMarca.Telefone;
+                Marca_btnDeletar.Visible = true;
+            }
+        }
+
+        private void dataGridFornecedor_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridFornecedor.Rows[e.RowIndex];
+                objFornecedor = FornecedorDAO.findById((int)row.Cells["idFornecedor"].Value);
+                Fornecedor_tbxNome.Text = objFornecedor.Nome;
+                Fornecedor_tbxDescricao.Text = objFornecedor.Descricao;
+                Fornecedor_tbxEndereco.Text = objFornecedor.Endereco;
+                Fornecedor_tbxCNPJ.Text = objFornecedor.Cnpj;
+                Fornecedor_tbxTelefone.Text = objFornecedor.Telefone;
+                Fornecedor_btnDeletar.Visible = true;
+            }
+        }
+
+        private void dataGridItem_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridItem.Rows[e.RowIndex];
+                objItem = ItemDAO.findById((int)row.Cells["idItem"].Value);
+                Item_tbxNome.Text = objItem.Nome;
+                Item_tbxComplemento.Text = objItem.Complemento;
+                Item_tbxImagem.Text = objItem.Imagem;
+                Item_cbMarca.SelectedValue = objItem.Marca.Id;
+                Item_cbSetor.SelectedValue = objItem.Setor.Id;
+                Item_btnDeletar.Visible = true;
+            }
+        }
+
+        private void dataGridFuncionario_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridFuncionario.Rows[e.RowIndex];
+                objEmpregado = EmpregadoDAO.findById((int)row.Cells["idEmpregado"].Value);
+                Funcionario_NomeCompleto.Text = objEmpregado.NomeCompleto;
+                Funcionario_tbcCPF.Text = objEmpregado.Cpf;
+                Funcionario_tbxSenha.Text = objEmpregado.Senha;
+                Funcionario_tbxConfirmar.Text = objEmpregado.Senha;
+                Funcionario_cbFuncao.Text = objEmpregado.Funcao;
+                Funcionario_btnDeletar.Visible = true;
+            }
+        }
+
+        private void Departamento_btnLimpar_Click(object sender, EventArgs e)
+        {
+            Departamento_tbxNome.Clear();
+            Departamento_tbxDescricao.Clear();
+            Departamento_btnDeletar.Visible = false;
+            tabDepartamento.ForeColor = Color.Black;
+        }
+
+        private void Departamento_btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (objDepartamento.Id != 0)
+            {
+                controller.deletarDepartamento(objDepartamento);
+                DataTable dt = DepartamentoDAO.returnDataSource();
+                dataGridDepartamento.DataSource = dt;
+                Departamento_btnLimpar_Click(sender,e);
+            }
+        }
+
+        private void SubDepartamnto_btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (objSubDepartamento.Id != 0)
+            {
+                controller.deletarSubDepartamento(objSubDepartamento);
+                DataTable dt = SubdepartamentoDAO.returnDataSource();
+                dataGridSubDepartamento.DataSource = dt;
+                Setor_btnLimpar_Click(sender, e);
+            }
+        }
+
+        private void Setor_btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (objSetor.Id != 0)
+            {
+                controller.deletarSetor(objSetor);
+                DataTable dt = SetorDAO.returnDataSource();
+                dataGridSetor.DataSource = dt;
+                Setor_btnLimpar_Click(sender, e);
+            }
+        }
+
+        private void Marca_btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (objMarca.Id != 0)
+            {
+                controller.deletarMarca(objMarca);
+                DataTable dt = MarcaDAO.returnDataSource();
+                dataGridMarca.DataSource = dt;
+                Marca_btnLimpar_Click(sender, e);
+            }
+        }
+
+        private void Fornecedor_btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (objFornecedor.Id != 0)
+            {
+                controller.deletarFornecedor(objFornecedor);
+                DataTable dt = FornecedorDAO.returnDataSource();
+                dataGridFornecedor.DataSource = dt;
+                Fornecedor_btnLimpar_Click(sender, e);
+            }
+        }
+
+        private void Item_btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (objItem.Id != 0)
+            {
+                controller.deletarItem(objItem);
+                DataTable dt = ItemDAO.returnDataSource();
+                dataGridItem.DataSource = dt;
+                Item_btnLimpar_Click(sender, e);
+            }
+        }
+
+        private void Funcionario_btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (objEmpregado.Id != 0)
+            {
+                controller.deletarFuncionario(objEmpregado);
+                DataTable dt = EmpregadoDAO.returnDataSource();
+                dataGridFuncionario.DataSource = dt;
+                Funcionario_btnLimpar_Click(sender, e);
+            }
+        }
+
+        private void SubDepartamnto_btnLimpar_Click(object sender, EventArgs e)
+        {
+            SubDepartamento_tbxNome.Clear();
+            SubDepartamento_tbxDescricao.Clear();
+            SubDepartamnto_btnDeletar.Visible = false;
+            tabSubDepartamento.ForeColor = Color.Black;
+        }
+
+        private void Setor_btnLimpar_Click(object sender, EventArgs e)
+        {
+            Setor_tbxNome.Clear();
+            Setor_tbxDescricao.Clear();
+            Setor_btnDeletar.Visible = false;
+            tabSetor.ForeColor = Color.Black;
+        }
+
+        private void Marca_btnLimpar_Click(object sender, EventArgs e)
+        {
+            Marca_tbxNome.Clear();
+            Marca_tbxDescricao.Clear();
+            Marca_tbxEndereco.Clear();
+            Marca_tbxCNPJ.Clear();
+            Marca_tbxTelefone.Clear();
+            Marca_btnDeletar.Visible = false;
+            tabMarca.ForeColor = Color.Black;
+        }
+
+        private void Fornecedor_btnLimpar_Click(object sender, EventArgs e)
+        {
+            Fornecedor_tbxNome.Clear();
+            Fornecedor_tbxDescricao.Clear();
+            Fornecedor_tbxEndereco.Clear();
+            Fornecedor_tbxCNPJ.Clear();
+            Fornecedor_tbxTelefone.Clear();
+            Fornecedor_btnDeletar.Visible = false;
+            tabFornecedor.ForeColor = Color.Black;
+        }
+
+        private void Item_btnLimpar_Click(object sender, EventArgs e)
+        {
+            Item_tbxNome.Clear();
+            Item_tbxComplemento.Clear();
+            Item_tbxImagem.Clear();
+            Item_btnDeletar.Visible = false;
+            tabProduto.ForeColor = Color.Black;
+        }
+
+        private void Funcionario_btnLimpar_Click(object sender, EventArgs e)
+        {
+            Funcionario_NomeCompleto.Clear();
+            Funcionario_tbcCPF.Clear();
+            Funcionario_tbxSenha.Clear();
+            Funcionario_tbxConfirmar.Clear();
+            Funcionario_lbConfirmar.Text = "";
+            Funcionario_btnDeletar.Visible = false;
+            tabFuncionario.ForeColor = Color.Black;
         }
     }
 }

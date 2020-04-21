@@ -19,26 +19,12 @@ namespace Trabalho_A1_Supermecado
         {
             InitializeComponent();
             perfilToolStripMenuItem.Text = Sessao.NomeUsuario;
+            dataGrid.DataSource = HistoricoDAO.returnDataSource();
         }
 
         private void sairToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            if (Application.OpenForms.Count != 0)
-            {
-                foreach (Form openForm in Application.OpenForms)
-                {
-                    if (openForm is Form)
-                    {
-                        this.Close();
-                        openForm.Show();
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                Application.Exit();
-            }
+            Application.Exit();
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
@@ -69,7 +55,6 @@ namespace Trabalho_A1_Supermecado
             this.itemTableAdapter1.Fill(this.supermecadoDataSet1.Item);
             // TODO: esta linha de código carrega dados na tabela 'supermecadoDataSet1.Empregado'. Você pode movê-la ou removê-la conforme necessário.
             this.empregadoTableAdapter1.Fill(this.supermecadoDataSet1.Empregado);
-
         }
 
         private void btn_pesquisar_Click(object sender, EventArgs e)

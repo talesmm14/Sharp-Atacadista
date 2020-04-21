@@ -54,36 +54,34 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datafabricacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataentradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historicoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id = new System.Windows.Forms.NumericUpDown();
             this.btn_limpar = new System.Windows.Forms.Button();
             this.empregadoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.EmpregadoTableAdapter();
             this.itemTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.ItemTableAdapter();
             this.fornecedorTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.FornecedorTableAdapter();
-            this.historicoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.HistoricoTableAdapter();
             this.checkProtudo = new System.Windows.Forms.CheckBox();
             this.checkFornecedor = new System.Windows.Forms.CheckBox();
             this.checkData = new System.Windows.Forms.CheckBox();
             this.checkResponsavel = new System.Windows.Forms.CheckBox();
+            this.historicoTableAdapter1 = new Trabalho_A1_Supermecado.SupermecadoDataSetTableAdapters.HistoricoTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empregadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supermecadoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.id)).BeginInit();
             this.SuspendLayout();
@@ -127,7 +125,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 42);
+            this.label1.Location = new System.Drawing.Point(6, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 37);
             this.label1.TabIndex = 4;
@@ -272,18 +270,18 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.datafabricacaoDataGridViewTextBoxColumn,
             this.dataentradaDataGridViewTextBoxColumn,
             this.codigoDataGridViewTextBoxColumn});
-            this.dataGrid.DataSource = this.historicoBindingSource1;
+            this.dataGrid.DataSource = this.historicoBindingSource;
             this.dataGrid.Location = new System.Drawing.Point(13, 151);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
@@ -300,105 +298,100 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "datetime";
-            this.dataGridViewTextBoxColumn2.HeaderText = "datetime";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Data";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "operacao";
-            this.dataGridViewTextBoxColumn3.HeaderText = "operacao";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Operacao";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "fk_id_lote";
-            this.dataGridViewTextBoxColumn4.HeaderText = "fk_id_lote";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Lote";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "qtd_estoque";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Estoque inserido";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "tipo_estoque";
-            this.dataGridViewTextBoxColumn5.HeaderText = "tipo_estoque";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Tipo estocado";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "dias_validade";
-            this.dataGridViewTextBoxColumn6.HeaderText = "dias_validade";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Validade";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "peso_kg";
-            this.dataGridViewTextBoxColumn7.HeaderText = "peso_kg";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Peso(kg)";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "valor_compra";
-            this.dataGridViewTextBoxColumn8.HeaderText = "valor_compra";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Valor";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "qtd_estoque";
-            this.dataGridViewTextBoxColumn9.HeaderText = "qtd_estoque";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "fk_item";
-            this.dataGridViewTextBoxColumn10.HeaderText = "fk_item";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Item";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "fk_fornecedor";
-            this.dataGridViewTextBoxColumn11.HeaderText = "fk_fornecedor";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Fornecedor";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "fk_empregado";
-            this.dataGridViewTextBoxColumn12.HeaderText = "fk_empregado";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Empregado";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // datafabricacaoDataGridViewTextBoxColumn
             // 
             this.datafabricacaoDataGridViewTextBoxColumn.DataPropertyName = "data_fabricacao";
-            this.datafabricacaoDataGridViewTextBoxColumn.HeaderText = "data_fabricacao";
+            this.datafabricacaoDataGridViewTextBoxColumn.HeaderText = "Data fabricacao";
             this.datafabricacaoDataGridViewTextBoxColumn.Name = "datafabricacaoDataGridViewTextBoxColumn";
             this.datafabricacaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataentradaDataGridViewTextBoxColumn
             // 
             this.dataentradaDataGridViewTextBoxColumn.DataPropertyName = "data_entrada";
-            this.dataentradaDataGridViewTextBoxColumn.HeaderText = "data_entrada";
+            this.dataentradaDataGridViewTextBoxColumn.HeaderText = "Data entrada";
             this.dataentradaDataGridViewTextBoxColumn.Name = "dataentradaDataGridViewTextBoxColumn";
             this.dataentradaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
             this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
             this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
             this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // historicoBindingSource1
-            // 
-            this.historicoBindingSource1.DataMember = "Historico";
-            this.historicoBindingSource1.DataSource = this.supermecadoDataSet1;
             // 
             // historicoBindingSource
             // 
@@ -433,10 +426,6 @@
             // fornecedorTableAdapter1
             // 
             this.fornecedorTableAdapter1.ClearBeforeFill = true;
-            // 
-            // historicoTableAdapter1
-            // 
-            this.historicoTableAdapter1.ClearBeforeFill = true;
             // 
             // checkProtudo
             // 
@@ -473,6 +462,10 @@
             this.checkResponsavel.Size = new System.Drawing.Size(15, 14);
             this.checkResponsavel.TabIndex = 26;
             this.checkResponsavel.UseVisualStyleBackColor = true;
+            // 
+            // historicoTableAdapter1
+            // 
+            this.historicoTableAdapter1.ClearBeforeFill = true;
             // 
             // Relatorios
             // 
@@ -511,7 +504,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.id)).EndInit();
             this.ResumeLayout(false);
@@ -564,27 +556,26 @@
         private SupermecadoDataSetTableAdapters.ItemTableAdapter itemTableAdapter1;
         private System.Windows.Forms.BindingSource fornecedorBindingSource;
         private SupermecadoDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter1;
+        private System.Windows.Forms.CheckBox checkProtudo;
+        private System.Windows.Forms.CheckBox checkFornecedor;
+        private System.Windows.Forms.CheckBox checkData;
+        private System.Windows.Forms.CheckBox checkResponsavel;
         private System.Windows.Forms.BindingSource historicoBindingSource;
         private SupermecadoDataSetTableAdapters.HistoricoTableAdapter historicoTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn datafabricacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataentradaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource historicoBindingSource1;
-        private System.Windows.Forms.CheckBox checkProtudo;
-        private System.Windows.Forms.CheckBox checkFornecedor;
-        private System.Windows.Forms.CheckBox checkData;
-        private System.Windows.Forms.CheckBox checkResponsavel;
     }
 }

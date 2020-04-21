@@ -81,9 +81,10 @@ namespace Trabalho_A1_Supermecado.Forms
 
         private void btnRetirar_Click(object sender, EventArgs e)
         {
+            MovimentacoesController controller = new MovimentacoesController();
             objLote.Qtd_estoque = (int)nuRetirar.Value;
             LoteDAO dao = new LoteDAO();
-            if (dao.update(objLote) != null)
+            if (controller.CadastrarLote(objLote))
             {
                 MessageBox.Show("Retirado!!");
                 dataGrid.DataSource = LoteDAO.returnDataSource();

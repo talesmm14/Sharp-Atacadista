@@ -24,7 +24,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public Departamento update(Departamento departamento)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Departamento set nome = @nome, descricao = @descricao, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Departamento set nome = @nome, descricao = @descricao where id = @id";
             cmd.Parameters.AddWithValue("@id", departamento.Id);
             cmd.Parameters.AddWithValue("@nome", departamento.Nome);
             cmd.Parameters.AddWithValue("@descricao", departamento.Descricao);
@@ -32,12 +32,14 @@ namespace Trabalho_A1_Supermecado.DAO
                 return departamento;
             return null;
         }
-        public void delete(Departamento departamento)
+        public Departamento delete(Departamento departamento)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Departamento WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", departamento.Id);
-            Conexao.CRUD(cmd);
+            if (Conexao.CRUD(cmd))
+                return departamento;
+            return null;
         }
         public static Departamento findById(int id)
         {

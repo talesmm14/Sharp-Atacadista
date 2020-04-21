@@ -29,7 +29,7 @@ namespace Trabalho_A1_Supermecado.DAO
         public Item update(Item item)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "UPDATE Item set nome = @nome, complemento = @complemento, imagem = @imagem, qtd_estoque = @qtd_estoque, fk_marca = @fk_marca, fk_setor = @fk_setor, id = @id where id = @id";
+            cmd.CommandText = "UPDATE Item set nome = @nome, complemento = @complemento, imagem = @imagem, qtd_estoque = @qtd_estoque, fk_marca = @fk_marca, fk_setor = @fk_setor where id = @id";
             cmd.Parameters.AddWithValue("@id", item.Id);
             cmd.Parameters.AddWithValue("@nome", item.Nome);
             cmd.Parameters.AddWithValue("@complemento", item.Complemento);
@@ -41,12 +41,14 @@ namespace Trabalho_A1_Supermecado.DAO
                 return item;
             return null;
         }
-        public void delete(Item item)
+        public Item delete(Item item)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "DELETE FROM Item WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", item.Id);
-            Conexao.CRUD(cmd);
+            if (Conexao.CRUD(cmd))
+                return item;
+            return null;
         }
         public static Item findById(int id)
         {
